@@ -2,17 +2,199 @@
   "theme": "modern",
   "style": "style-3-garden",
   "demo_mode": false,
-  "brand": { "name": "Verdant Studio", "logo_text": "Verdant", "logo_accent": " Studio", "tagline": "Design and branding for businesses that care about the world." },
-  "meta": { "site_title": "Verdant Studio — Purposeful Design", "description": "A design studio for sustainable, purpose-led businesses.", "language": "en", "theme_label": "Modern · Garden" },
-  "nav": { "cta_label": "Start a Project", "cta_href": "contact.html" },
-  "hero": { "eyebrow": "Design with Purpose", "headline": "Beautiful Brands for a Better World", "subheadline": "We work with sustainable and purpose-led businesses to create brands that are as thoughtful as they are beautiful.", "cta_primary_label": "Our Work", "cta_secondary_label": "About Us" },
-  "stats": [ { "number": "8+", "label": "Years of Practice" }, { "number": "120+", "label": "Brands Created" }, { "number": "100%", "label": "Independent Studio" }, { "number": "3", "label": "Design Awards" } ],
-  "services": { "eyebrow": "What We Create", "headline": "Design Services", "subheadline": "From visual identity to full brand ecosystems.", "page_subheadline": "Creative work grounded in strategy and craft.", "items": [ { "icon": "🌿", "title": "Brand Identity", "body": "Logos, colour systems, typography, and the visual language that makes your brand instantly recognisable.", "features": ["Logo design", "Colour & typography systems", "Brand guidelines"] }, { "icon": "📐", "title": "Web Design", "body": "Thoughtful, accessible websites that tell your story and convert visitors into believers.", "features": ["UX strategy", "Visual design", "Handoff to development"] }, { "icon": "✏️", "title": "Print & Packaging", "body": "From business cards to product packaging — tangible design that leaves a lasting impression.", "features": ["Product packaging", "Stationery & collateral", "Environmental design"] } ] },
-  "process": { "eyebrow": "How We Work", "headline": "Our Creative Process", "steps": [ { "title": "Discover", "body": "We listen deeply to understand your brand and audience." }, { "title": "Define", "body": "We establish the strategic and creative direction." }, { "title": "Design", "body": "We explore, iterate and refine until the work feels right." }, { "title": "Deliver", "body": "Final files, guidelines and ongoing support." } ] },
-  "about": { "eyebrow": "About the Studio", "headline": "Design That Does Good", "page_subheadline": "A small studio with a clear point of view.", "body": "Verdant was founded on the belief that design is a powerful force for good.", "mission_headline": "Why We Do This", "mission_body_1": "We started Verdant because purpose-led businesses deserve brands that reflect their ambition.", "mission_body_2": "We're a small, focused studio. We take on fewer clients so we can go deeper with each one.", "mission_emoji": "🌿", "values_headline": "What Guides Us", "team_headline": "The Studio", "team_subheadline": "Small by design. Committed by choice.", "values": [ { "icon": "🌍", "title": "Purpose Over Profit", "body": "We work with businesses trying to make things better." }, { "icon": "✨", "title": "Craft First", "body": "Every curve, every colour, every word is considered." }, { "icon": "💬", "title": "Open Collaboration", "body": "The best work comes from genuine partnership." } ], "team": [ { "name": "Maya Chen", "role": "Creative Director", "emoji": "👩‍🎨" }, { "name": "Leo Barros", "role": "Brand Designer", "emoji": "👨‍💻" }, { "name": "Priya Nair", "role": "Strategy Lead", "emoji": "👩‍💼" }, { "name": "Sam Okafor", "role": "Web Designer", "emoji": "🧑‍🎨" } ] },
-  "testimonials": [ { "text": "Verdant took the time to really understand what we stood for before putting pen to paper.", "author": "Laura Moss", "role": "Founder, Rootwork Botanicals", "emoji": "🌱" }, { "text": "Working with Verdant felt more like a creative partnership than hiring an agency.", "author": "Tom & Ellie Graves", "role": "Co-founders, Hearthside Foods", "emoji": "👨‍👩‍👧" } ],
-  "cta": { "eyebrow": "Let's Create Together", "headline": "Got a Project in Mind?", "subheadline": "We'd love to hear about your brand." },
-  "contact": { "page_subheadline": "Tell us about your project.", "intro": "We work with a small number of clients at a time to ensure every project gets the attention it deserves.", "email": "hello@verdantstudio.co", "phone": "+44 117 000 4567", "address": "The Tobacco Factory, Bristol BS3 1TF", "hours": "Mon–Thu, 9am–5pm GMT", "form_service_options": ["Brand Identity", "Web Design", "Print & Packaging", "Full Brand Project", "Not Sure Yet"] },
-  "social": { "linkedin": "https://linkedin.com/company/verdant-studio", "twitter": "https://instagram.com/verdantstudio" },
-  "footer": { "tagline": "Design for businesses that care about the world.", "copyright": "Verdant Studio" }
+  "brand": {
+    "name": "Verdant Studio",
+    "logo_text": "Verdant",
+    "logo_accent": " Studio",
+    "tagline": "Design and branding for businesses that care about the world."
+  },
+  "meta": {
+    "site_title": "Verdant Studio — Purposeful Design",
+    "description": "A design studio for sustainable, purpose-led businesses.",
+    "language": "en",
+    "theme_label": "Modern · Garden"
+  },
+  "nav": {
+    "cta_label": "Start a Project",
+    "cta_href": "contact.html"
+  },
+  "hero": {
+    "eyebrow": "Design with Purpose",
+    "headline": "Beautiful Brands for a Better World",
+    "subheadline": "We work with sustainable and purpose-led businesses to create brands that are as thoughtful as they are beautiful.",
+    "cta_primary_label": "Our Work",
+    "cta_secondary_label": "About Us"
+  },
+  "stats": [
+    {
+      "number": "8+",
+      "label": "Years of Practice"
+    },
+    {
+      "number": "120+",
+      "label": "Brands Created"
+    },
+    {
+      "number": "100%",
+      "label": "Independent Studio"
+    },
+    {
+      "number": "3",
+      "label": "Design Awards"
+    }
+  ],
+  "services": {
+    "eyebrow": "What We Create",
+    "headline": "Design Services",
+    "subheadline": "From visual identity to full brand ecosystems.",
+    "page_subheadline": "Creative work grounded in strategy and craft.",
+    "items": [
+      {
+        "icon": "🌿",
+        "title": "Brand Identity",
+        "body": "Logos, colour systems, typography, and the visual language that makes your brand instantly recognisable.",
+        "features": [
+          "Logo design",
+          "Colour & typography systems",
+          "Brand guidelines"
+        ]
+      },
+      {
+        "icon": "📐",
+        "title": "Web Design",
+        "body": "Thoughtful, accessible websites that tell your story and convert visitors into believers.",
+        "features": [
+          "UX strategy",
+          "Visual design",
+          "Handoff to development"
+        ]
+      },
+      {
+        "icon": "✏️",
+        "title": "Print & Packaging",
+        "body": "From business cards to product packaging — tangible design that leaves a lasting impression.",
+        "features": [
+          "Product packaging",
+          "Stationery & collateral",
+          "Environmental design"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How We Work",
+    "headline": "Our Creative Process",
+    "steps": [
+      {
+        "title": "Discover",
+        "body": "We listen deeply to understand your brand and audience."
+      },
+      {
+        "title": "Define",
+        "body": "We establish the strategic and creative direction."
+      },
+      {
+        "title": "Design",
+        "body": "We explore, iterate and refine until the work feels right."
+      },
+      {
+        "title": "Deliver",
+        "body": "Final files, guidelines and ongoing support."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About the Studio",
+    "headline": "Design That Does Good",
+    "page_subheadline": "A small studio with a clear point of view.",
+    "body": "Verdant was founded on the belief that design is a powerful force for good.",
+    "mission_headline": "Why We Do This",
+    "mission_body_1": "We started Verdant because purpose-led businesses deserve brands that reflect their ambition.",
+    "mission_body_2": "We're a small, focused studio. We take on fewer clients so we can go deeper with each one.",
+    "mission_emoji": "🌿",
+    "values_headline": "What Guides Us",
+    "team_headline": "The Studio",
+    "team_subheadline": "Small by design. Committed by choice.",
+    "values": [
+      {
+        "icon": "🌍",
+        "title": "Purpose Over Profit",
+        "body": "We work with businesses trying to make things better."
+      },
+      {
+        "icon": "✨",
+        "title": "Craft First",
+        "body": "Every curve, every colour, every word is considered."
+      },
+      {
+        "icon": "💬",
+        "title": "Open Collaboration",
+        "body": "The best work comes from genuine partnership."
+      }
+    ],
+    "team": [
+      {
+        "name": "Maya Chen",
+        "role": "Creative Director",
+        "emoji": "👩‍🎨"
+      },
+      {
+        "name": "Leo Barros",
+        "role": "Brand Designer",
+        "emoji": "👨‍💻"
+      },
+      {
+        "name": "Priya Nair",
+        "role": "Strategy Lead",
+        "emoji": "👩‍💼"
+      },
+      {
+        "name": "Sam Okafor",
+        "role": "Web Designer",
+        "emoji": "🧑‍🎨"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "text": "Verdant took the time to really understand what we stood for before putting pen to paper.",
+      "author": "Laura Moss",
+      "role": "Founder, Rootwork Botanicals",
+      "emoji": "🌱"
+    },
+    {
+      "text": "Working with Verdant felt more like a creative partnership than hiring an agency.",
+      "author": "Tom & Ellie Graves",
+      "role": "Co-founders, Hearthside Foods",
+      "emoji": "👨‍👩‍👧"
+    }
+  ],
+  "cta": {
+    "eyebrow": "Let's Create Together",
+    "headline": "Got a Project in Mind?",
+    "subheadline": "We'd love to hear about your brand."
+  },
+  "contact": {
+    "page_subheadline": "Tell us about your project.",
+    "intro": "We work with a small number of clients at a time to ensure every project gets the attention it deserves.",
+    "email": "hello@verdantstudio.co",
+    "phone": "+44 117 000 4567",
+    "address": "The Tobacco Factory, Bristol BS3 1TF",
+    "hours": "Mon–Thu, 9am–5pm GMT",
+    "form_service_options": [
+      "Brand Identity",
+      "Web Design",
+      "Print & Packaging",
+      "Full Brand Project",
+      "Not Sure Yet"
+    ]
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/verdant-studio",
+    "twitter": "https://instagram.com/verdantstudio"
+  },
+  "footer": {
+    "tagline": "Design for businesses that care about the world.",
+    "copyright": "Verdant Studio"
+  }
 }

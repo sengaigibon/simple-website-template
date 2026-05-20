@@ -2,17 +2,211 @@
   "theme": "sober",
   "style": "style-8-corporate-red",
   "demo_mode": true,
-  "brand": { "name": "Axflow Industries", "logo_text": "Axflow", "logo_accent": " Industries", "tagline": "Precision flow control solutions for critical industrial applications." },
-  "meta": { "site_title": "Axflow Industries", "description": "Industrial flow control equipment and services for oil & gas, power and chemical processing.", "language": "en", "theme_label": "Sober · Corporate Red" },
-  "nav": { "cta_label": "Contact Us", "cta_href": "contact.html" },
-  "hero": { "eyebrow": "Flow Control Solutions Since 1978", "headline": "Engineering Reliability Into Every System", "subheadline": "We design, manufacture and service precision flow control equipment for the world's most demanding industrial environments.", "cta_primary_label": "Our Products", "cta_secondary_label": "About Axflow" },
-  "stats": [ { "number": "45+", "label": "Years in Operation" }, { "number": "60+", "label": "Countries Served" }, { "number": "98%", "label": "Uptime Guarantee" }, { "number": "2,400", "label": "Installations Worldwide" } ],
-  "services": { "eyebrow": "Product Lines", "headline": "Our Product Portfolio", "subheadline": "Engineered solutions across pumps, valves, seals and control systems.", "page_subheadline": "Precision-engineered for critical applications.", "items": [ { "icon": "⚙️", "title": "Industrial Pumps", "body": "Centrifugal, axial and positive displacement pumps engineered for continuous duty in corrosive and high-temperature environments.", "features": ["API 610 / ISO 13709 compliant", "Flow rates 5–50,000 m³/h", "Carbon steel, stainless, duplex, Hastelloy"] }, { "icon": "🔧", "title": "Control Valves", "body": "Globe, butterfly and ball valves with digital positioners for precise process control across all pressure classes.", "features": ["ANSI Classes 150–2500", "SIL 2 / SIL 3 rated safety valves", "HART, Fieldbus, Profibus compatible"] }, { "icon": "🛡️", "title": "Mechanical Seals", "body": "Single, double and tandem seal arrangements engineered to eliminate fugitive emissions.", "features": ["API 682 / ISO 21049 compliant", "Dry gas seals for compressors", "Custom seal support systems"] }, { "icon": "📡", "title": "Actuators & Controls", "body": "Pneumatic, hydraulic and electric actuators with integrated diagnostic capabilities.", "features": ["Quarter-turn and multi-turn", "Integrated valve controllers", "Remote I/O and bus communication"] } ] },
-  "process": { "eyebrow": "How We Work", "headline": "Our Approach", "steps": [ { "title": "Assessment", "body": "We evaluate your process conditions and operational requirements before recommending any solution." }, { "title": "Engineering", "body": "Our applications engineers size, select and configure equipment to your exact specifications." }, { "title": "Manufacture", "body": "All equipment is manufactured to order and tested against acceptance criteria." }, { "title": "Lifecycle", "body": "Commissioning support, preventive maintenance and emergency repair — full lifecycle support." } ] },
-  "about": { "eyebrow": "About Axflow", "headline": "Built on Engineering Integrity", "page_subheadline": "Four decades of precision manufacturing and field-proven reliability.", "body": "Axflow was founded in 1978 by process engineers who believed that better equipment engineering meant safer, more efficient plant operations.", "mission_headline": "Our Mission", "mission_body_1": "We exist to eliminate unplanned downtime in critical processes. Every product we engineer is aimed at keeping your plant running safely and efficiently.", "mission_body_2": "With manufacturing in four countries and service centres in over sixty, we combine global capability with local accountability.", "mission_emoji": "⚙️", "values_headline": "What We Stand For", "team_headline": "Leadership", "team_subheadline": "Experienced operators and engineers who have worked in the industries we serve.", "values": [ { "icon": "🔩", "title": "Engineering First", "body": "Every decision starts with the engineering. We don't recommend products that aren't right for the application." }, { "icon": "📋", "title": "Standards Compliance", "body": "All products are designed and tested to applicable API, ISO and ASME standards." }, { "icon": "🤝", "title": "Long-Term Partnership", "body": "Our relationships with customers average over 12 years." } ], "team": [ { "name": "Richard Holt", "role": "CEO", "emoji": "👨‍💼" }, { "name": "Elena Moser", "role": "Chief Engineer", "emoji": "👩‍🔧" }, { "name": "David Nakamura", "role": "VP Operations", "emoji": "👨‍🏭" }, { "name": "Fatima Al-Said", "role": "Global Service Director", "emoji": "👩‍💼" } ] },
-  "testimonials": [ { "text": "Axflow specified and delivered a complete pump train for our offshore platform in 14 weeks. The equipment has operated without incident for three years.", "author": "J. Hargreaves", "role": "Rotating Equipment Manager, North Sea Operations", "emoji": "👷" }, { "text": "Their engineering team identified a seal failure mode our own team had missed. That kind of expertise is why we sole-source with Axflow.", "author": "M. Rodrigues", "role": "Maintenance Director, Petroquimica do Brasil", "emoji": "👨‍🔬" } ],
-  "cta": { "eyebrow": "Talk to an Engineer", "headline": "Have a Difficult Application?", "subheadline": "Our applications engineers are available to discuss your process requirements without obligation." },
-  "contact": { "page_subheadline": "Speak directly with an applications engineer.", "intro": "For new project enquiries, replacement parts or emergency service, contact your nearest Axflow office or fill in the form.", "email": "enquiries@axflow.com", "phone": "+44 1925 000 400", "address": "Axflow House, Gemini Business Park, Warrington WA5 7WQ", "hours": "Mon–Fri, 8am–5:30pm GMT", "form_service_options": ["Industrial Pumps", "Control Valves", "Mechanical Seals", "Actuators & Controls", "Aftermarket / Spare Parts", "Emergency Service", "General Enquiry"] },
-  "social": { "linkedin": "https://linkedin.com/company/axflow", "twitter": "https://twitter.com/axflow" },
-  "footer": { "tagline": "Precision flow control for critical industrial applications.", "copyright": "Axflow Industries Ltd" }
+  "brand": {
+    "name": "Axflow Industries",
+    "logo_text": "Axflow",
+    "logo_accent": " Industries",
+    "tagline": "Precision flow control solutions for critical industrial applications."
+  },
+  "meta": {
+    "site_title": "Axflow Industries",
+    "description": "Industrial flow control equipment and services for oil & gas, power and chemical processing.",
+    "language": "en",
+    "theme_label": "Sober · Corporate Red"
+  },
+  "nav": {
+    "cta_label": "Contact Us",
+    "cta_href": "contact.html"
+  },
+  "hero": {
+    "eyebrow": "Flow Control Solutions Since 1978",
+    "headline": "Engineering Reliability Into Every System",
+    "subheadline": "We design, manufacture and service precision flow control equipment for the world's most demanding industrial environments.",
+    "cta_primary_label": "Our Products",
+    "cta_secondary_label": "About Axflow"
+  },
+  "stats": [
+    {
+      "number": "45+",
+      "label": "Years in Operation"
+    },
+    {
+      "number": "60+",
+      "label": "Countries Served"
+    },
+    {
+      "number": "98%",
+      "label": "Uptime Guarantee"
+    },
+    {
+      "number": "2,400",
+      "label": "Installations Worldwide"
+    }
+  ],
+  "services": {
+    "eyebrow": "Product Lines",
+    "headline": "Our Product Portfolio",
+    "subheadline": "Engineered solutions across pumps, valves, seals and control systems.",
+    "page_subheadline": "Precision-engineered for critical applications.",
+    "items": [
+      {
+        "icon": "⚙️",
+        "title": "Industrial Pumps",
+        "body": "Centrifugal, axial and positive displacement pumps engineered for continuous duty in corrosive and high-temperature environments.",
+        "features": [
+          "API 610 / ISO 13709 compliant",
+          "Flow rates 5–50,000 m³/h",
+          "Carbon steel, stainless, duplex, Hastelloy"
+        ]
+      },
+      {
+        "icon": "🔧",
+        "title": "Control Valves",
+        "body": "Globe, butterfly and ball valves with digital positioners for precise process control across all pressure classes.",
+        "features": [
+          "ANSI Classes 150–2500",
+          "SIL 2 / SIL 3 rated safety valves",
+          "HART, Fieldbus, Profibus compatible"
+        ]
+      },
+      {
+        "icon": "🛡️",
+        "title": "Mechanical Seals",
+        "body": "Single, double and tandem seal arrangements engineered to eliminate fugitive emissions.",
+        "features": [
+          "API 682 / ISO 21049 compliant",
+          "Dry gas seals for compressors",
+          "Custom seal support systems"
+        ]
+      },
+      {
+        "icon": "📡",
+        "title": "Actuators & Controls",
+        "body": "Pneumatic, hydraulic and electric actuators with integrated diagnostic capabilities.",
+        "features": [
+          "Quarter-turn and multi-turn",
+          "Integrated valve controllers",
+          "Remote I/O and bus communication"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How We Work",
+    "headline": "Our Approach",
+    "steps": [
+      {
+        "title": "Assessment",
+        "body": "We evaluate your process conditions and operational requirements before recommending any solution."
+      },
+      {
+        "title": "Engineering",
+        "body": "Our applications engineers size, select and configure equipment to your exact specifications."
+      },
+      {
+        "title": "Manufacture",
+        "body": "All equipment is manufactured to order and tested against acceptance criteria."
+      },
+      {
+        "title": "Lifecycle",
+        "body": "Commissioning support, preventive maintenance and emergency repair — full lifecycle support."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About Axflow",
+    "headline": "Built on Engineering Integrity",
+    "page_subheadline": "Four decades of precision manufacturing and field-proven reliability.",
+    "body": "Axflow was founded in 1978 by process engineers who believed that better equipment engineering meant safer, more efficient plant operations.",
+    "mission_headline": "Our Mission",
+    "mission_body_1": "We exist to eliminate unplanned downtime in critical processes. Every product we engineer is aimed at keeping your plant running safely and efficiently.",
+    "mission_body_2": "With manufacturing in four countries and service centres in over sixty, we combine global capability with local accountability.",
+    "mission_emoji": "⚙️",
+    "values_headline": "What We Stand For",
+    "team_headline": "Leadership",
+    "team_subheadline": "Experienced operators and engineers who have worked in the industries we serve.",
+    "values": [
+      {
+        "icon": "🔩",
+        "title": "Engineering First",
+        "body": "Every decision starts with the engineering. We don't recommend products that aren't right for the application."
+      },
+      {
+        "icon": "📋",
+        "title": "Standards Compliance",
+        "body": "All products are designed and tested to applicable API, ISO and ASME standards."
+      },
+      {
+        "icon": "🤝",
+        "title": "Long-Term Partnership",
+        "body": "Our relationships with customers average over 12 years."
+      }
+    ],
+    "team": [
+      {
+        "name": "Richard Holt",
+        "role": "CEO",
+        "emoji": "👨‍💼"
+      },
+      {
+        "name": "Elena Moser",
+        "role": "Chief Engineer",
+        "emoji": "👩‍🔧"
+      },
+      {
+        "name": "David Nakamura",
+        "role": "VP Operations",
+        "emoji": "👨‍🏭"
+      },
+      {
+        "name": "Fatima Al-Said",
+        "role": "Global Service Director",
+        "emoji": "👩‍💼"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "text": "Axflow specified and delivered a complete pump train for our offshore platform in 14 weeks. The equipment has operated without incident for three years.",
+      "author": "J. Hargreaves",
+      "role": "Rotating Equipment Manager, North Sea Operations",
+      "emoji": "👷"
+    },
+    {
+      "text": "Their engineering team identified a seal failure mode our own team had missed. That kind of expertise is why we sole-source with Axflow.",
+      "author": "M. Rodrigues",
+      "role": "Maintenance Director, Petroquimica do Brasil",
+      "emoji": "👨‍🔬"
+    }
+  ],
+  "cta": {
+    "eyebrow": "Talk to an Engineer",
+    "headline": "Have a Difficult Application?",
+    "subheadline": "Our applications engineers are available to discuss your process requirements without obligation."
+  },
+  "contact": {
+    "page_subheadline": "Speak directly with an applications engineer.",
+    "intro": "For new project enquiries, replacement parts or emergency service, contact your nearest Axflow office or fill in the form.",
+    "email": "enquiries@axflow.com",
+    "phone": "+44 1925 000 400",
+    "address": "Axflow House, Gemini Business Park, Warrington WA5 7WQ",
+    "hours": "Mon–Fri, 8am–5:30pm GMT",
+    "form_service_options": [
+      "Industrial Pumps",
+      "Control Valves",
+      "Mechanical Seals",
+      "Actuators & Controls",
+      "Aftermarket / Spare Parts",
+      "Emergency Service",
+      "General Enquiry"
+    ]
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/axflow",
+    "twitter": "https://twitter.com/axflow"
+  },
+  "footer": {
+    "tagline": "Precision flow control for critical industrial applications.",
+    "copyright": "Axflow Industries Ltd"
+  }
 }
