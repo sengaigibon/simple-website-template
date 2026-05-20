@@ -46,35 +46,58 @@
     }
   });
 
-  // ── 5. Logo image (replaces text spans when brand.logo_image is set) ──
+  // ── 5. Logo image + company name (when brand.logo_image is set) ──
+  // Shows: [img] [logo_text][logo_accent]  in both nav and footer.
+  // Footer version inverts the image to white since the footer is dark.
   if (cfg.brand && cfg.brand.logo_image) {
-    const logoImg = () => {
+
+    // Build the logo <img> — square logos (h≈w) get constrained differently
+    const makeImg = (forFooter) => {
       const img = document.createElement('img');
-      img.src = cfg.brand.logo_image;
-      img.alt = cfg.brand.name || '';
-      img.className = 'logo-img';
-      img.style.cssText = 'height:36px;width:auto;display:block;';
+      img.src   = cfg.brand.logo_image;
+      img.alt   = cfg.brand.name || '';
+      // Max height 36px nav / 32px footer; max-width prevents a square logo
+      // from becoming enormous — clamps it to a reasonable badge size
+      img.style.cssText = forFooter
+        ? 'height:32px;max-width:48px;width:auto;display:block;object-fit:contain;filter:brightness(0) invert(1);opacity:0.9;'
+        : 'height:36px;max-width:52px;width:auto;display:block;object-fit:contain;';
       return img;
     };
-    const logoName = () => {
-      const span = document.createElement('span');
-      span.textContent = cfg.brand.name || '';
-      return span;
+
+    // Build the two-tone name span: logo_text in default colour, logo_accent styled
+    const makeName = (forFooter) => {
+      const wrap  = document.createElement('span');
+      const main  = document.createElement('span');
+      const acc   = document.createElement('span');
+      main.textContent = cfg.brand.logo_text   || cfg.brand.name || '';
+      acc.textContent  = cfg.brand.logo_accent || '';
+      // accent span picks up the CSS --accent variable naturally via .nav__logo span
+      // For footer we set colour explicitly since context is dark
+      if (forFooter) {
+        main.style.cssText = 'color:rgba(255,255,255,0.9);';
+        acc.style.cssText  = 'color:var(--accent-light,var(--accent));';
+      }
+      wrap.appendChild(main);
+      wrap.appendChild(acc);
+      return wrap;
     };
+
     const flexRow = 'display:flex;align-items:center;gap:10px;';
+
     // Nav logo
     document.querySelectorAll('.nav__logo').forEach(el => {
       el.innerHTML = '';
       el.style.cssText += flexRow;
-      el.appendChild(logoImg());
-      el.appendChild(logoName());
+      el.appendChild(makeImg(false));
+      el.appendChild(makeName(false));
     });
+
     // Footer brand heading
     document.querySelectorAll('.footer__brand h3').forEach(el => {
       el.innerHTML = '';
       el.style.cssText += flexRow;
-      el.appendChild(logoImg());
-      el.appendChild(logoName());
+      el.appendChild(makeImg(true));
+      el.appendChild(makeName(true));
     });
   }
 
