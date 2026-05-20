@@ -38,6 +38,13 @@
         { id: 'style-7-industrial-blue', label: 'Industrial Blue', swatch: '#0099CC' },
         { id: 'style-8-corporate-red',   label: 'Corporate Red',   swatch: '#C8102E' },
       ]
+    },
+    simplistic: {
+      label:  'Simplistic',
+      layout: 'simplistic',
+      styles: [
+        { id: 'style-9-simplistic', label: 'Simplistic', swatch: '#F5A623' },
+      ]
     }
   };
 

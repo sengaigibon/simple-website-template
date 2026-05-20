@@ -50,7 +50,7 @@ echo "    Style  : $STYLE"
 
 # ── Clean dist ───────────────────────────────────────────────
 rm -rf "$DIST"
-mkdir -p "$DIST/modern" "$DIST/sober" "$DIST/styles" "$DIST/js"
+mkdir -p "$DIST/modern" "$DIST/sober" "$DIST/simplistic" "$DIST/styles" "$DIST/js"
 
 # ── Shared: styles and JS ────────────────────────────────────
 cp "$CORE/styles/"*.css "$DIST/styles/"
@@ -72,7 +72,7 @@ echo "window.__CLIENT_CONFIG__ = ${CONFIG_JSON};" > "$DIST/client.config.js"
 echo "✓   Generated client.config.js"
 
 # ── Copy HTML into both layout subfolders ────────────────────
-for layout in modern sober; do
+for layout in modern sober simplistic; do
   LAYOUT_DIR="$CORE/layouts/$layout"
   if [ ! -d "$LAYOUT_DIR" ]; then
     echo "⚠   Layout directory not found: $LAYOUT_DIR (skipping)"
@@ -87,7 +87,7 @@ for layout in modern sober; do
 done
 
 # ── Inject <script src="../client.config.js"> into all HTML ──
-for layout in modern sober; do
+for layout in modern sober simplistic; do
   for html in "$DIST/$layout/"*.html; do
     [ -f "$html" ] || continue
     if ! grep -q 'client.config.js' "$html"; then
@@ -125,3 +125,4 @@ echo "    cd $DIST && python3 -m http.server 8080"
 echo "    http://localhost:8080/              (redirects to $THEME)"
 echo "    http://localhost:8080/modern/       (Modern theme)"
 echo "    http://localhost:8080/sober/        (Sober theme)"
+    echo "    http://localhost:8080/simplistic/  (Simplistic theme)"
