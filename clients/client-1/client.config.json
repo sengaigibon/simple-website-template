@@ -1,0 +1,200 @@
+{
+  "theme": "modern",
+  "style": "style-1-editorial",
+  "demo_mode": true,
+  "brand": {
+    "name": "ShaJa Digital",
+    "logo_text": "ShaJa",
+    "logo_accent": "Digital",
+    "logo_image": "../assets/logo.png",
+    "tagline": "Strategy and execution for ambitious organisations."
+  },
+  "meta": {
+    "site_title": "ShaJa Digital",
+    "description": "Strategic consulting for forward-thinking brands.",
+    "language": "en",
+    "theme_label": "Modern · Editorial"
+  },
+  "nav": {
+    "cta_label": "Get in Touch",
+    "cta_href": "contact.html"
+  },
+  "hero": {
+    "eyebrow": "Digitalising Brands Since 2019",
+    "headline": "Where Vision Meets Execution",
+    "subheadline": "We partner with ambitious organisations to craft strategies that endure, brands that resonate, and operations that scale.",
+    "cta_primary_label": "Explore Services",
+    "cta_secondary_label": "Our Story"
+  },
+  "stats": [
+    {
+      "number": "15+",
+      "label": "Years of Excellence"
+    },
+    {
+      "number": "2+",
+      "label": "Clients Served"
+    },
+    {
+      "number": "94%",
+      "label": "Retention Rate"
+    },
+    {
+      "number": "18",
+      "label": "Industry Sectors"
+    }
+  ],
+  "services": {
+    "eyebrow": "What We Do",
+    "headline": "Our Capabilities",
+    "subheadline": "We Digitalise Your: Brand / Commerce / Shop / Industry.",
+    "page_subheadline": "Best practices. Deep expertise. Measurable outcomes.",
+    "items": [
+      {
+        "icon": "🧭",
+        "title": "Brand Strategy",
+        "body": "Positioning, identity systems, and narrative frameworks that make your brand unmistakable.",
+        "features": [
+          "Brand positioning & competitive analysis",
+          "Brand architecture",
+          "Messaging frameworks"
+        ]
+      },
+      {
+        "icon": "📈",
+        "title": "Growth Consulting",
+        "body": "Market expansion, revenue architecture, and go-to-market playbooks grounded in real data.",
+        "features": [
+          "Go-to-market strategy",
+          "Revenue model design",
+          "Market entry planning"
+        ]
+      },
+      {
+        "icon": "⚙️",
+        "title": "Operations Design",
+        "body": "Process optimisation and organisational design so your teams move fast without breaking things.",
+        "features": [
+          "Operating model design",
+          "Process mapping",
+          "OKR frameworks"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How We Work",
+    "headline": "Our Engagement Model",
+    "steps": [
+      {
+        "title": "Diagnosis",
+        "body": "We start by understanding the real problem."
+      },
+      {
+        "title": "Strategy",
+        "body": "Clear choices, backed by evidence."
+      },
+      {
+        "title": "Execution",
+        "body": "We work alongside your team."
+      },
+      {
+        "title": "Capability",
+        "body": "We build your team's ability to sustain the work."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Who We Are",
+    "headline": "A Firm Built on Honest Counsel",
+    "page_subheadline": "Twelve years of building trust and delivering results.",
+    "body": "ShaJa Digital was founded on a simple belief: the best advice is direct, informed, and free of agenda.",
+    "mission_headline": "Counsel You Can Build On",
+    "mission_body_1": "Founded in 2012 with a conviction that great consulting is less about frameworks and more about judgment.",
+    "mission_body_2": "We are specialists in helping organisations define who they are, where they're going, and how to get there.",
+    "mission_emoji": "🧭",
+    "values_headline": "What We Stand For",
+    "team_headline": "People With Perspective",
+    "team_subheadline": "Practitioners, not theorists.",
+    "values": [
+      {
+        "icon": "🔍",
+        "title": "Honest Counsel",
+        "body": "We tell clients what they need to hear, not what they want to hear."
+      },
+      {
+        "icon": "🤝",
+        "title": "Genuine Partnership",
+        "body": "We work alongside until the work is real, not just on paper."
+      },
+      {
+        "icon": "🌱",
+        "title": "Long-term Thinking",
+        "body": "We optimise for outcomes that matter in three years."
+      }
+    ],
+    "team": [
+      {
+        "name": "Claire Ashford",
+        "role": "Founder & CEO",
+        "emoji": "👩‍💼"
+      },
+      {
+        "name": "David Lim",
+        "role": "Head of Strategy",
+        "emoji": "👨‍💻"
+      },
+      {
+        "name": "Rosa Ferreira",
+        "role": "Brand Director",
+        "emoji": "👩‍🎨"
+      },
+      {
+        "name": "Tom Haverford",
+        "role": "Operations Lead",
+        "emoji": "👨‍🔬"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "text": "ShaJa Digital didn't just give us a strategy deck — they helped us build the capability to execute it.",
+      "author": "Sarah Okonkwo",
+      "role": "CEO, Harlow & Partners",
+      "emoji": "👩‍💼"
+    },
+    {
+      "text": "The clarity they brought to our brand positioning changed how we show up in every deal.",
+      "author": "James Whitfield",
+      "role": "Founder, Arc Ventures",
+      "emoji": "👨‍💼"
+    }
+  ],
+  "cta": {
+    "eyebrow": "Start a Conversation",
+    "headline": "Ready to Build Something Lasting?",
+    "subheadline": "Let's talk about where you are and where you're going."
+  },
+  "contact": {
+    "page_subheadline": "No pitches. An honest conversation.",
+    "intro": "Whether you have a specific project or just want to explore what's possible, we're happy to talk.",
+    "email": "hello@ShaJa Digital.co",
+    "phone": "+44 20 7946 0321",
+    "address": "12 Finsbury Square, London EC2A 1AB",
+    "hours": "Mon–Fri, 9am–6pm GMT",
+    "form_service_options": [
+      "Brand Strategy",
+      "Growth Consulting",
+      "Operations Design",
+      "Other"
+    ]
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/ShaJa Digital",
+    "twitter": "https://twitter.com/ShaJa Digital"
+  },
+  "footer": {
+    "tagline": "Strategic consulting for organisations that refuse to stand still.",
+    "copyright": "ShaJa Digital"
+  }
+}

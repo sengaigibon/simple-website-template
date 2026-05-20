@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-config="meta.site_title">About</title>
+  <script>
+    (function(){
+      var cfg = window.__CLIENT_CONFIG__;
+      var theme = (cfg && cfg.style) ? cfg.style : 'style-1-editorial';
+      try { var ls = localStorage.getItem('style_override'); if(ls) theme = ls; } catch(e){}
+      var link = document.createElement('link');
+      link.rel='stylesheet'; link.id='theme-stylesheet';
+      link.href='../styles/'+theme+'.css';
+      document.currentScript.parentNode.insertBefore(link, document.currentScript.nextSibling);
+    })();
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="index.html">
+        <span data-config="brand.logo_text">Brand</span><span data-config="brand.logo_accent"></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav__cta" href="contact.html" data-config="nav.cta_label">Contact</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a href="services.html">Services</a><a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-top">
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">About</span></nav>
+        <h1 data-config="about.headline">About Us</h1>
+        <p data-config="about.page_subheadline">Our story, values and the people behind the work.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Mission block ── -->
+  <section class="section">
+    <div class="container">
+      <div class="about-block">
+        <div class="about-block__label">
+          <span class="eyebrow" data-config="about.eyebrow">Our Mission</span>
+          <h2 data-config="about.mission_headline">Mission</h2>
+        </div>
+        <div>
+          <p data-config="about.mission_body_1">Mission paragraph one.</p>
+          <p data-config="about.mission_body_2">Mission paragraph two.</p>
+        </div>
+      </div>
+
+      <!-- ── Values block ── -->
+      <div class="about-block">
+        <div class="about-block__label">
+          <span class="eyebrow">Our Values</span>
+          <h2 data-config="about.values_headline">Values</h2>
+        </div>
+        <div>
+          <div class="grid-2-cards" id="values-container"></div>
+          <template id="tpl-value">
+            <div class="card">
+              <div class="card__icon"></div>
+              <h3></h3>
+              <p></p>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <!-- ── Team block ── -->
+      <div class="about-block">
+        <div class="about-block__label">
+          <span class="eyebrow">The Team</span>
+          <h2 data-config="about.team_headline">People</h2>
+          <p data-config="about.team_subheadline">Our team.</p>
+        </div>
+        <div>
+          <div class="team-grid" id="team-container"></div>
+          <template id="tpl-person">
+            <div class="person fade-up">
+              <div class="person__avatar"></div>
+              <div class="person__name"></div>
+              <div class="person__role"></div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats" id="stats-container"></div>
+  <template id="tpl-stat">
+    <div class="stat"><div class="stat__num"></div><div class="stat__label"></div></div>
+  </template>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="container">
+      <div>
+        <h2 data-config="cta.headline">Ready to Work Together?</h2>
+        <p data-config="cta.subheadline">Let's talk.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="contact.html" data-config="nav.cta_label">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand"><h3><span data-config="brand.logo_text">Brand</span><span data-config="brand.logo_accent"></span></h3><p data-config="footer.tagline">Tagline.</p></div>
+        <div class="footer__col"><h4>Company</h4><ul class="footer__links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer__col"><h4>Services</h4><ul class="footer__links" id="footer-services"></ul></div>
+        <div class="footer__col"><h4>Connect</h4><ul class="footer__links"><li><a href="#" data-config-href="mailto:contact.email" data-config="contact.email">Email</a></li><li><a href="#" data-config-href="social.linkedin">LinkedIn</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© <span id="year"></span> <span data-config="footer.copyright">Company</span>. All rights reserved.</span><span data-config="meta.theme_label">Theme</span></div>
+    </div>
+  </footer>
+
+  <script src="../js/render.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/theme-switcher.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
