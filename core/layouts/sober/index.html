@@ -102,7 +102,7 @@
             <!-- Rendered by render.js — first 4 items -->
           </div>
           <template id="tpl-service-card">
-            <div class="card">
+            <div class="card fade-up">
               <div class="card__icon"></div>
               <h3></h3>
               <p></p>
@@ -238,23 +238,6 @@
         var d = document.createElement('div');
         d.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
         dots.appendChild(d);
-      });
-    })();
-
-    // Services — 4 items in 2-col grid
-    (function(){
-      var cfg = window.__CLIENT_CONFIG__;
-      if (!cfg || !cfg.services || !cfg.services.items) return;
-      var container = document.getElementById('services-home-container');
-      var tpl = document.getElementById('tpl-service-card');
-      if (!container || !tpl) return;
-      cfg.services.items.slice(0, 4).forEach(function(item) {
-        var clone = tpl.content.cloneNode(true);
-        var card  = clone.querySelector('.card');
-        clone.querySelector('.card__icon').textContent = item.icon || '●';
-        clone.querySelector('h3').textContent = item.title;
-        clone.querySelector('p').textContent  = item.body;
-        container.appendChild(clone);
       });
     })();
   </script>

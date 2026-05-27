@@ -1,0 +1,15 @@
+{
+  "name": "simple-website-template",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev"
+  },
+  "dependencies": {
+    "@astrojs/react": "^5.0.5",
+    "@keystatic/astro": "^5.0.0",
+    "@keystatic/core": "^0.5.0",
+    "astro": "^6.3.8",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}

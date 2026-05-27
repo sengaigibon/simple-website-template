@@ -3,14 +3,14 @@
   "style": "style-7-industrial-blue",
   "demo_mode": false,
   "brand": {
-    "name": "ShaJa Adventures",
-    "logo_text": "ShaJa",
+    "name": "Vierszka Adventures",
+    "logo_text": "Vierszka",
     "logo_accent": "Adventures",
-    "logo_image": "../assets/logo.png",
+    "logo_image": "../assets/logo.svg",
     "tagline": "Explorando el mundo desde 1999"
   },
   "meta": {
-    "site_title": "ShaJa",
+    "site_title": "Vierszka",
     "description": "Industrial flow control equipment and services for oil & gas, power and chemical processing.",
     "language": "es",
     "theme_label": "Sober · Corporate Red"
@@ -24,7 +24,7 @@
     "headline": "Guiamos exploradores y aventureros a vivir experiencias inolvidables",
     "subheadline": "Planeamos, coordinamos y guiamos con seguridad salidas a la naturaleza de uno o varios días, individuales o en grupo, haciendo senderismo, montañismo y escalada en roca",
     "cta_primary_label": "Nuestros Servicios",
-    "cta_secondary_label": "Sobre ShaJa Adventures"
+    "cta_secondary_label": "Sobre Vierszka Adventures"
   },
   "stats": [
     {
@@ -115,10 +115,10 @@
     ]
   },
   "about": {
-    "eyebrow": "Sobre ShaJa Adventures",
+    "eyebrow": "Sobre Vierszka Adventures",
     "headline": "Queremos hacer montañismo divertido y seguro",
     "page_subheadline": "Décadas impresionando nuestros sentidos con las maravillas naturales",
-    "body": "ShaJa Adventures fue fundada en 2025 por un Ingeniero de Software - quien está en proceso de convertirse en guía de montaña - y un grupo de amigos(as) todos amantes de la montaña, quienes creen que sigue siendo posible conmover el alma humana a través de las maravillas que ofrece la madre naturaleza.",
+    "body": "Vierszka Adventures fue fundada en 2025 por un Ingeniero de Software - quien está en proceso de convertirse en guía de montaña - y un grupo de amigos(as) todos amantes de la montaña, quienes creen que sigue siendo posible conmover el alma humana a través de las maravillas que ofrece la madre naturaleza.",
     "mission_headline": "Misión",
     "mission_body_1": "Queremos aprender del mundo y de nosotros mismos mediante la exploración de la montaña, presentando retos de nivel adecuado a cada quién y garantizando la seguridad en todo momento.",
     "mission_body_2": "Preparación, experiencia y confianza son los tres ejes que nos mueven en nuestras aventuras.",
@@ -178,7 +178,7 @@
   "contact": {
     "page_subheadline": "Habla directamente con nuestros(as) guías",
     "intro": "Para cualquier información sobre aventuras existentes, nuevas aventuras o cualquier otra duda que tengas, contáctanos vía telefónica, correo electrónico o rellena el formulario",
-    "email": "preguntas@shaja-adventures.com",
+    "email": "preguntas@vierszka.com",
     "phone": "+34 644 554 028 ",
     "address": "Eugenio Salazar 45, 28002 Madrid",
     "hours": "Lunes–Viernes, 8am–5:30pm ",
@@ -191,11 +191,11 @@
     ]
   },
   "social": {
-    "linkedin": "https://linkedin.com/company/shaja-adventures",
-    "twitter": "https://twitter.com/shaja-adventures"
+    "linkedin": "https://linkedin.com/company/vierszka",
+    "twitter": "https://twitter.com/vierszka"
   },
   "footer": {
     "tagline": "Guiamos exploradores y aventureros a vivir experiencias inolvidables",
-    "copyright": "ShaJa Adventures SC de CV"
+    "copyright": "Vierszka Adventures SC de CV"
   }
 }

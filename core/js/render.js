@@ -119,17 +119,24 @@
     el.querySelector('.stat__label').textContent = item.label;
   });
 
-  // Services — homepage cards (first 3)
-  renderList('services-home-container', 'tpl-service-card', (cfg.services && cfg.services.items || []).slice(0, 3), (el, item, i) => {
-    el.querySelector('.card__icon').textContent = item.icon || '●';
-    el.querySelector('h3').textContent = item.title;
-    el.querySelector('p').textContent  = item.body;
+  // Card count matched to grid columns so no orphan card is left over.
+  // grid-3 (modern) → 3, grid-4 (simplistic) → 4, grid-2-cards (sober) → 4.
+  const _svcContainer = document.getElementById('services-home-container');
+  const _svcCount = _svcContainer && _svcContainer.classList.contains('grid-3') ? 3 : 4;
+  renderList('services-home-container', 'tpl-service-card', (cfg.services && cfg.services.items || []).slice(0, _svcCount), (el, item, i) => {
+    const iconEl = el.querySelector('.card__icon');
+    if (iconEl) iconEl.textContent = item.icon || '●';
+    const h3 = el.querySelector('h3');
+    if (h3) h3.textContent = item.title;
+    const p = el.querySelector('p');
+    if (p) p.textContent = item.body;
     el.classList.add('fade-up-' + (i + 1));
   });
 
   // Services — full detail list
   renderList('services-detail-container', 'tpl-service-detail', cfg.services && cfg.services.items || [], (el, item, i) => {
-    el.querySelector('.service-num').textContent   = String(i + 1).padStart(2, '0');
+    const numEl = el.querySelector('.service-num') || el.querySelector('.service-row__num');
+    if (numEl) numEl.textContent = String(i + 1).padStart(2, '0');
     el.querySelector('h3').textContent             = item.title;
     el.querySelector('.service-body').textContent  = item.body;
     const ul = el.querySelector('.service-features');

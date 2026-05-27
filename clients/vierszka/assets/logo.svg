@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="1024" height="1024" role="img" aria-label="Vierszka mark">
+  
+  
+  
+    <g id="mark">
+      <circle cx="50" cy="50" r="44" stroke="#1a2733" stroke-width="2.5" fill="none"></circle>
+      <line x1="50" y1="6" x2="50" y2="12" stroke="#1a2733" stroke-width="2.5" transform="rotate(0 50 50)"></line><line x1="50" y1="6" x2="50" y2="12" stroke="#1a2733" stroke-width="2.5" transform="rotate(90 50 50)"></line><line x1="50" y1="6" x2="50" y2="12" stroke="#1a2733" stroke-width="2.5" transform="rotate(180 50 50)"></line><line x1="50" y1="6" x2="50" y2="12" stroke="#1a2733" stroke-width="2.5" transform="rotate(270 50 50)"></line>
+      <line x1="50" y1="8" x2="50" y2="11" stroke="#1a2733" stroke-width="1.5" transform="rotate(45 50 50)"></line><line x1="50" y1="8" x2="50" y2="11" stroke="#1a2733" stroke-width="1.5" transform="rotate(135 50 50)"></line><line x1="50" y1="8" x2="50" y2="11" stroke="#1a2733" stroke-width="1.5" transform="rotate(225 50 50)"></line><line x1="50" y1="8" x2="50" y2="11" stroke="#1a2733" stroke-width="1.5" transform="rotate(315 50 50)"></line>
+      <path d="M28 66 L44 38 L58 58 L66 46 L74 66 Z" fill="#1a2733"></path>
+      <path d="M50 18 L54 30 L50 27 L46 30 Z" fill="#4a7c9a"></path>
+      <text class="vk-N" x="50" y="78" text-anchor="middle" font-size="7" fill="#1a2733" letter-spacing="0.2em">N</text>
+    </g>
+</svg>
