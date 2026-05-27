@@ -1,200 +1,201 @@
 {
-  "theme": "modern",
-  "style": "style-3-garden",
-  "demo_mode": false,
+  "theme": "simplistic",
+  "style": "style-9-simplistic",
+  "demo_mode": true,
   "brand": {
-    "name": "Verdant Studio",
-    "logo_text": "Verdant",
-    "logo_accent": " Studio",
-    "tagline": "Design and branding for businesses that care about the world."
+    "name": "ShaJa Adventures",
+    "logo_text": "ShaJa",
+    "logo_accent": "Adventures",
+    "logo_image": "../assets/logo.svg",
+    "tagline": "Explorando el mundo desde 1999"
   },
   "meta": {
-    "site_title": "Verdant Studio — Purposeful Design",
-    "description": "A design studio for sustainable, purpose-led businesses.",
-    "language": "en",
-    "theme_label": "Modern · Garden"
+    "site_title": "ShaJa Adventures",
+    "description": "Aventuras en la montaña: senderismo, montañismo, escalada en roca",
+    "language": "es",
+    "theme_label": "Sober · Industrial Blue"
   },
   "nav": {
-    "cta_label": "Start a Project",
+    "cta_label": "Contáctanos",
     "cta_href": "contact.html"
   },
   "hero": {
-    "eyebrow": "Design with Purpose",
-    "headline": "Beautiful Brands for a Better World",
-    "subheadline": "We work with sustainable and purpose-led businesses to create brands that are as thoughtful as they are beautiful.",
-    "cta_primary_label": "Our Work",
-    "cta_secondary_label": "About Us"
+    "eyebrow": "Exploramos el mundo",
+    "headline": "Guiamos exploradores y aventureros a vivir experiencias inolvidables",
+    "subheadline": "Planeamos, coordinamos y guiamos con seguridad salidas a la naturaleza de uno o varios días, individuales o en grupo, haciendo senderismo, montañismo y escalada en roca",
+    "cta_primary_label": "Nuestros Servicios",
+    "cta_secondary_label": "Sobre ShaJa Adventures"
   },
   "stats": [
     {
-      "number": "8+",
-      "label": "Years of Practice"
+      "number": "20+",
+      "label": "Años subiendo montañas"
     },
     {
-      "number": "120+",
-      "label": "Brands Created"
+      "number": "35+",
+      "label": "Países explorados"
     },
     {
-      "number": "100%",
-      "label": "Independent Studio"
+      "number": "0%",
+      "label": "Rutas Abandonadas"
     },
     {
-      "number": "3",
-      "label": "Design Awards"
+      "number": "+10",
+      "label": "Guías Asociados"
     }
   ],
   "services": {
-    "eyebrow": "What We Create",
-    "headline": "Design Services",
-    "subheadline": "From visual identity to full brand ecosystems.",
-    "page_subheadline": "Creative work grounded in strategy and craft.",
+    "eyebrow": "Servicios",
+    "headline": "Portafolio de Servicios",
+    "subheadline": "Encuentra el tipo de aventura que quieres vivir!",
+    "page_subheadline": "Lo que mejor sabemos hacer...",
     "items": [
       {
-        "icon": "🌿",
-        "title": "Brand Identity",
-        "body": "Logos, colour systems, typography, and the visual language that makes your brand instantly recognisable.",
+        "icon": "🌲",
+        "title": "Senderismo",
+        "body": "Caminar por la Sierra de Guadarrama, conocer el corazón de la Pedriza, subir por los pinares del Valle de Navalmedio",
         "features": [
-          "Logo design",
-          "Colour & typography systems",
-          "Brand guidelines"
+          "Rutas de 1 día de 5-20km",
+          "Para ir en transporte público o privado",
+          "Rutas con nula o poca dificultad técnica"
         ]
       },
       {
-        "icon": "📐",
-        "title": "Web Design",
-        "body": "Thoughtful, accessible websites that tell your story and convert visitors into believers.",
+        "icon": "⛰️",
+        "title": "Montanismo",
+        "body": "Ascensiones estivales e invernales a las montañas de la Sierra de Guadarrama y alrededores",
         "features": [
-          "UX strategy",
-          "Visual design",
-          "Handoff to development"
+          "Rutas de 1-2 días",
+          "Dificultad técnica poca / baja / media",
+          "Facilitamos material necesario"
         ]
       },
       {
-        "icon": "✏️",
-        "title": "Print & Packaging",
-        "body": "From business cards to product packaging — tangible design that leaves a lasting impression.",
+        "icon": "🤸",
+        "title": "Vías Ferratas",
+        "body": "Vámonos a trepar algunas paredes protegidos con equipo previamente instalado para mantenernos seguros mientras disfrutamos los paisajes.",
         "features": [
-          "Product packaging",
-          "Stationery & collateral",
-          "Environmental design"
+          "Garantizamos hermosos paisajes",
+          "Y algo de adrenalina y esfuerzo",
+          "Facilitamos material necesario"
+        ]
+      },
+      {
+        "icon": "🧗🏻",
+        "title": "Escalada en Roca",
+        "body": "¿Vamos a dar unos buenos pegues a la Pedri? ¿A Patones? ¿San Martín de Valdeiglesias?",
+        "features": [
+          "De Top rope o Primero, tú eliges",
+          "Facilitamos material necesario",
+          "Escaladores experimentados"
         ]
       }
     ]
   },
   "process": {
-    "eyebrow": "How We Work",
-    "headline": "Our Creative Process",
+    "eyebrow": "Cómo trabajamos",
+    "headline": "Nuestro Enfoque",
     "steps": [
       {
-        "title": "Discover",
-        "body": "We listen deeply to understand your brand and audience."
+        "title": "Informamos",
+        "body": "Te contamos de qué va la cosa y tú te decides por la aventura que quieras experimentar!"
       },
       {
-        "title": "Define",
-        "body": "We establish the strategic and creative direction."
+        "title": "Planeamos",
+        "body": "Nos encargamos de que la logística, el transporte, el acceso, la ruta, el clima, el equipo de seguridad, los(as) guías, etc., se encuentren en condiciones óptimas previo a la aventura"
       },
       {
-        "title": "Design",
-        "body": "We explore, iterate and refine until the work feels right."
+        "title": "Nos divertimos",
+        "body": "Y nos vamos al jaleo, a divertirnos confiando en nuestro plan, equipo y guías!"
       },
       {
-        "title": "Deliver",
-        "body": "Final files, guidelines and ongoing support."
+        "title": "Mejoramos",
+        "body": "Aprendemos de cada aventura, nos retroalimentamos y mejoramos para que tu próxima experiencia sea buenísima!"
       }
     ]
   },
   "about": {
-    "eyebrow": "About the Studio",
-    "headline": "Design That Does Good",
-    "page_subheadline": "A small studio with a clear point of view.",
-    "body": "Verdant was founded on the belief that design is a powerful force for good.",
-    "mission_headline": "Why We Do This",
-    "mission_body_1": "We started Verdant because purpose-led businesses deserve brands that reflect their ambition.",
-    "mission_body_2": "We're a small, focused studio. We take on fewer clients so we can go deeper with each one.",
-    "mission_emoji": "🌿",
-    "values_headline": "What Guides Us",
-    "team_headline": "The Studio",
-    "team_subheadline": "Small by design. Committed by choice.",
+    "eyebrow": "Sobre ShaJa Adventures",
+    "headline": "Queremos hacer montañismo divertido y seguro",
+    "page_subheadline": "Décadas impresionando nuestros sentidos con las maravillas naturales",
+    "body": "ShaJa Adventures fue fundada en 2025 por un Ingeniero de Software - quien está en proceso de convertirse en guía de montaña - y un grupo de amigos(as) todos amantes de la montaña, quienes creen que sigue siendo posible conmover el alma humana a través de las maravillas que ofrece la madre naturaleza.",
+    "mission_headline": "Misión",
+    "mission_body_1": "Queremos aprender del mundo y de nosotros mismos mediante la exploración de la montaña, presentando retos de nivel adecuado a cada quién y garantizando la seguridad en todo momento.",
+    "mission_body_2": "Preparación, experiencia y confianza son los tres ejes que nos mueven en nuestras aventuras.",
+    "mission_emoji": "⛰️",
+    "values_headline": "Nuestros Principios",
+    "team_headline": "Experiencia",
+    "team_subheadline": "Técnicos deportivos de montaña, senderistas y escaladores con experiencia real.",
     "values": [
       {
-        "icon": "🌍",
-        "title": "Purpose Over Profit",
-        "body": "We work with businesses trying to make things better."
+        "icon": "🔩",
+        "title": "Conocimiento",
+        "body": "Cada decisión, cada aventura, comienza con adquirir conocimiento: lo planeamos, vemos qué hace falta, lo incluimos o lo aprendemos y sabemos que es posible. No vamos a experimentar contigo sobre la ruta."
       },
       {
-        "icon": "✨",
-        "title": "Craft First",
-        "body": "Every curve, every colour, every word is considered."
+        "icon": "📋",
+        "title": "Capacitación y Estándares",
+        "body": "Todo nuestro equipo humano se encuentra certificado como Técnico Deportivo de Montaña. Todo nuestro material de aventuras está homologado a estándares europeos o internacionales."
       },
       {
-        "icon": "💬",
-        "title": "Open Collaboration",
-        "body": "The best work comes from genuine partnership."
+        "icon": "🤝",
+        "title": "Confianza",
+        "body": "Quienes nos conocen han repetido aventuras con nosotros."
       }
     ],
     "team": [
       {
-        "name": "Maya Chen",
-        "role": "Creative Director",
-        "emoji": "👩‍🎨"
-      },
-      {
-        "name": "Leo Barros",
-        "role": "Brand Designer",
+        "name": "Javier Caballero",
+        "role": "IT Expert",
         "emoji": "👨‍💻"
       },
       {
-        "name": "Priya Nair",
-        "role": "Strategy Lead",
-        "emoji": "👩‍💼"
-      },
-      {
-        "name": "Sam Okafor",
-        "role": "Web Designer",
-        "emoji": "🧑‍🎨"
+        "name": "Sasha Yang",
+        "role": "Guía de montaña",
+        "emoji": "👩‍🔧"
       }
     ]
   },
   "testimonials": [
     {
-      "text": "Verdant took the time to really understand what we stood for before putting pen to paper.",
-      "author": "Laura Moss",
-      "role": "Founder, Rootwork Botanicals",
-      "emoji": "🌱"
+      "text": "\"Siempre me había llamado la atención hacer una vía ferrata, pero me daba un poco de respeto la altura. ¡Menos mal que elegí a este equipo! Desde el minuto uno, la guía nos transmitió una confianza increíble, explicando cada detalle del material y de la ruta. La experiencia en las grapas y los puentes colgantes fue una pasada absoluta, con unas vistas que te quitan el aliento. Me sentí súper segura en todo momento y disfruté como una niña pequeña. Si buscas aventura con profesionales de verdad, no te lo pienses. ¡Repetiré seguro!\"",
+      "author": "Laura G.",
+      "role": "34 años",
+      "emoji": "🌎"
     },
     {
-      "text": "Working with Verdant felt more like a creative partnership than hiring an agency.",
-      "author": "Tom & Ellie Graves",
-      "role": "Co-founders, Hearthside Foods",
-      "emoji": "👨‍👩‍👧"
+      "text": "\"¡Brutal! Fuimos un grupo de amigos a pasar el fin de semana y la ruta que nos prepararon entre montañas y bosques fue de lo mejor que he hecho nunca. No fue la típica caminata aburrida; los coordinadores le metieron un rollazo increíble, enseñándonos zonas escondidas, cruzando ríos y dándonos caña con un ritmo perfecto. Nos reímos muchísimo y desconectamos del todo de las pantallas y la ciudad. Si quieres perderte en la naturaleza y pasártelo jodidamente bien, este es tu sitio. ¡Un diez de fin de semana!\"",
+      "author": "Mateo S.",
+      "role": "22 años",
+      "emoji": "😜"
     }
   ],
   "cta": {
-    "eyebrow": "Let's Create Together",
-    "headline": "Got a Project in Mind?",
-    "subheadline": "We'd love to hear about your brand."
+    "eyebrow": "Habla con uno de nosotros",
+    "headline": "¿Tienes alguna aventura específica en mente?",
+    "subheadline": "Nuestros(as) guías estan disponibles para ti sin compromiso alguno ;)"
   },
   "contact": {
-    "page_subheadline": "Tell us about your project.",
-    "intro": "We work with a small number of clients at a time to ensure every project gets the attention it deserves.",
-    "email": "hello@verdantstudio.co",
-    "phone": "+44 117 000 4567",
-    "address": "The Tobacco Factory, Bristol BS3 1TF",
-    "hours": "Mon–Thu, 9am–5pm GMT",
+    "page_subheadline": "Habla directamente con nuestros(as) guías",
+    "intro": "Para cualquier información sobre aventuras existentes, nuevas aventuras o cualquier otra duda que tengas, contáctanos vía telefónica, correo electrónico o rellena el formulario",
+    "email": "preguntas@shaja-adventures.com",
+    "phone": "+34 644 554 028 ",
+    "address": "Eugenio Salazar 45, 28002 Madrid",
+    "hours": "Lunes–Viernes, 8am–5:30pm ",
     "form_service_options": [
-      "Brand Identity",
-      "Web Design",
-      "Print & Packaging",
-      "Full Brand Project",
-      "Not Sure Yet"
+      "Información General",
+      "Sugerencias",
+      "Quejas",
+      "Aventuras Nuevas",
+      "Aventuras Existentes"
     ]
   },
   "social": {
-    "linkedin": "https://linkedin.com/company/verdant-studio",
-    "twitter": "https://instagram.com/verdantstudio"
+    "linkedin": "https://linkedin.com/company/shaja-adventures",
+    "twitter": "https://twitter.com/shaja-adventures"
   },
   "footer": {
-    "tagline": "Design for businesses that care about the world.",
-    "copyright": "Verdant Studio"
+    "tagline": "Guiamos exploradores y aventureros a vivir experiencias inolvidables",
+    "copyright": "ShaJa Adventures SC de CV"
   }
 }
