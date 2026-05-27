@@ -46,39 +46,61 @@ const a = cfg.about
     </div>
   </div>
 
-  {theme === 'sober' && <>
-    <section class="section section--alt">
-      <div class="container">
-        <SoberAboutMission {cfg} />
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <SoberValues {cfg} {t} />
-      </div>
-    </section>
-    <section class="section section--alt">
-      <div class="container">
-        <SoberTeam {cfg} {t} />
-      </div>
-    </section>
-    <Stats {cfg} />
-    <SoberCTA {cfg} {t} {lang} />
-  </>}
-
-  {theme === 'modern' && <>
-    <ModernAboutMission {cfg} />
-    <ModernValues {cfg} {t} />
-    <ModernTeam {cfg} {t} />
-    <Stats {cfg} />
-    <ModernCTA {cfg} {t} {lang} />
-  </>}
-
-  {theme === 'simplistic' && <>
-    <SimplisticAboutMission {cfg} />
-    <Stats {cfg} />
-    <SimplisticValues {cfg} />
-    <SimplisticTeam {cfg} {t} />
-    <SimplisticCTA {cfg} {t} {lang} />
+  {cfg.demo_mode ? <>
+    <div data-demo-theme="sober" class:list={[{ active: cfg.theme === 'sober' }]}>
+      <section class="section section--alt">
+        <div class="container"><SoberAboutMission {cfg} /></div>
+      </section>
+      <section class="section">
+        <div class="container"><SoberValues {cfg} {t} /></div>
+      </section>
+      <section class="section section--alt">
+        <div class="container"><SoberTeam {cfg} {t} /></div>
+      </section>
+      <Stats {cfg} />
+      <SoberCTA {cfg} {t} {lang} />
+    </div>
+    <div data-demo-theme="modern" class:list={[{ active: cfg.theme === 'modern' }]}>
+      <ModernAboutMission {cfg} />
+      <ModernValues {cfg} {t} />
+      <ModernTeam {cfg} {t} />
+      <Stats {cfg} />
+      <ModernCTA {cfg} {t} {lang} />
+    </div>
+    <div data-demo-theme="simplistic" class:list={[{ active: cfg.theme === 'simplistic' }]}>
+      <SimplisticAboutMission {cfg} />
+      <Stats {cfg} />
+      <SimplisticValues {cfg} />
+      <SimplisticTeam {cfg} {t} />
+      <SimplisticCTA {cfg} {t} {lang} />
+    </div>
+  </> : <>
+    {theme === 'sober' && <>
+      <section class="section section--alt">
+        <div class="container"><SoberAboutMission {cfg} /></div>
+      </section>
+      <section class="section">
+        <div class="container"><SoberValues {cfg} {t} /></div>
+      </section>
+      <section class="section section--alt">
+        <div class="container"><SoberTeam {cfg} {t} /></div>
+      </section>
+      <Stats {cfg} />
+      <SoberCTA {cfg} {t} {lang} />
+    </>}
+    {theme === 'modern' && <>
+      <ModernAboutMission {cfg} />
+      <ModernValues {cfg} {t} />
+      <ModernTeam {cfg} {t} />
+      <Stats {cfg} />
+      <ModernCTA {cfg} {t} {lang} />
+    </>}
+    {theme === 'simplistic' && <>
+      <SimplisticAboutMission {cfg} />
+      <Stats {cfg} />
+      <SimplisticValues {cfg} />
+      <SimplisticTeam {cfg} {t} />
+      <SimplisticCTA {cfg} {t} {lang} />
+    </>}
   </>}
 </BasePage>
