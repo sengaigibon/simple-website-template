@@ -122,7 +122,7 @@ This is the end-to-end process after a client has seen the showroom and chosen a
    - `theme` and `style` to the client's chosen combination
    - `brand.name`, `brand.logo_text`, `brand.logo_accent`
    - `demo_mode: true` (keeps the theme switcher visible during review)
-4. Create `clients/vierszka/assets/` and drop in the client's logo file (e.g. `logo.png`)
+4. Create `clients/vierszka/assets/` and drop in the client's logo file (`logo.png` or `logo.svg`)
 5. Open `keystatic.config.ts` and add a new singleton block inside `singletons: { ... }`:
    ```ts
    'vierszka': singleton({
