@@ -85,12 +85,17 @@
     });
   }
 
-  // ── Switch theme — not supported at runtime in Astro (build-time) ────
+  // ── Switch theme — swaps to best style for the new theme and rebuilds panel ──
   function switchTheme(newThemeId) {
     if (!THEMES[newThemeId]) return;
     saveTheme(newThemeId);
     const bestStyle = getStyleId(newThemeId);
+    // Rebuild the panel so style list and active states reflect the new theme
+    const panel = document.getElementById('ts-panel');
+    if (panel) panel.outerHTML = buildPanel(newThemeId);
     applyStyle(bestStyle);
+    // Re-wire theme buttons after DOM replacement
+    wireThemeButtons();
   }
 
   // ── Build the switcher DOM ────────────────────────────────
@@ -269,25 +274,25 @@
     }
   });
 
-  // ── Wire up theme buttons ─────────────────────────────────
-  wrapper.addEventListener('click', e => {
-    const themeBtn = e.target.closest('.ts-theme-btn');
-    if (themeBtn) {
-      const newThemeId = themeBtn.dataset.themeId;
-      if (newThemeId === getThemeId()) return; // already active
-      // Show loading state
-      themeBtn.classList.add('ts-theme-btn--loading');
-      themeBtn.textContent = '...';
-      switchTheme(newThemeId);
-      return;
-    }
-
-    const styleBtn = e.target.closest('.ts-style-btn');
-    if (styleBtn) {
-      applyStyle(styleBtn.dataset.styleId);
-      document.getElementById('ts-panel').classList.remove('open');
-    }
-  });
+  // ── Wire up theme and style buttons ──────────────────────
+  function wireThemeButtons() {
+    wrapper.addEventListener('click', e => {
+      const themeBtn = e.target.closest('.ts-theme-btn');
+      if (themeBtn) {
+        const newThemeId = themeBtn.dataset.themeId;
+        if (newThemeId === getThemeId()) return;
+        switchTheme(newThemeId);
+        document.getElementById('ts-panel').classList.add('open');
+        return;
+      }
+      const styleBtn = e.target.closest('.ts-style-btn');
+      if (styleBtn) {
+        applyStyle(styleBtn.dataset.styleId);
+        document.getElementById('ts-panel').classList.remove('open');
+      }
+    });
+  }
+  wireThemeButtons();
 
   // ── Apply the active style on load ───────────────────────
   applyStyle(activeStyleId);
