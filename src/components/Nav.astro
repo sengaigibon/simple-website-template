@@ -7,6 +7,13 @@ interface Props {
 }
 const { cfg, t, lang, page } = Astro.props
 const base = `/${lang}`
+
+const LANGS = [
+  { code: 'es', label: 'ES' },
+  { code: 'en', label: 'EN' },
+  { code: 'zh', label: '中文' },
+]
+const pageSlug = page === 'index' ? '' : page
 ---
 
 <nav class="nav">
@@ -21,6 +28,18 @@ const base = `/${lang}`
       <li><a href={`${base}/services`}class:list={[{active: page==='services'}]}>{t.nav.services}</a></li>
       <li><a href={`${base}/contact`} class:list={[{active: page==='contact'}]}>{t.nav.contact}</a></li>
     </ul>
+    <div class="nav__lang">
+      <button class="nav__lang-toggle" aria-haspopup="true">
+        {LANGS.find(l => l.code === lang)?.label ?? 'ES'} <span class="nav__lang-arrow">▾</span>
+      </button>
+      <ul class="nav__lang-menu" role="menu">
+        {LANGS.filter(l => l.code !== lang).map(l => (
+          <li role="none">
+            <a href={`/${l.code}/${pageSlug}`} role="menuitem">{l.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
     <a class:list={['btn', 'nav__cta', cfg.theme === 'modern' ? 'btn-accent' : 'btn-primary']} href={`${base}/contact`}>{cfg.nav.cta_label}</a>
     <button class="nav__burger" aria-label={t.nav.menu_aria}>
       <span></span><span></span><span></span>
@@ -28,8 +47,98 @@ const base = `/${lang}`
   </div>
 </nav>
 <div class="nav__mobile">
-  <a href={`${base}/`}>{t.nav.home}</a>
-  <a href={`${base}/about`}>{t.nav.about}</a>
-  <a href={`${base}/services`}>{t.nav.services}</a>
-  <a href={`${base}/contact`}>{t.nav.contact}</a>
+  <a href={`/${lang}/`}>{t.nav.home}</a>
+  <a href={`/${lang}/about`}>{t.nav.about}</a>
+  <a href={`/${lang}/services`}>{t.nav.services}</a>
+  <a href={`/${lang}/contact`}>{t.nav.contact}</a>
+  <div class="nav__mobile-lang">
+    {LANGS.map(l => (
+      <a href={`/${l.code}/${pageSlug}`} class:list={[{ active: l.code === lang }]}>
+        {l.label}
+      </a>
+    ))}
+  </div>
 </div>
+
+<style>
+  .nav__lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav__lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 4px 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    white-space: nowrap;
+    color: inherit;
+    opacity: 0.75;
+    transition: opacity 0.15s;
+  }
+  .nav__lang-toggle:hover { opacity: 1; }
+  .nav__lang-arrow { font-size: 0.6rem; opacity: 0.7; }
+
+  .nav__lang-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    list-style: none;
+    padding: 8px 0 0;
+    min-width: 70px;
+    z-index: 200;
+  }
+  .nav__lang-menu::before {
+    content: '';
+    display: block;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    position: absolute;
+    inset: 8px 0 0;
+    z-index: -1;
+  }
+  .nav__lang:hover .nav__lang-menu,
+  .nav__lang-toggle:focus + .nav__lang-menu { display: block; }
+
+  .nav__lang-menu li a {
+    display: block;
+    padding: 6px 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    color: #333;
+    transition: background 0.12s;
+    margin: 0 4px;
+  }
+  .nav__lang-menu li:last-child a { margin-bottom: 4px; }
+  .nav__lang-menu li a:hover { background: #f0f0f0; }
+
+  .nav__mobile-lang {
+    display: flex;
+    gap: 8px;
+    padding: 10px 0 4px;
+    border-top: 1px solid rgba(128,128,128,0.2);
+    margin-top: 8px;
+  }
+  .nav__mobile-lang a {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    opacity: 0.5;
+    padding: 3px 6px;
+    border-radius: 4px;
+  }
+  .nav__mobile-lang a:hover { opacity: 0.85; }
+  .nav__mobile-lang a.active { opacity: 1; font-weight: 700; }
+</style>
