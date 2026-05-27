@@ -43,7 +43,7 @@ const s = cfg.services
   </div>
 
   {cfg.demo_mode ? <>
-    <div data-demo-theme="sober" class:list={[{ active: cfg.theme === 'sober' }]}>
+    <div data-demo-theme="sober" style={cfg.theme !== 'sober' ? 'display:none' : ''}>
       <section class="section">
         <div class="container">
           <div class="sidebar-section">
@@ -64,7 +64,7 @@ const s = cfg.services
         secondaryHref={`/${lang}/about`}
       />
     </div>
-    <div data-demo-theme="modern" class:list={[{ active: cfg.theme === 'modern' }]}>
+    <div data-demo-theme="modern" style={cfg.theme !== 'modern' ? 'display:none' : ''}>
       <section class="section">
         <div class="container">
           <ModernServicesDetail {cfg} />
@@ -76,7 +76,7 @@ const s = cfg.services
         secondaryHref={`/${lang}/about`}
       />
     </div>
-    <div data-demo-theme="simplistic" class:list={[{ active: cfg.theme === 'simplistic' }]}>
+    <div data-demo-theme="simplistic" style={cfg.theme !== 'simplistic' ? 'display:none' : ''}>
       <SimplisticServicesHome {cfg} {t} {lang} />
       <section class="section">
         <div class="container">

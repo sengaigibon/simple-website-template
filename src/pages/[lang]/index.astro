@@ -36,7 +36,7 @@ const theme = cfg.theme
 
 <BasePage {cfg} {t} {lang} page="index">
   {cfg.demo_mode ? <>
-    <div data-demo-theme="sober" class:list={[{ active: cfg.theme === 'sober' }]}>
+    <div data-demo-theme="sober" style={cfg.theme !== 'sober' ? 'display:none' : ''}>
       <SoberHero {cfg} {lang} />
       <Stats {cfg} />
       <SoberServicesHome {cfg} {t} {lang} />
@@ -47,7 +47,7 @@ const theme = cfg.theme
         secondaryHref={`/${lang}/services`}
       />
     </div>
-    <div data-demo-theme="modern" class:list={[{ active: cfg.theme === 'modern' }]}>
+    <div data-demo-theme="modern" style={cfg.theme !== 'modern' ? 'display:none' : ''}>
       <ModernHero {cfg} {t} {lang} />
       <Stats {cfg} />
       <ModernServicesHome {cfg} {t} {lang} />
@@ -57,7 +57,7 @@ const theme = cfg.theme
         secondaryHref={`/${lang}/services`}
       />
     </div>
-    <div data-demo-theme="simplistic" class:list={[{ active: cfg.theme === 'simplistic' }]}>
+    <div data-demo-theme="simplistic" style={cfg.theme !== 'simplistic' ? 'display:none' : ''}>
       <SimplisticHero {cfg} {t} {lang} />
       <Stats {cfg} />
       <SimplisticServicesHome {cfg} {t} {lang} />
