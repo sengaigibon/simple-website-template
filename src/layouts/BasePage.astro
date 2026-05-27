@@ -20,12 +20,18 @@ const pageTitle = title ?? cfg.meta.site_title
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{pageTitle}</title>
   <meta name="description" content={cfg.meta.description} />
-  <link rel="stylesheet" href={`/styles/${cfg.style}.css`} />
+  <link id="theme-stylesheet" rel="stylesheet" href={`/styles/${cfg.style}.css`} />
 </head>
 <body>
   <Nav {cfg} {t} {lang} {page} />
   <slot />
   <Footer {cfg} {t} {lang} />
   <script src="/js/main.js" is:inline></script>
+  {cfg.demo_mode && (
+    <script define:vars={{ demoCfg: { demo_mode: true, theme: cfg.theme, style: cfg.style } }} is:inline>
+      window.__DEMO_CFG__ = demoCfg;
+    </script>
+    <script src="/js/theme-switcher.js" is:inline></script>
+  )}
 </body>
 </html>
