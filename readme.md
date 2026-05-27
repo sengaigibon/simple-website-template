@@ -73,7 +73,7 @@ This installs Astro and Keystatic. Only needed once after cloning.
 npm run dev
 ```
 
-Open http://localhost:4321/keystatic — you'll see a **Clients** list with all existing clients. Click any client to edit its fields through a form. Save writes directly to the `client.config.json` file on disk. Commit and push as normal to trigger a Cloudflare redeploy.
+Open http://localhost:4321/keystatic — you'll see a **Clients** list with all existing clients. Click any client to edit its fields through a form. Save writes directly to the `client.config.json` file on disk. Commit and push to `master` as normal to trigger a Cloudflare redeploy.
 
 ## Adding a new client via Keystatic
 
@@ -114,7 +114,7 @@ The `keystatic.config.ts` is where you add new fields if the `client.config.json
 
 This is the end-to-end process after a client has seen the showroom and chosen a theme and style.
 
-## Step 1 — Create the client folder
+## Step 1 — Create the client folder and register it in Keystatic
 
 1. Create `clients/<client-slug>/` (e.g. `clients/vierszka/`)
 2. Copy `client.config.json` from the closest existing client as a starting point
@@ -122,8 +122,19 @@ This is the end-to-end process after a client has seen the showroom and chosen a
    - `theme` and `style` to the client's chosen combination
    - `brand.name`, `brand.logo_text`, `brand.logo_accent`
    - `demo_mode: true` (keeps the theme switcher visible during review)
-4. Create `assets/` inside the client folder and drop in the client's logo file
-5. Commit and push to `master`
+4. Create `clients/vierszka/assets/` and drop in the client's logo file (e.g. `logo.png`)
+5. Open `keystatic.config.ts` and add a new singleton block inside `singletons: { ... }`:
+   ```ts
+   'vierszka': singleton({
+     label: 'Vierszka (vierszka)',
+     path: 'clients/vierszka/client.config',
+     format: { data: 'json' },
+     entryLayout: 'form',
+     schema: clientSchema,
+   }),
+   ```
+6. Restart `npm run dev` — the new client appears in the Keystatic sidebar
+7. Commit and push to `master`
 
 ## Step 2 — Test locally
 
@@ -161,7 +172,7 @@ Work with the client (or gather content from them) to complete all sections of t
 - Contact details (email, phone, address, hours)
 - Social links, footer tagline
 
-Use **Keystatic** (see section below) to edit content — each save commits to the repo, which triggers an automatic Cloudflare redeploy.
+Use **Keystatic** (`npm run dev` → http://localhost:4321/keystatic) to edit content through a form. Each save writes directly to the `client.config.json` file on disk. Once done, commit and push to `master` to trigger the Cloudflare redeploy.
 
 ## Step 5 — Client review
 
