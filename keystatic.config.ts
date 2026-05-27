@@ -225,25 +225,25 @@ export default config({
   // One singleton per client — each reads/writes its client.config.json directly.
   // To add a new client: copy a block, update the key, label, and path, then restart npm run dev.
   singletons: {
-    'client-1': singleton({
-      label: 'ShaJa Digital (client-1)',
-      path: 'clients/client-1/client.config',
+    'shaja-adventures': singleton({
+      label: 'ShaJa Adventures (shaja-adventures)',
+      path: 'clients/shaja-adventures/client.config',
       format: { data: 'json' },
       entryLayout: 'form',
       schema: clientSchema,
     }),
 
-    'client-2': singleton({
-      label: 'Verdant Studio (client-2)',
-      path: 'clients/client-2/client.config',
+    'showroom': singleton({
+      label: 'Showroom Website (showroom)',
+      path: 'clients/showroom/client.config',
       format: { data: 'json' },
       entryLayout: 'form',
       schema: clientSchema,
     }),
 
-    'vierszka': singleton({
-      label: 'Vierszka Adventures (vierszka)',
-      path: 'clients/vierszka/client.config',
+    'vierszka-adventures': singleton({
+      label: 'Vierszka Adventures (vierszka-adventures)',
+      path: 'clients/vierszka-adventures/client.config',
       format: { data: 'json' },
       entryLayout: 'form',
       schema: clientSchema,
