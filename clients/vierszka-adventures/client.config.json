@@ -13,6 +13,7 @@
     "linkedin": "https://linkedin.com/company/vierszka",
     "twitter": "https://twitter.com/vierszka"
   },
+  "languages": ["es", "en"],
   "es": {
     "meta": {
       "site_title": "Vierszka",
