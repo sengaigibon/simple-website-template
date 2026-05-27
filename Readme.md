@@ -164,7 +164,7 @@ Output: `/es/`, `/en/`, `/zh/` — all pre-rendered with real content, no JS.
 1. **Account Home → Add → Pages → Import an existing Git repository**
 2. Select this repository → Begin setup
 3. Configure:
-   - **Build command:** `CLIENT_ID=vierszka npm run build`
+   - **Build command:** `npm run build`
    - **Build output directory:** `dist`
 4. Under **Environment variables**, add:
    - `CLIENT_ID` = `vierszka` (or whichever client slug)
