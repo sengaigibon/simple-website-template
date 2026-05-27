@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 export function loadClientConfig(lang: string = 'es') {
-  const clientId = import.meta.env.CLIENT_ID || 'client-1'
+  const clientId = import.meta.env.CLIENT_ID || 'showroom'
   const configPath = path.join(process.cwd(), 'clients', clientId, 'client.config.json')
   const raw = JSON.parse(fs.readFileSync(configPath, 'utf-8'))
 
