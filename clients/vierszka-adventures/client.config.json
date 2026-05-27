@@ -21,7 +21,7 @@
     },
     "nav": {
       "cta_label": "Contáctanos",
-      "cta_href": "contact.html"
+      "cta_href": "contact"
     },
     "hero": {
       "eyebrow": "Exploramos el mundo",
@@ -154,9 +154,9 @@
           "emoji": "👨‍💻"
         },
         {
-          "name": "Sasha Yang",
+          "name": "Agnieszka Kruszynska-Ziaja",
           "role": "Guía de montaña",
-          "emoji": "👩‍🔧"
+          "emoji": "👩🏻‍🏫"
         }
       ]
     },
@@ -201,136 +201,136 @@
   },
   "en": {
     "meta": {
-      "site_title": "Vierszka",
+      "site_title": "Vierszka Adventures",
       "description": "Mountain adventures: hiking, mountaineering and rock climbing",
       "theme_label": "Sober · Corporate Red"
     },
     "nav": {
-      "cta_label": "Contáctanos",
-      "cta_href": "contact.html"
+      "cta_label": "Contact Us",
+      "cta_href": "contact"
     },
     "hero": {
-      "eyebrow": "Exploramos el mundo",
-      "headline": "Guiamos exploradores y aventureros a vivir experiencias inolvidables",
-      "subheadline": "Planeamos, coordinamos y guiamos con seguridad salidas a la naturaleza de uno o varios días, individuales o en grupo, haciendo senderismo, montañismo y escalada en roca",
-      "cta_primary_label": "Nuestros Servicios",
-      "cta_secondary_label": "Sobre Vierszka Adventures"
+      "eyebrow": "We explore the world",
+      "headline": "We guide explorers and adventurers to live unforgettable experiences",
+      "subheadline": "We plan, coordinate and safely guide single or multi-day nature outings, individually or in groups, hiking, mountaineering and rock climbing",
+      "cta_primary_label": "Our Services",
+      "cta_secondary_label": "About Vierszka Adventures"
     },
     "stats": [
       {
         "number": "20+",
-        "label": "Años subiendo montañas"
+        "label": "Years in the mountains"
       },
       {
         "number": "35+",
-        "label": "Países explorados"
+        "label": "Countries explored"
       },
       {
         "number": "0%",
-        "label": "Rutas Abandonadas"
+        "label": "Abandoned routes"
       },
       {
         "number": "+10",
-        "label": "Guías Asociados"
+        "label": "Associated guides"
       }
     ],
     "services": {
-      "eyebrow": "Servicios",
-      "headline": "Portafolio de Servicios",
-      "subheadline": "Encuentra el tipo de aventura que quieres vivir!",
-      "page_subheadline": "Lo que mejor sabemos hacer...",
+      "eyebrow": "Services",
+      "headline": "Service Portfolio",
+      "subheadline": "Find the type of adventure you want to experience!",
+      "page_subheadline": "What we do best...",
       "items": [
         {
           "icon": "🌲",
-          "title": "Senderismo",
-          "body": "Caminar por la Sierra de Guadarrama, conocer el corazón de la Pedriza, subir por los pinares del Valle de Navalmedio",
+          "title": "Hiking",
+          "body": "Walk through the Sierra de Guadarrama, explore the heart of La Pedriza, climb through the pine forests of Navalmedio Valley",
           "features": [
-            "Rutas de 1 día de 5-20km",
-            "Para ir en transporte público o privado",
-            "Rutas con nula o poca dificultad técnica"
+            "1-day routes of 5-20km",
+            "Accessible by public or private transport",
+            "Routes with little or no technical difficulty"
           ]
         },
         {
           "icon": "⛰️",
-          "title": "Montanismo",
-          "body": "Ascensiones estivales e invernales a las montañas de la Sierra de Guadarrama y alrededores",
+          "title": "Mountaineering",
+          "body": "Summer and winter ascents in the Sierra de Guadarrama mountains and surroundings",
           "features": [
-            "Rutas de 1-2 días",
-            "Dificultad técnica poca / baja / media",
-            "Facilitamos material necesario"
+            "1-2 day routes",
+            "Low to medium technical difficulty",
+            "We provide necessary equipment"
           ]
         },
         {
           "icon": "🤸",
-          "title": "Vías Ferratas",
-          "body": "Vámonos a trepar algunas paredes protegidos con equipo previamente instalado para mantenernos seguros mientras disfrutamos los paisajes.",
+          "title": "Via Ferratas",
+          "body": "Let's climb some walls protected with pre-installed equipment to keep us safe while enjoying the scenery.",
           "features": [
-            "Garantizamos hermosos paisajes",
-            "Y algo de adrenalina y esfuerzo",
-            "Facilitamos material necesario"
+            "Breathtaking landscapes guaranteed",
+            "Some adrenaline and effort required",
+            "We provide necessary equipment"
           ]
         },
         {
           "icon": "🧗🏻",
-          "title": "Escalada en Roca",
-          "body": "¿Vamos a dar unos buenos pegues a la Pedri? ¿A Patones? ¿San Martín de Valdeiglesias?",
+          "title": "Rock Climbing",
+          "body": "Ready to tackle La Pedriza? Patones? San Martín de Valdeiglesias?",
           "features": [
-            "De Top rope o Primero, tú eliges",
-            "Facilitamos material necesario",
-            "Escaladores experimentados"
+            "Top rope or lead, your choice",
+            "We provide necessary equipment",
+            "Experienced climbers"
           ]
         }
       ]
     },
     "process": {
-      "eyebrow": "Cómo trabajamos",
-      "headline": "Nuestro Enfoque",
+      "eyebrow": "How we work",
+      "headline": "Our Approach",
       "steps": [
         {
-          "title": "Informamos",
-          "body": "Te contamos de qué va la cosa y tú te decides por la aventura que quieras experimentar!"
+          "title": "We inform",
+          "body": "We tell you what it's all about and you choose the adventure you want to experience!"
         },
         {
-          "title": "Planeamos",
-          "body": "Nos encargamos de que la logística, el transporte, el acceso, la ruta, el clima, el equipo de seguridad, los(as) guías, etc., se encuentren en condiciones óptimas previo a la aventura"
+          "title": "We plan",
+          "body": "We take care of logistics, transport, access, route, weather, safety equipment, guides, etc., ensuring everything is in optimal condition before the adventure"
         },
         {
-          "title": "Nos divertimos",
-          "body": "Y nos vamos al jaleo, a divertirnos confiando en nuestro plan, equipo y guías!"
+          "title": "We have fun",
+          "body": "And off we go, trusting our plan, equipment and guides!"
         },
         {
-          "title": "Mejoramos",
-          "body": "Aprendemos de cada aventura, nos retroalimentamos y mejoramos para que tu próxima experiencia sea buenísima!"
+          "title": "We improve",
+          "body": "We learn from every adventure, gather feedback and improve so your next experience is even better!"
         }
       ]
     },
     "about": {
-      "eyebrow": "Sobre Vierszka Adventures",
-      "headline": "Queremos hacer montañismo divertido y seguro",
-      "page_subheadline": "Décadas impresionando nuestros sentidos con las maravillas naturales",
-      "body": "Vierszka Adventures fue fundada en 2025 por un Ingeniero de Software - quien está en proceso de convertirse en guía de montaña - y un grupo de amigos(as) todos amantes de la montaña, quienes creen que sigue siendo posible conmover el alma humana a través de las maravillas que ofrece la madre naturaleza.",
-      "mission_headline": "Misión",
-      "mission_body_1": "Queremos aprender del mundo y de nosotros mismos mediante la exploración de la montaña, presentando retos de nivel adecuado a cada quién y garantizando la seguridad en todo momento.",
-      "mission_body_2": "Preparación, experiencia y confianza son los tres ejes que nos mueven en nuestras aventuras.",
+      "eyebrow": "About Vierszka Adventures",
+      "headline": "We want to make mountaineering fun and safe",
+      "page_subheadline": "Decades impressing our senses with nature's wonders",
+      "body": "Vierszka Adventures was founded in 2025 by a Software Engineer — who is becoming a mountain guide — and a group of friends, all mountain lovers, who believe it is still possible to move the human soul through the wonders of nature.",
+      "mission_headline": "Mission",
+      "mission_body_1": "We want to learn about the world and ourselves through mountain exploration, presenting challenges suited to each person and ensuring safety at all times.",
+      "mission_body_2": "Preparation, experience and trust are the three pillars that drive us in our adventures.",
       "mission_emoji": "⛰️",
-      "values_headline": "Nuestros Principios",
-      "team_headline": "Experiencia",
-      "team_subheadline": "Técnicos deportivos de montaña, senderistas y escaladores con experiencia real.",
+      "values_headline": "Our Principles",
+      "team_headline": "Experience",
+      "team_subheadline": "Mountain sports technicians, hikers and climbers with real experience.",
       "values": [
         {
           "icon": "🔩",
-          "title": "Conocimiento",
-          "body": "Cada decisión, cada aventura, comienza con adquirir conocimiento: lo planeamos, vemos qué hace falta, lo incluimos o lo aprendemos y sabemos que es posible. No vamos a experimentar contigo sobre la ruta."
+          "title": "Knowledge",
+          "body": "Every decision, every adventure, starts with acquiring knowledge: we plan, identify what's needed, include it or learn it and know it's achievable. We won't experiment with you on the route."
         },
         {
           "icon": "📋",
-          "title": "Capacitación y Estándares",
-          "body": "Todo nuestro equipo humano se encuentra certificado como Técnico Deportivo de Montaña. Todo nuestro material de aventuras está homologado a estándares europeos o internacionales."
+          "title": "Training & Standards",
+          "body": "All our human team is certified as Mountain Sports Technicians. All our adventure equipment meets European or international standards."
         },
         {
           "icon": "🤝",
-          "title": "Confianza",
-          "body": "Quienes nos conocen han repetido aventuras con nosotros."
+          "title": "Trust",
+          "body": "Those who know us have come back for more adventures with us."
         }
       ],
       "team": [
@@ -340,234 +340,234 @@
           "emoji": "👨‍💻"
         },
         {
-          "name": "Sasha Yang",
-          "role": "Guía de montaña",
-          "emoji": "👩‍🔧"
+          "name": "Agnieszka Kruszynska-Ziaja",
+          "role": "Mountain Guide",
+          "emoji": "👩🏻‍🏫"
         }
       ]
     },
     "testimonials": [
       {
-        "text": "\"Siempre me había llamado la atención hacer una vía ferrata, pero me daba un poco de respeto la altura. ¡Menos mal que elegí a este equipo! Desde el minuto uno, la guía nos transmitió una confianza increíble, explicando cada detalle del material y de la ruta. La experiencia en las grapas y los puentes colgantes fue una pasada absoluta, con unas vistas que te quitan el aliento. Me sentí súper segura en todo momento y disfruté como una niña pequeña. Si buscas aventura con profesionales de verdad, no te lo pienses. ¡Repetiré seguro!\"",
+        "text": "\"I had always been curious about via ferratas, but heights made me a bit nervous. Thank goodness I chose this team! From minute one, the guide gave us incredible confidence, explaining every detail of the equipment and route. The experience on the rungs and suspension bridges was absolutely incredible, with breathtaking views. I felt completely safe and enjoyed it like a child. If you're looking for adventure with true professionals, don't think twice. I'll definitely be back!\"",
         "author": "Laura G.",
-        "role": "34 años",
+        "role": "34 years old",
         "emoji": "🌎"
       },
       {
-        "text": "\"¡Brutal! Fuimos un grupo de amigos a pasar el fin de semana y la ruta que nos prepararon entre montañas y bosques fue de lo mejor que he hecho nunca. No fue la típica caminata aburrida; los coordinadores le metieron un rollazo increíble, enseñándonos zonas escondidas, cruzando ríos y dándonos caña con un ritmo perfecto. Nos reímos muchísimo y desconectamos del todo de las pantallas y la ciudad. Si quieres perderte en la naturaleza y pasártelo jodidamente bien, este es tu sitio. ¡Un diez de fin de semana!\"",
+        "text": "\"Brilliant! A group of friends went for the weekend and the route they planned through mountains and forests was one of the best things I've ever done. It wasn't the typical boring hike; the coordinators brought incredible energy, showing us hidden areas, crossing rivers and keeping a perfect pace. We laughed so much and completely disconnected from screens and the city. If you want to get lost in nature and have a genuinely great time, this is your place. A perfect weekend!\"",
         "author": "Mateo S.",
-        "role": "22 años",
+        "role": "22 years old",
         "emoji": "😜"
       }
     ],
     "cta": {
-      "eyebrow": "Habla con uno de nosotros",
-      "headline": "¿Tienes alguna aventura específica en mente?",
-      "subheadline": "Nuestros(as) guías estan disponibles para ti sin compromiso alguno ;)"
+      "eyebrow": "Talk to one of us",
+      "headline": "Do you have a specific adventure in mind?",
+      "subheadline": "Our guides are available for you with no commitment whatsoever ;)"
     },
     "contact": {
-      "page_subheadline": "Habla directamente con nuestros(as) guías",
-      "intro": "Para cualquier información sobre aventuras existentes, nuevas aventuras o cualquier otra duda que tengas, contáctanos vía telefónica, correo electrónico o rellena el formulario",
+      "page_subheadline": "Talk directly with our guides",
+      "intro": "For any information about existing adventures, new adventures or any other questions you may have, contact us by phone, email or fill in the form",
       "email": "preguntas@vierszka.com",
-      "phone": "+34 644 554 028 ",
+      "phone": "+34 644 554 028",
       "address": "Eugenio Salazar 45, 28002 Madrid",
-      "hours": "Lunes–Viernes, 8am–5:30pm ",
+      "hours": "Monday–Friday, 8am–5:30pm",
       "form_service_options": [
-        "Información General",
-        "Sugerencias",
-        "Quejas",
-        "Aventuras Nuevas",
-        "Aventuras Existentes"
+        "General Information",
+        "Suggestions",
+        "Complaints",
+        "New Adventures",
+        "Existing Adventures"
       ]
     },
     "footer": {
-      "tagline": "Guiamos exploradores y aventureros a vivir experiencias inolvidables",
+      "tagline": "We guide explorers and adventurers to live unforgettable experiences",
       "copyright": "Vierszka Adventures SC de CV"
     }
   },
   "zh": {
     "meta": {
-      "site_title": "Vierszka",
+      "site_title": "Vierszka Adventures",
       "description": "山地探险：徒步旅行、登山和攀岩",
       "theme_label": "Sober · Corporate Red"
     },
     "nav": {
-      "cta_label": "Contáctanos",
-      "cta_href": "contact.html"
+      "cta_label": "联系我们",
+      "cta_href": "contact"
     },
     "hero": {
-      "eyebrow": "Exploramos el mundo",
-      "headline": "Guiamos exploradores y aventureros a vivir experiencias inolvidables",
-      "subheadline": "Planeamos, coordinamos y guiamos con seguridad salidas a la naturaleza de uno o varios días, individuales o en grupo, haciendo senderismo, montañismo y escalada en roca",
-      "cta_primary_label": "Nuestros Servicios",
-      "cta_secondary_label": "Sobre Vierszka Adventures"
+      "eyebrow": "探索世界",
+      "headline": "我们引导探险者和冒险家体验难忘的经历",
+      "subheadline": "我们规划、协调并安全引导单日或多日自然之旅，个人或团体，徒步、登山和攀岩",
+      "cta_primary_label": "我们的服务",
+      "cta_secondary_label": "关于Vierszka Adventures"
     },
     "stats": [
       {
         "number": "20+",
-        "label": "Años subiendo montañas"
+        "label": "山地探险年数"
       },
       {
         "number": "35+",
-        "label": "Países explorados"
+        "label": "探索过的国家"
       },
       {
         "number": "0%",
-        "label": "Rutas Abandonadas"
+        "label": "放弃的路线"
       },
       {
         "number": "+10",
-        "label": "Guías Asociados"
+        "label": "合作向导"
       }
     ],
     "services": {
-      "eyebrow": "Servicios",
-      "headline": "Portafolio de Servicios",
-      "subheadline": "Encuentra el tipo de aventura que quieres vivir!",
-      "page_subheadline": "Lo que mejor sabemos hacer...",
+      "eyebrow": "服务",
+      "headline": "服务组合",
+      "subheadline": "找到您想体验的冒险类型！",
+      "page_subheadline": "我们最擅长的...",
       "items": [
         {
           "icon": "🌲",
-          "title": "Senderismo",
-          "body": "Caminar por la Sierra de Guadarrama, conocer el corazón de la Pedriza, subir por los pinares del Valle de Navalmedio",
+          "title": "徒步旅行",
+          "body": "漫步瓜达拉马山脉，探索拉佩德里萨的心脏地带，穿越纳瓦尔梅迪奥山谷的松林",
           "features": [
-            "Rutas de 1 día de 5-20km",
-            "Para ir en transporte público o privado",
-            "Rutas con nula o poca dificultad técnica"
+            "5-20公里的1日路线",
+            "公共或私人交通均可抵达",
+            "技术难度低的路线"
           ]
         },
         {
           "icon": "⛰️",
-          "title": "Montanismo",
-          "body": "Ascensiones estivales e invernales a las montañas de la Sierra de Guadarrama y alrededores",
+          "title": "登山",
+          "body": "瓜达拉马山脉及周边的夏季和冬季登顶",
           "features": [
-            "Rutas de 1-2 días",
-            "Dificultad técnica poca / baja / media",
-            "Facilitamos material necesario"
+            "1-2天路线",
+            "低至中等技术难度",
+            "提供必要装备"
           ]
         },
         {
           "icon": "🤸",
-          "title": "Vías Ferratas",
-          "body": "Vámonos a trepar algunas paredes protegidos con equipo previamente instalado para mantenernos seguros mientras disfrutamos los paisajes.",
+          "title": "铁索攀登",
+          "body": "让我们攀爬一些岩壁，使用预先安装的设备保护安全，同时欣赏风景。",
           "features": [
-            "Garantizamos hermosos paisajes",
-            "Y algo de adrenalina y esfuerzo",
-            "Facilitamos material necesario"
+            "保证壮丽风景",
+            "需要一些肾上腺素和努力",
+            "提供必要装备"
           ]
         },
         {
           "icon": "🧗🏻",
-          "title": "Escalada en Roca",
-          "body": "¿Vamos a dar unos buenos pegues a la Pedri? ¿A Patones? ¿San Martín de Valdeiglesias?",
+          "title": "攀岩",
+          "body": "准备好挑战拉佩德里萨？帕托内斯？圣马丁德巴尔德伊格莱西亚斯？",
           "features": [
-            "De Top rope o Primero, tú eliges",
-            "Facilitamos material necesario",
-            "Escaladores experimentados"
+            "顶绳或先锋，您来选择",
+            "提供必要装备",
+            "经验丰富的攀岩者"
           ]
         }
       ]
     },
     "process": {
-      "eyebrow": "Cómo trabajamos",
-      "headline": "Nuestro Enfoque",
+      "eyebrow": "我们的工作方式",
+      "headline": "我们的方法",
       "steps": [
         {
-          "title": "Informamos",
-          "body": "Te contamos de qué va la cosa y tú te decides por la aventura que quieras experimentar!"
+          "title": "我们告知",
+          "body": "我们告诉您一切，然后您选择想要体验的冒险！"
         },
         {
-          "title": "Planeamos",
-          "body": "Nos encargamos de que la logística, el transporte, el acceso, la ruta, el clima, el equipo de seguridad, los(as) guías, etc., se encuentren en condiciones óptimas previo a la aventura"
+          "title": "我们规划",
+          "body": "我们负责物流、交通、路线、天气、安全装备、向导等，确保冒险前一切处于最佳状态"
         },
         {
-          "title": "Nos divertimos",
-          "body": "Y nos vamos al jaleo, a divertirnos confiando en nuestro plan, equipo y guías!"
+          "title": "我们享受",
+          "body": "出发啦，信任我们的计划、装备和向导！"
         },
         {
-          "title": "Mejoramos",
-          "body": "Aprendemos de cada aventura, nos retroalimentamos y mejoramos para que tu próxima experiencia sea buenísima!"
+          "title": "我们进步",
+          "body": "我们从每次冒险中学习，收集反馈并改进，让您的下次体验更加精彩！"
         }
       ]
     },
     "about": {
-      "eyebrow": "Sobre Vierszka Adventures",
-      "headline": "Queremos hacer montañismo divertido y seguro",
-      "page_subheadline": "Décadas impresionando nuestros sentidos con las maravillas naturales",
-      "body": "Vierszka Adventures fue fundada en 2025 por un Ingeniero de Software - quien está en proceso de convertirse en guía de montaña - y un grupo de amigos(as) todos amantes de la montaña, quienes creen que sigue siendo posible conmover el alma humana a través de las maravillas que ofrece la madre naturaleza.",
-      "mission_headline": "Misión",
-      "mission_body_1": "Queremos aprender del mundo y de nosotros mismos mediante la exploración de la montaña, presentando retos de nivel adecuado a cada quién y garantizando la seguridad en todo momento.",
-      "mission_body_2": "Preparación, experiencia y confianza son los tres ejes que nos mueven en nuestras aventuras.",
+      "eyebrow": "关于Vierszka Adventures",
+      "headline": "我们想让登山变得有趣而安全",
+      "page_subheadline": "数十年来，大自然的奇迹令我们叹为观止",
+      "body": "Vierszka Adventures由一位软件工程师（正在成为山地向导）和一群热爱山地的朋友于2025年创立，他们相信通过大自然的奇迹仍然可以触动人类的灵魂。",
+      "mission_headline": "使命",
+      "mission_body_1": "我们希望通过山地探索来了解世界和自我，为每个人提供适当难度的挑战，并始终确保安全。",
+      "mission_body_2": "准备、经验和信任是我们冒险的三大支柱。",
       "mission_emoji": "⛰️",
-      "values_headline": "Nuestros Principios",
-      "team_headline": "Experiencia",
-      "team_subheadline": "Técnicos deportivos de montaña, senderistas y escaladores con experiencia real.",
+      "values_headline": "我们的原则",
+      "team_headline": "经验",
+      "team_subheadline": "具有丰富实战经验的山地运动技术员、徒步旅行者和攀岩者。",
       "values": [
         {
           "icon": "🔩",
-          "title": "Conocimiento",
-          "body": "Cada decisión, cada aventura, comienza con adquirir conocimiento: lo planeamos, vemos qué hace falta, lo incluimos o lo aprendemos y sabemos que es posible. No vamos a experimentar contigo sobre la ruta."
+          "title": "知识",
+          "body": "每一个决定、每一次冒险，都从获取知识开始：我们规划，找出所需，学习并确认可行性。我们不会在路上与您一起实验。"
         },
         {
           "icon": "📋",
-          "title": "Capacitación y Estándares",
-          "body": "Todo nuestro equipo humano se encuentra certificado como Técnico Deportivo de Montaña. Todo nuestro material de aventuras está homologado a estándares europeos o internacionales."
+          "title": "培训与标准",
+          "body": "我们的全体团队均持有山地运动技术员认证。我们的所有冒险装备均符合欧洲或国际标准。"
         },
         {
           "icon": "🤝",
-          "title": "Confianza",
-          "body": "Quienes nos conocen han repetido aventuras con nosotros."
+          "title": "信任",
+          "body": "了解我们的人都会再次与我们一起冒险。"
         }
       ],
       "team": [
         {
           "name": "Javier Caballero",
-          "role": "IT Expert",
+          "role": "IT专家",
           "emoji": "👨‍💻"
         },
         {
-          "name": "Sasha Yang",
-          "role": "Guía de montaña",
-          "emoji": "👩‍🔧"
+          "name": "Agnieszka Kruszynska-Ziaja",
+          "role": "山地向导",
+          "emoji": "👩🏻‍🏫"
         }
       ]
     },
     "testimonials": [
       {
-        "text": "\"Siempre me había llamado la atención hacer una vía ferrata, pero me daba un poco de respeto la altura. ¡Menos mal que elegí a este equipo! Desde el minuto uno, la guía nos transmitió una confianza increíble, explicando cada detalle del material y de la ruta. La experiencia en las grapas y los puentes colgantes fue una pasada absoluta, con unas vistas que te quitan el aliento. Me sentí súper segura en todo momento y disfruté como una niña pequeña. Si buscas aventura con profesionales de verdad, no te lo pienses. ¡Repetiré seguro!\"",
+        "text": "\"我一直对铁索攀登很感兴趣，但高度让我有点紧张。幸好我选择了这个团队！从第一分钟起，向导就给了我们难以置信的信心，解释了装备和路线的每一个细节。踩着铁钉和悬索桥的体验绝对令人难忘，景色令人叹为观止。我全程感到非常安全，玩得像个孩子一样开心。如果您正在寻找与真正专业人士共度的冒险，不要犹豫。我一定会再来！\"",
         "author": "Laura G.",
-        "role": "34 años",
+        "role": "34岁",
         "emoji": "🌎"
       },
       {
-        "text": "\"¡Brutal! Fuimos un grupo de amigos a pasar el fin de semana y la ruta que nos prepararon entre montañas y bosques fue de lo mejor que he hecho nunca. No fue la típica caminata aburrida; los coordinadores le metieron un rollazo increíble, enseñándonos zonas escondidas, cruzando ríos y dándonos caña con un ritmo perfecto. Nos reímos muchísimo y desconectamos del todo de las pantallas y la ciudad. Si quieres perderte en la naturaleza y pasártelo jodidamente bien, este es tu sitio. ¡Un diez de fin de semana!\"",
+        "text": "\"太棒了！一群朋友去度过了一个周末，他们为我们规划的穿越山地和森林的路线是我做过的最好的事情之一。这不是典型的无聊徒步；协调员带来了令人难以置信的活力，向我们展示隐秘地区，穿越河流，保持完美的节奏。我们笑声不断，完全脱离了屏幕和城市。如果您想迷失在大自然中并度过真正美好的时光，这就是您的地方。完美的周末！\"",
         "author": "Mateo S.",
-        "role": "22 años",
+        "role": "22岁",
         "emoji": "😜"
       }
     ],
     "cta": {
-      "eyebrow": "Habla con uno de nosotros",
-      "headline": "¿Tienes alguna aventura específica en mente?",
-      "subheadline": "Nuestros(as) guías estan disponibles para ti sin compromiso alguno ;)"
+      "eyebrow": "与我们交流",
+      "headline": "您心中有特定的冒险吗？",
+      "subheadline": "我们的向导随时为您提供服务，无需任何承诺 ;)"
     },
     "contact": {
-      "page_subheadline": "Habla directamente con nuestros(as) guías",
-      "intro": "Para cualquier información sobre aventuras existentes, nuevas aventuras o cualquier otra duda que tengas, contáctanos vía telefónica, correo electrónico o rellena el formulario",
+      "page_subheadline": "直接与我们的向导交流",
+      "intro": "如需了解现有冒险、新冒险或任何其他问题，请通过电话、电子邮件联系我们或填写表格",
       "email": "preguntas@vierszka.com",
-      "phone": "+34 644 554 028 ",
+      "phone": "+34 644 554 028",
       "address": "Eugenio Salazar 45, 28002 Madrid",
-      "hours": "Lunes–Viernes, 8am–5:30pm ",
+      "hours": "周一至周五，上午8点至下午5点30分",
       "form_service_options": [
-        "Información General",
-        "Sugerencias",
-        "Quejas",
-        "Aventuras Nuevas",
-        "Aventuras Existentes"
+        "一般信息",
+        "建议",
+        "投诉",
+        "新冒险",
+        "现有冒险"
       ]
     },
     "footer": {
-      "tagline": "Guiamos exploradores y aventureros a vivir experiencias inolvidables",
+      "tagline": "我们引导探险者和冒险家体验难忘的经历",
       "copyright": "Vierszka Adventures SC de CV"
     }
   }
