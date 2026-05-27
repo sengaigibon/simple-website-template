@@ -1,4 +1,6 @@
 ---
+import { LOCALES } from '../i18n/utils'
+
 interface Props {
   cfg: any
   t: any
@@ -8,11 +10,9 @@ interface Props {
 const { cfg, t, lang, page } = Astro.props
 const base = `/${lang}`
 
-const LANGS = [
-  { code: 'es', label: 'ES' },
-  { code: 'en', label: 'EN' },
-  { code: 'zh', label: '中文' },
-]
+// Filter to only the languages the client supports (all three if not specified)
+const enabledCodes: string[] = cfg.languages ?? LOCALES.map(l => l.code)
+const LANGS = LOCALES.filter(l => enabledCodes.includes(l.code))
 const pageSlug = page === 'index' ? '' : page
 ---
 
@@ -28,18 +28,20 @@ const pageSlug = page === 'index' ? '' : page
       <li><a href={`${base}/services`}class:list={[{active: page==='services'}]}>{t.nav.services}</a></li>
       <li><a href={`${base}/contact`} class:list={[{active: page==='contact'}]}>{t.nav.contact}</a></li>
     </ul>
-    <div class="nav__lang">
-      <button class="nav__lang-toggle" aria-haspopup="true">
-        {LANGS.find(l => l.code === lang)?.label ?? 'ES'} <span class="nav__lang-arrow">▾</span>
-      </button>
-      <ul class="nav__lang-menu" role="menu">
-        {LANGS.filter(l => l.code !== lang).map(l => (
-          <li role="none">
-            <a href={`/${l.code}/${pageSlug}`} role="menuitem">{l.label}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    {LANGS.length > 1 && (
+      <div class="nav__lang">
+        <button class="nav__lang-toggle" aria-haspopup="true">
+          {LANGS.find(l => l.code === lang)?.label ?? 'ES'} <span class="nav__lang-arrow">▾</span>
+        </button>
+        <ul class="nav__lang-menu" role="menu">
+          {LANGS.filter(l => l.code !== lang).map(l => (
+            <li role="none">
+              <a href={`/${l.code}/${pageSlug}`} role="menuitem">{l.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
     <a class:list={['btn', 'nav__cta', cfg.theme === 'modern' ? 'btn-accent' : 'btn-primary']} href={`${base}/contact`}>{cfg.nav.cta_label}</a>
     <button class="nav__burger" aria-label={t.nav.menu_aria}>
       <span></span><span></span><span></span>

@@ -25,7 +25,7 @@ import { loadClientConfig } from '../../lib/config'
 import { useTranslations, LOCALES } from '../../i18n/utils'
 
 export function getStaticPaths() {
-  return LOCALES.map(lang => ({ params: { lang } }))
+  return LOCALES.map(({ code: lang }) => ({ params: { lang } }))
 }
 
 const { lang } = Astro.params
