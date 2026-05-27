@@ -78,15 +78,9 @@ const s = cfg.services
   </>}
 
   {theme === 'simplistic' && <>
+    <SimplisticServicesHome {cfg} {t} {lang} />
     <section class="section">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">{s.eyebrow}</span>
-          <h2>{s.headline}</h2>
-          <div class="divider"></div>
-          <p>{s.subheadline}</p>
-        </div>
-        <SimplisticServicesHome {cfg} {t} {lang} />
         <SimplisticServicesDetail {cfg} />
       </div>
     </section>
