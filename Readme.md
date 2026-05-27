@@ -1,220 +1,249 @@
-# Multi-Client Theme-Switcher Website
+# Multi-Client Website Template
 
 ## 1. Overview
 
-A single static website codebase that:
-- Supports multiple visual **Layouts** (structural HTML templates) and **Styles** (CSS files)
-- Can be deployed to multiple **Cloudflare Pages projects**, one per client
-- Each deployment is independently configured with a chosen Layout+Style combination and client-specific content
-- Includes a **Theme Switcher** UI for showroom / demo purposes
-- No backend, no CMS, no framework — pure HTML/CSS/JS with a lightweight bash build script
+A single **Astro SSG** codebase that builds fully pre-rendered, multilingual (es / en / zh) websites for multiple clients. Each client is a separate Cloudflare Pages deployment, configured by its own `client.config.json`.
 
-
-
-## 2. Local Set Up
-
- ```` bash 
-cd /home/MyCoolProjects
-git clone git@github.com:sengaigibon/simple-website-template.git
-    
-cd simple-website-template
-CLIENT_ID=client-1 bash build.sh
-cd dist && python3 -m http.server 8080
- ````
-
-Now you can access it through http://localhost:8080/
-
-See the configuration for each client in, e.g. for client-1
-````
-simple-website-template/clients/client-1/client.config.json
-````
-
-## 2a. Build modes
-
-The `demo_mode` flag in `client.config.json` controls what `build.sh` puts into `dist/`:
-
-| `demo_mode` | What is built |
-|---|---|
-| `true` | **Full build** — all layouts (modern, sober, simplistic) and all CSS styles are copied to subfolders. A root `index.html` redirects to the configured theme. The Theme Switcher UI is active. Used during client review. |
-| `false` | **Locked build** — only the configured `theme` layout and `style` CSS are copied. HTML pages are placed directly at `dist/` root (no subfolder, no redirect). No other themes or styles are shipped, so the URL cannot be manipulated to load a different theme. Used for live production. |
-
-**Production `dist/` structure (demo_mode: false):**
-```
-dist/
-  index.html        ← served directly, no redirect
-  about.html
-  services.html
-  contact.html
-  styles/<style>.css
-  js/
-  assets/
-  client.config.js
-```
-
-> Switching from demo to production: set `"demo_mode": false`, commit, push. Cloudflare will redeploy with locked theme/style and HTML at root.
-
-
-## 3. Clodflare Set Up
-
-- On the Account Home:
-    - Add -> Pages -> Import an existing Git repository
-- Select repository
-    - Choose your repository -> Begin setup
-- Set up builds and deployments
-    - Give a name to your project
-    - Build command: **bash build.sh**
-    - Build output: **dist**
-- Under **Environment variables**, add:
-    - `CLIENT_ID` = `client-1` (or whichever client this deployment is for)
-- Deploy site
-
-Current Showroom URL: https://showroom-ean.pages.dev/ 
+Key properties:
+- **Pre-rendered HTML** — all content is baked in at build time; no client-side DOM injection, no JS required for content
+- **Multilingual** — three URL routes per page (`/es/`, `/en/`, `/zh/`) generated from a single page file via `getStaticPaths()`
+- **Multi-theme** — three layouts (Sober, Modern, Simplistic) × nine CSS styles; theme is selected per client in config
+- **Multi-client** — one repo, many Cloudflare Pages projects; `CLIENT_ID` env var selects the client at build time
+- **CMS** — Keystatic provides a local admin UI that reads/writes `client.config.json` directly; no database
 
 ---
 
-# Keystatic — Local Setup
-
-Keystatic is a Git-based content editor. It reads and writes the `client.config.json` files directly in this repo — no database, no CMS platform. You run a local admin UI to edit client content through a form instead of hand-editing JSON.
-
-The site itself is unchanged — `bash build.sh` still builds it. Keystatic only adds a lightweight Node.js/Astro layer to serve the admin UI.
-
-## First-time setup
+## 2. Local Setup
 
 ```bash
+git clone git@github.com:sengaigibon/simple-website-template.git
+cd simple-website-template
 npm install
 ```
 
-This installs Astro and Keystatic. Only needed once after cloning.
-
-## Running the admin UI
+### Run the dev server (with Keystatic admin)
 
 ```bash
-npm run dev
+CLIENT_ID=client-1 npm run dev
 ```
 
-Open http://localhost:4321/keystatic — you'll see a **Clients** list with all existing clients. Click any client to edit its fields through a form. Save writes directly to the `client.config.json` file on disk. Commit and push to `master` as normal to trigger a Cloudflare redeploy.
+- Site: http://localhost:4321/es/
+- Keystatic admin: http://localhost:4321/keystatic
 
-## Adding a new client via Keystatic
+### Build for production
 
-Each client is a **singleton** in `keystatic.config.ts` (not a dynamic collection). This keeps the config clean — no extra fields written to `client.config.json`.
+```bash
+CLIENT_ID=client-1 npm run build
+```
 
-To add a new client:
+Output goes to `dist/`. The build runs `node setup.mjs` first, which copies `clients/<CLIENT_ID>/assets/` → `public/assets/`.
 
-1. Create the folder manually: `clients/vierszka/` with a `client.config.json` copied from an existing client
-2. Open `keystatic.config.ts` and copy one of the existing singleton blocks:
-   ```ts
-   'vierszka': singleton({
-     label: 'Vierszka (vierszka)',
-     path: 'clients/vierszka/client.config',
-     format: { data: 'json' },
-     entryLayout: 'form',
-     schema: clientSchema,
-   }),
-   ```
-3. Restart `npm run dev` — the new client appears in the admin sidebar
-4. Open it in Keystatic and fill in all fields
-5. Add the logo manually: `clients/vierszka/assets/logo.png`
-6. Commit and push
+### Preview the production build
 
-## Files added for Keystatic
-
-| File | Purpose |
-|------|---------|
-| `package.json` | Node dependencies (Astro + React + Keystatic) |
-| `astro.config.mjs` | Astro config with Keystatic integration |
-| `tsconfig.json` | TypeScript config (required by Keystatic) |
-| `keystatic.config.ts` | Schema: defines every editable field for client configs |
-
-The `keystatic.config.ts` is where you add new fields if the `client.config.json` schema ever changes.
+```bash
+npm run preview
+```
 
 ---
 
-# Workflow: Onboarding a New Client
+## 3. Repository Structure
 
-This is the end-to-end process after a client has seen the showroom and chosen a theme and style.
-
-## Step 1 — Create the client folder and register it in Keystatic
-
-1. Create `clients/<client-slug>/` (e.g. `clients/vierszka/`)
-2. Copy `client.config.json` from the closest existing client as a starting point
-3. Update at minimum:
-   - `theme` and `style` to the client's chosen combination
-   - `brand.name`, `brand.logo_text`, `brand.logo_accent`
-   - `demo_mode: true` (keeps the theme switcher visible during review)
-4. Create `clients/vierszka/assets/` and drop in the client's logo file (`logo.png` or `logo.svg`)
-5. Open `keystatic.config.ts` and add a new singleton block inside `singletons: { ... }`:
-   ```ts
-   'vierszka': singleton({
-     label: 'Vierszka (vierszka)',
-     path: 'clients/vierszka/client.config',
-     format: { data: 'json' },
-     entryLayout: 'form',
-     schema: clientSchema,
-   }),
-   ```
-6. Restart `npm run dev` — the new client appears in the Keystatic sidebar
-7. Commit and push to `master`
-
-## Step 2 — Test locally
-
-```bash
-CLIENT_ID=vierszka bash build.sh
-cd dist && python3 -m http.server 8080
+```
+simple-website-template/
+  src/
+    components/
+      Nav.astro               ← shared nav (CTA class adapts to theme)
+      Footer.astro            ← shared footer
+      sober/                  ← Sober theme sections
+      modern/                 ← Modern theme sections
+      simplistic/             ← Simplistic theme sections
+    layouts/
+      BasePage.astro          ← shared HTML shell (head, nav, footer, demo switcher)
+    pages/
+      index.astro             ← redirects / → /es/
+      [lang]/
+        index.astro           ← home page (es, en, zh)
+        about.astro
+        services.astro
+        contact.astro
+    i18n/
+      es.json                 ← UI strings (nav, footer, form labels, buttons)
+      en.json
+      zh.json
+      utils.ts                ← useTranslations(lang) helper
+    lib/
+      config.ts               ← loadClientConfig(lang) — merges structural + locale content
+  clients/
+    client-1/
+      client.config.json      ← all content, nested by locale (es/en/zh)
+      assets/logo.svg
+    client-2/
+      client.config.json
+    vierszka/
+      client.config.json
+      assets/logo.svg
+  public/
+    styles/                   ← CSS files (style-1-editorial.css … style-9-simplistic.css)
+    js/
+      main.js                 ← scroll, fade-up, mobile nav behaviour
+      theme-switcher.js       ← demo mode style switcher (injected only when demo_mode: true)
+  keystatic.config.ts         ← Keystatic schema (locale-nested, mirrors client.config.json)
+  astro.config.mjs            ← Astro config; Keystatic loaded only in dev
+  setup.mjs                   ← pre-build: copies client assets to public/assets/
+  package.json
 ```
 
-Open http://localhost:8080/ and confirm the build works and the logo/theme look correct before touching Cloudflare.
+---
 
-## Step 3 — Set up Cloudflare Pages
+## 4. Client Config Structure
 
-1. Account Home → **Add → Pages → Import an existing Git repository**
-2. Select this repository → **Begin setup**
+Each `client.config.json` has two layers:
+
+**Structural fields** (top level — same for all languages):
+```json
+{
+  "theme": "sober",
+  "style": "style-7-industrial-blue",
+  "demo_mode": false,
+  "brand": { "name": "…", "logo_text": "…", "logo_accent": "…", "logo_image": "../assets/logo.svg", "tagline": "…" },
+  "social": { "linkedin": "…", "twitter": "…" }
+}
+```
+
+**Content fields** (locale-nested — translated per language):
+```json
+{
+  "es": { "meta": {}, "nav": {}, "hero": {}, "stats": [], "services": {}, "process": {}, "about": {}, "testimonials": [], "cta": {}, "contact": {}, "footer": {} },
+  "en": { … },
+  "zh": { … }
+}
+```
+
+`loadClientConfig(lang)` merges both layers and returns a single flat object so components use `cfg.hero.headline` regardless of locale.
+
+---
+
+## 5. Themes and Styles
+
+| Theme | Layout style | CSS files |
+|---|---|---|
+| `sober` | Sidebar sections, split hero with stat panel | style-6, 7, 8 |
+| `modern` | Centred hero with `<em>`, 3-col icon cards, dark process band | style-1 – 6 |
+| `simplistic` | Full-width hero, 4-col image cards, about-split, solution overlays | style-9 |
+
+The `theme` field in `client.config.json` selects which components are rendered. All three themes share the same `Nav.astro`, `Footer.astro`, `Stats.astro`, and `Contact.astro`.
+
+### Demo mode / style switcher
+
+When `demo_mode: true`, a 🎨 panel is injected into every page. It lets you swap CSS styles live (instant, no reload) and switch the active theme's style palette. Turn it off before going live by setting `demo_mode: false`.
+
+---
+
+## 6. Multilingual Pages
+
+UI strings (nav labels, button text, form labels) live in `src/i18n/es.json`, `en.json`, `zh.json`.
+
+Client content (headlines, body copy, service names) lives under locale keys in `client.config.json`.
+
+Each page file generates three routes from one file:
+
+```astro
+export function getStaticPaths() {
+  return LOCALES.map(lang => ({ params: { lang } }))
+}
+const cfg = loadClientConfig(lang)   // returns content for this locale
+const t = useTranslations(lang)      // returns UI strings for this locale
+```
+
+Output: `/es/`, `/en/`, `/zh/` — all pre-rendered with real content, no JS.
+
+---
+
+## 7. Cloudflare Pages Setup
+
+1. **Account Home → Add → Pages → Import an existing Git repository**
+2. Select this repository → Begin setup
 3. Configure:
-   - **Project name:** e.g. `vierszka`
-   - **Build command:** `bash build.sh`
+   - **Build command:** `CLIENT_ID=vierszka npm run build`
    - **Build output directory:** `dist`
 4. Under **Environment variables**, add:
-   - `CLIENT_ID` = `vierszka`
-5. **Save and deploy**
+   - `CLIENT_ID` = `vierszka` (or whichever client slug)
+5. Save and deploy
 
-Outcome: a Cloudflare-hosted URL (e.g. `vierszka.pages.dev`) for the client to review.
+Each client is a separate Cloudflare Pages project pointing at the same repo, differing only in the `CLIENT_ID` env var.
 
-## Step 4 — Fill in the content
+---
 
-Work with the client (or gather content from them) to complete all sections of their `client.config.json`:
-- Brand, tagline, meta description
-- Hero copy
-- Stats
-- Services (titles, descriptions, features)
-- Process steps
-- About / mission / team / values
-- Testimonials
-- Contact details (email, phone, address, hours)
-- Social links, footer tagline
+## 8. Onboarding a New Client
 
-Use **Keystatic** (`npm run dev` → http://localhost:4321/keystatic) to edit content through a form. Each save writes directly to the `client.config.json` file on disk. Once done, commit and push to `master` to trigger the Cloudflare redeploy.
+### Step 1 — Create the client folder
 
-## Step 5 — Client review
+```bash
+cp -r clients/client-1 clients/<slug>
+```
 
-Share the `*.pages.dev` URL with the client. Iterate on content as needed. Each push to `main` triggers a redeploy automatically.
+Edit `clients/<slug>/client.config.json`:
+- Set `theme` and `style`
+- Set `brand.name`, `brand.logo_text`, `brand.logo_accent`
+- Set `demo_mode: true` (keeps the style switcher visible during review)
+- Fill in content under `es` (en/zh are stubs to translate later)
 
-## Step 6 — Domain setup
+Drop the logo file into `clients/<slug>/assets/`.
 
-Either:
-- Buy a new domain through Cloudflare (Registrar), or
-- Transfer the client's existing domain to Cloudflare DNS
+### Step 2 — Register in Keystatic
 
-In the Cloudflare Pages project, go to **Custom domains** and attach the domain. Cloudflare handles the SSL cert automatically.
+Open `keystatic.config.ts` and add a singleton inside `singletons: { … }`:
 
-## Step 7 — Go live
+```ts
+'<slug>': singleton({
+  label: 'Client Name (<slug>)',
+  path: 'clients/<slug>/client.config',
+  format: { data: 'json' },
+  entryLayout: 'form',
+  schema: clientSchema,
+}),
+```
 
-1. Set `"demo_mode": false` in the client's `client.config.json` (via Keystatic or directly)
-2. Commit and push to `master` → triggers final redeploy
-3. Cloudflare rebuilds in **locked mode**: only the configured theme layout and style CSS are included — no other themes or styles are shipped
-4. Confirm the theme switcher is gone and the live domain resolves correctly
+Restart `npm run dev` — the new client appears in the Keystatic sidebar.
 
-## Done when:
-1. The website is live on the client's own domain
-2. `demo_mode` is set to `false`
-3. All content is final and deployed
-4. The client knows how to edit their content via Keystatic
+### Step 3 — Test locally
 
+```bash
+CLIENT_ID=<slug> npm run dev
+```
+
+Open http://localhost:4321/es/ and confirm the logo, theme, and content look correct.
+
+### Step 4 — Deploy to Cloudflare Pages
+
+Follow Section 7. The deployment URL (e.g. `<slug>.pages.dev`) is what you share with the client for review.
+
+### Step 5 — Fill in content
+
+Use Keystatic (`npm run dev` → http://localhost:4321/keystatic) to edit content through a form. Each save writes directly to `client.config.json`. Commit and push to trigger a Cloudflare redeploy.
+
+### Step 6 — Domain setup
+
+In the Cloudflare Pages project → **Custom domains** → attach the client's domain. Cloudflare handles SSL automatically.
+
+### Step 7 — Go live
+
+1. Set `"demo_mode": false` in the client's config
+2. Commit and push → Cloudflare rebuilds; style switcher is gone from the live site
+3. Confirm the live domain resolves correctly
+
+---
+
+## 9. Adding or Editing i18n Strings
+
+UI strings that appear in every client's site (nav labels, footer headers, form labels, button text) live in:
+
+```
+src/i18n/es.json
+src/i18n/en.json
+src/i18n/zh.json
+```
+
+These are **not** client-editable via Keystatic — they are code-level defaults. Edit them directly and rebuild.
+
+Client-specific copy (headlines, service descriptions, team bios, etc.) lives under the locale keys in `client.config.json` and is editable via Keystatic.
