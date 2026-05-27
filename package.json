@@ -2,7 +2,9 @@
   "name": "simple-website-template",
   "type": "module",
   "scripts": {
-    "dev": "astro dev"
+    "dev": "astro dev",
+    "build": "node setup.mjs && astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.5",

@@ -1,0 +1,29 @@
+---
+interface Props { cfg: any; t: any }
+const { cfg, t } = Astro.props
+const testimonials = cfg.testimonials ?? []
+---
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{t.testimonials.eyebrow}</span>
+      <h2>{t.testimonials.headline}</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid-3">
+      {testimonials.map((item: any) => (
+        <div class="testimonial">
+          <p class="testimonial__text">{item.text}</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">{item.emoji}</div>
+            <div>
+              <div class="testimonial__name">{item.author}</div>
+              <div class="testimonial__role">{item.role}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

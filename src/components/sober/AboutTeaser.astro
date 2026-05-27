@@ -1,0 +1,22 @@
+---
+interface Props { cfg: any; t: any; lang: string }
+const { cfg, t, lang } = Astro.props
+const a = cfg.about
+const base = `/${lang}`
+---
+
+<section class="section">
+  <div class="container">
+    <div class="about-block">
+      <div class="about-block__label">
+        <span class="eyebrow">{a.eyebrow}</span>
+        <h2>{a.headline}</h2>
+        <a class="btn btn-outline" href={`${base}/about`} style="margin-top:20px;">{t.about.learn_more_btn}</a>
+      </div>
+      <div>
+        <p>{a.body}</p>
+        <p>{a.mission_body_1}</p>
+      </div>
+    </div>
+  </div>
+</section>

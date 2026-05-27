@@ -1,0 +1,27 @@
+---
+interface Props { cfg: any; t: any; lang: string }
+const { cfg, t, lang } = Astro.props
+const s = cfg.services
+const items = s.items?.slice(0, 3) ?? []
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{s.eyebrow}</span>
+      <h2>{s.headline}</h2>
+      <div class="divider"></div>
+      <p>{s.subheadline}</p>
+    </div>
+    <div class="grid-3">
+      {items.map((item: any) => (
+        <div class="card fade-up">
+          <div class="card__icon">{item.icon}</div>
+          <h3>{item.title}</h3>
+          <p>{item.body}</p>
+          <a class="card__more" href={`/${lang}/services`}>{t.services.learn_more_link}</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

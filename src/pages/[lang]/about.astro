@@ -1,0 +1,84 @@
+---
+import BasePage from '../../layouts/BasePage.astro'
+// Sober
+import SoberAboutMission from '../../components/sober/AboutMission.astro'
+import SoberValues from '../../components/sober/Values.astro'
+import SoberTeam from '../../components/sober/Team.astro'
+import SoberCTA from '../../components/sober/CTABanner.astro'
+// Modern
+import ModernAboutMission from '../../components/modern/AboutMission.astro'
+import ModernValues from '../../components/modern/Values.astro'
+import ModernTeam from '../../components/modern/Team.astro'
+import ModernCTA from '../../components/modern/CTABanner.astro'
+// Simplistic
+import SimplisticAboutMission from '../../components/simplistic/AboutMission.astro'
+import SimplisticValues from '../../components/simplistic/Values.astro'
+import SimplisticTeam from '../../components/simplistic/Team.astro'
+import SimplisticCTA from '../../components/simplistic/CTABanner.astro'
+// Shared
+import Stats from '../../components/sober/Stats.astro'
+import { loadClientConfig } from '../../lib/config'
+import { useTranslations, LOCALES } from '../../i18n/utils'
+
+export function getStaticPaths() {
+  return LOCALES.map(lang => ({ params: { lang } }))
+}
+
+const { lang } = Astro.params
+const cfg = loadClientConfig(lang)
+const t = useTranslations(lang)
+const theme = cfg.theme
+const a = cfg.about
+---
+
+<BasePage {cfg} {t} {lang} page="about" title={`${t.nav.about} — ${cfg.meta.site_title}`}>
+  <div class="page-top">
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href={`/${lang}/`}>{t.nav.home}</a>
+          <span class="sep">/</span>
+          <span class="current">{t.nav.about}</span>
+        </nav>
+        <h1>{a.headline}</h1>
+        <p>{a.page_subheadline}</p>
+      </div>
+    </div>
+  </div>
+
+  {theme === 'sober' && <>
+    <section class="section section--alt">
+      <div class="container">
+        <SoberAboutMission {cfg} />
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <SoberValues {cfg} {t} />
+      </div>
+    </section>
+    <section class="section section--alt">
+      <div class="container">
+        <SoberTeam {cfg} {t} />
+      </div>
+    </section>
+    <Stats {cfg} />
+    <SoberCTA {cfg} {t} {lang} />
+  </>}
+
+  {theme === 'modern' && <>
+    <ModernAboutMission {cfg} />
+    <ModernValues {cfg} {t} />
+    <ModernTeam {cfg} {t} />
+    <Stats {cfg} />
+    <ModernCTA {cfg} {t} {lang} />
+  </>}
+
+  {theme === 'simplistic' && <>
+    <SimplisticAboutMission {cfg} />
+    <Stats {cfg} />
+    <SimplisticValues {cfg} />
+    <SimplisticTeam {cfg} {t} />
+    <SimplisticCTA {cfg} {t} {lang} />
+  </>}
+</BasePage>

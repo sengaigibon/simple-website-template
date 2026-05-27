@@ -1,0 +1,19 @@
+---
+interface Props { cfg: any; t: any; lang: string }
+const { cfg, t, lang } = Astro.props
+const h = cfg.hero
+const base = `/${lang}`
+---
+
+<section class="hero page-top">
+  <div class="hero__content">
+    <span class="hero__tag fade-up fade-up-1">{h.eyebrow}</span>
+    <h1 class="fade-up fade-up-2">{h.headline}</h1>
+    {h.subheadline_short && <p class="hero__sub fade-up fade-up-2">{h.subheadline_short}</p>}
+    <p class="fade-up fade-up-3">{h.subheadline}</p>
+    <div class="hero__actions fade-up fade-up-4">
+      <a class="btn btn-primary" href={`${base}/services`}>{h.cta_primary_label}</a>
+      <a class="btn btn-outline" href={`${base}/about`}>{h.cta_secondary_label}</a>
+    </div>
+  </div>
+</section>

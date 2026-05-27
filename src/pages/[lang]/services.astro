@@ -1,0 +1,93 @@
+---
+import BasePage from '../../layouts/BasePage.astro'
+// Sober
+import SoberServicesDetail from '../../components/sober/ServicesDetail.astro'
+import SoberProcess from '../../components/sober/Process.astro'
+import SoberCTA from '../../components/sober/CTABanner.astro'
+// Modern
+import ModernServicesDetail from '../../components/modern/ServicesDetail.astro'
+import ModernProcess from '../../components/modern/Process.astro'
+import ModernCTA from '../../components/modern/CTABanner.astro'
+// Simplistic
+import SimplisticServicesDetail from '../../components/simplistic/ServicesDetail.astro'
+import SimplisticServicesHome from '../../components/simplistic/ServicesHome.astro'
+import SimplisticProcessAlt from '../../components/simplistic/Process.astro'
+import SimplisticCTA from '../../components/simplistic/CTABanner.astro'
+import { loadClientConfig } from '../../lib/config'
+import { useTranslations, LOCALES } from '../../i18n/utils'
+
+export function getStaticPaths() {
+  return LOCALES.map(lang => ({ params: { lang } }))
+}
+
+const { lang } = Astro.params
+const cfg = loadClientConfig(lang)
+const t = useTranslations(lang)
+const theme = cfg.theme
+const s = cfg.services
+---
+
+<BasePage {cfg} {t} {lang} page="services" title={`${t.nav.services} — ${cfg.meta.site_title}`}>
+  <div class="page-top">
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href={`/${lang}/`}>{t.nav.home}</a>
+          <span class="sep">/</span>
+          <span class="current">{t.nav.services}</span>
+        </nav>
+        <h1>{s.headline}</h1>
+        <p>{s.page_subheadline}</p>
+      </div>
+    </div>
+  </div>
+
+  {theme === 'sober' && <>
+    <section class="section">
+      <div class="container">
+        <div class="sidebar-section">
+          <div class="sidebar-section__label">
+            <span class="eyebrow">{s.eyebrow}</span>
+            <h2>{s.headline}</h2>
+            <p>{s.subheadline}</p>
+          </div>
+          <div class="sidebar-section__content">
+            <SoberServicesDetail {cfg} />
+          </div>
+        </div>
+        <SoberProcess {cfg} />
+      </div>
+    </section>
+    <SoberCTA {cfg} {t} {lang}
+      secondaryBtn={t.services.about_team_btn}
+      secondaryHref={`/${lang}/about`}
+    />
+  </>}
+
+  {theme === 'modern' && <>
+    <section class="section">
+      <div class="container">
+        <ModernServicesDetail {cfg} />
+      </div>
+    </section>
+    <ModernProcess {cfg} {t} />
+    <ModernCTA {cfg} {t} {lang}
+      secondaryBtn={t.services.about_team_btn}
+      secondaryHref={`/${lang}/about`}
+    />
+  </>}
+
+  {theme === 'simplistic' && <>
+    <SimplisticServicesHome {cfg} {t} {lang} />
+    <section class="section">
+      <div class="container">
+        <SimplisticServicesDetail {cfg} />
+      </div>
+    </section>
+    <SimplisticProcessAlt {cfg} />
+    <SimplisticCTA {cfg} {t} {lang}
+      secondaryBtn={t.services.about_team_btn}
+      secondaryHref={`/${lang}/about`}
+    />
+  </>}
+</BasePage>

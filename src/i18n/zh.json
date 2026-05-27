@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "contact": "联系我们",
+    "menu_aria": "菜单"
+  },
+  "footer": {
+    "col_company": "公司",
+    "col_services": "服务",
+    "col_connect": "联系",
+    "link_about": "关于我们",
+    "link_linkedin": "LinkedIn",
+    "link_twitter": "Twitter / X",
+    "rights": "版权所有。"
+  },
+  "about": {
+    "values_eyebrow": "我们的价值观",
+    "team_eyebrow": "团队",
+    "meet_team_btn": "认识团队",
+    "learn_more_btn": "了解更多"
+  },
+  "services": {
+    "view_all_btn": "查看全部",
+    "learn_more_link": "了解更多 →",
+    "learn_more_cap_link": "了解更多 →",
+    "about_team_btn": "关于团队",
+    "view_services_btn": "查看服务"
+  },
+  "solutions": {
+    "eyebrow": "行业解决方案",
+    "headline": "多元化工业领域的成熟解决方案",
+    "view_details": "查看详情 →"
+  },
+  "testimonials": {
+    "eyebrow": "客户评价",
+    "headline": "客户证言"
+  },
+  "contact": {
+    "h1_get_in_touch": "联系我们",
+    "h1_contact_us": "联系我们",
+    "eyebrow_info": "联系信息",
+    "eyebrow_get_in_touch": "联系我们",
+    "h2_lets_talk": "联系我们",
+    "h2_contact_information": "联系信息",
+    "label_email": "电子邮件",
+    "label_phone": "电话",
+    "label_address": "地址",
+    "label_hours": "工作时间",
+    "form_headline": "发送消息",
+    "form_description": "填写表格，我们将尽快与您联系。",
+    "form_description_alt": "填写表格，我们将尽快回复。",
+    "form_first_name": "名字",
+    "form_last_name": "姓氏",
+    "form_email_label": "电子邮件",
+    "form_email_address_label": "电子邮件地址",
+    "form_company_label": "公司",
+    "form_interest_label": "感兴趣的领域",
+    "form_message_label": "留言",
+    "form_placeholder_first": "张",
+    "form_placeholder_last": "三",
+    "form_placeholder_email": "zhang@company.com",
+    "form_placeholder_company": "公司名称",
+    "form_placeholder_company_alt": "您的公司名称",
+    "form_placeholder_message": "请告诉我们您的项目…",
+    "form_select_default": "— 请选择 —",
+    "form_submit": "发送消息 →",
+    "form_submit_short": "发送 →"
+  }
+}

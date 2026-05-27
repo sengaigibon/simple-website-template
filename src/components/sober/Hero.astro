@@ -1,0 +1,29 @@
+---
+interface Props { cfg: any; lang: string }
+const { cfg, lang } = Astro.props
+const h = cfg.hero
+const base = `/${lang}`
+const firstStat = cfg.stats?.[0]
+---
+
+<section class="hero page-top">
+  <div class="hero__content">
+    <span class="hero__tag">{h.eyebrow}</span>
+    <h1 class="fade-up fade-up-1">{h.headline}</h1>
+    <p class="fade-up fade-up-2">{h.subheadline}</p>
+    <div class="hero__actions fade-up fade-up-3">
+      <a class="btn btn-primary" href={`${base}/services`}>{h.cta_primary_label}</a>
+      <a class="btn btn-outline"  href={`${base}/about`}>{h.cta_secondary_label}</a>
+    </div>
+  </div>
+  <div class="hero__panel">
+    {firstStat && (
+      <div class="hero__panel-stat" id="hero-stat">
+        <div class="hero__panel-stat-num">{firstStat.number}</div>
+        <div class="hero__panel-stat-label">{firstStat.label}</div>
+      </div>
+    )}
+    <div class="hero__panel-divider"></div>
+    <p class="hero__panel-tagline">{cfg.brand.tagline}</p>
+  </div>
+</section>

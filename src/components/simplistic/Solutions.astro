@@ -1,0 +1,27 @@
+---
+interface Props { cfg: any; t: any }
+const { cfg, t } = Astro.props
+const items = cfg.services?.items ?? []
+---
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{t.solutions.eyebrow}</span>
+      <h2>{t.solutions.headline}</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid-3">
+      {items.map((item: any) => (
+        <div class="solution-card">
+          <div class="solution-card__bg">{item.icon}</div>
+          <div class="solution-card__overlay">
+            <span class="solution-card__cat">{item.category ?? ''}</span>
+            <h3>{item.title}</h3>
+            <span class="solution-card__link">{t.solutions.view_details}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

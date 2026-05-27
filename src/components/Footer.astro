@@ -1,0 +1,55 @@
+---
+interface Props {
+  cfg: any
+  t: any
+  lang: string
+}
+const { cfg, t, lang } = Astro.props
+const base = `/${lang}`
+const year = new Date().getFullYear()
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <h3><span>{cfg.brand.logo_text}</span><span>{cfg.brand.logo_accent}</span></h3>
+        <p>{cfg.footer.tagline}</p>
+      </div>
+      <div class="footer__col">
+        <h4>{t.footer.col_company}</h4>
+        <ul class="footer__links">
+          <li><a href={`${base}/about`}>{t.footer.link_about}</a></li>
+          <li><a href={`${base}/services`}>{t.nav.services}</a></li>
+          <li><a href={`${base}/contact`}>{t.nav.contact}</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>{t.footer.col_services}</h4>
+        <ul class="footer__links">
+          {cfg.services?.items?.map((s: any) => (
+            <li><a href={`${base}/services`}>{s.title}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>{t.footer.col_connect}</h4>
+        <ul class="footer__links">
+          {cfg.contact?.email && (
+            <li><a href={`mailto:${cfg.contact.email}`}>{cfg.contact.email}</a></li>
+          )}
+          {cfg.social?.linkedin && (
+            <li><a href={cfg.social.linkedin} target="_blank" rel="noopener">{t.footer.link_linkedin}</a></li>
+          )}
+          {cfg.social?.twitter && (
+            <li><a href={cfg.social.twitter} target="_blank" rel="noopener">{t.footer.link_twitter}</a></li>
+          )}
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© {year} {cfg.footer.copyright}. {t.footer.rights}</span>
+      <span>{cfg.meta.theme_label}</span>
+    </div>
+  </div>
+</footer>

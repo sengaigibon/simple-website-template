@@ -1,0 +1,25 @@
+---
+interface Props { cfg: any; t: any }
+const { cfg, t } = Astro.props
+const a = cfg.about
+const team = a?.team ?? []
+---
+
+<div class="about-block">
+  <div class="about-block__label">
+    <span class="eyebrow">{t.about.team_eyebrow}</span>
+    <h2>{a.team_headline}</h2>
+    <p>{a.team_subheadline}</p>
+  </div>
+  <div>
+    <div class="team-grid">
+      {team.map((person: any) => (
+        <div class="person fade-up">
+          <div class="person__avatar">{person.emoji ?? '👤'}</div>
+          <div class="person__name">{person.name}</div>
+          <div class="person__role">{person.role}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

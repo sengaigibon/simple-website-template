@@ -1,0 +1,74 @@
+---
+import BasePage from '../../layouts/BasePage.astro'
+// Sober
+import SoberHero from '../../components/sober/Hero.astro'
+import SoberServicesHome from '../../components/sober/ServicesHome.astro'
+import SoberTestimonials from '../../components/sober/Testimonials.astro'
+import SoberAboutTeaser from '../../components/sober/AboutTeaser.astro'
+import SoberCTA from '../../components/sober/CTABanner.astro'
+// Modern
+import ModernHero from '../../components/modern/Hero.astro'
+import ModernServicesHome from '../../components/modern/ServicesHome.astro'
+import ModernAboutTeaser from '../../components/modern/AboutTeaser.astro'
+import ModernCTA from '../../components/modern/CTABanner.astro'
+// Simplistic
+import SimplisticHero from '../../components/simplistic/Hero.astro'
+import SimplisticServicesHome from '../../components/simplistic/ServicesHome.astro'
+import SimplisticAboutSplit from '../../components/simplistic/AboutSplit.astro'
+import SimplisticSolutions from '../../components/simplistic/Solutions.astro'
+import SimplisticProcess from '../../components/simplistic/Process.astro'
+import SimplisticTestimonials from '../../components/simplistic/Testimonials.astro'
+import SimplisticCTA from '../../components/simplistic/CTABanner.astro'
+// Shared
+import Stats from '../../components/sober/Stats.astro'
+import { loadClientConfig } from '../../lib/config'
+import { useTranslations, LOCALES } from '../../i18n/utils'
+
+export function getStaticPaths() {
+  return LOCALES.map(lang => ({ params: { lang } }))
+}
+
+const { lang } = Astro.params
+const cfg = loadClientConfig(lang)
+const t = useTranslations(lang)
+const theme = cfg.theme
+---
+
+<BasePage {cfg} {t} {lang} page="index">
+  {theme === 'sober' && <>
+    <SoberHero {cfg} {lang} />
+    <Stats {cfg} />
+    <SoberServicesHome {cfg} {t} {lang} />
+    <SoberTestimonials {cfg} />
+    <SoberAboutTeaser {cfg} {t} {lang} />
+    <SoberCTA {cfg} {t} {lang}
+      secondaryBtn={t.services.view_services_btn}
+      secondaryHref={`/${lang}/services`}
+    />
+  </>}
+
+  {theme === 'modern' && <>
+    <ModernHero {cfg} {t} {lang} />
+    <Stats {cfg} />
+    <ModernServicesHome {cfg} {t} {lang} />
+    <ModernAboutTeaser {cfg} {t} {lang} />
+    <ModernCTA {cfg} {t} {lang}
+      secondaryBtn={t.services.view_services_btn}
+      secondaryHref={`/${lang}/services`}
+    />
+  </>}
+
+  {theme === 'simplistic' && <>
+    <SimplisticHero {cfg} {t} {lang} />
+    <Stats {cfg} />
+    <SimplisticServicesHome {cfg} {t} {lang} />
+    <SimplisticAboutSplit {cfg} {t} {lang} />
+    <SimplisticSolutions {cfg} {t} />
+    <SimplisticProcess {cfg} />
+    <SimplisticTestimonials {cfg} {t} />
+    <SimplisticCTA {cfg} {t} {lang}
+      secondaryBtn={t.services.view_services_btn}
+      secondaryHref={`/${lang}/services`}
+    />
+  </>}
+</BasePage>

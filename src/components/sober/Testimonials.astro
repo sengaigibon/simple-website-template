@@ -1,0 +1,37 @@
+---
+interface Props { cfg: any }
+const { cfg } = Astro.props
+const items = cfg.testimonials ?? []
+---
+
+{items.length > 0 && (
+  <div class="testimonial-block section--alt">
+    <div class="container">
+      <div id="testimonials-container">
+        {items.map((item: any, i: number) => (
+          <div class:list={['testimonial', {hidden: i > 0}]}>
+            <p class="testimonial__text">{item.text}</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">{item.emoji ?? '👤'}</div>
+              <div>
+                <div class="testimonial__name">{item.author}</div>
+                <div class="testimonial__role">{item.role}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      {items.length > 1 && (
+        <div class="testimonial-dots">
+          {items.map((_: any, i: number) => (
+            <div class:list={['testimonial-dot', {active: i === 0}]}></div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+)}
+
+<style>
+  .testimonial.hidden { display: none; }
+</style>

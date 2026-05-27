@@ -1,0 +1,17 @@
+---
+interface Props { cfg: any }
+const { cfg } = Astro.props
+const a = cfg.about
+---
+
+<div class="about-split">
+  <div class="about-split__text">
+    <span class="eyebrow">{a.eyebrow}</span>
+    <h2>{a.mission_headline}</h2>
+    <p>{a.mission_body_1}</p>
+    <p>{a.mission_body_2}</p>
+  </div>
+  <div class="about-split__img">
+    <span style="position:relative;z-index:1;">{a.mission_emoji}</span>
+  </div>
+</div>

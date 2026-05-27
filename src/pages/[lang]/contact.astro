@@ -1,0 +1,32 @@
+---
+import BasePage from '../../layouts/BasePage.astro'
+import Contact from '../../components/sober/Contact.astro'
+import { loadClientConfig } from '../../lib/config'
+import { useTranslations, LOCALES } from '../../i18n/utils'
+
+export function getStaticPaths() {
+  return LOCALES.map(lang => ({ params: { lang } }))
+}
+
+const { lang } = Astro.params
+const cfg = loadClientConfig(lang)
+const t = useTranslations(lang)
+---
+
+<BasePage {cfg} {t} {lang} page="contact" title={`${t.nav.contact} — ${cfg.meta.site_title}`}>
+  <div class="page-top">
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href={`/${lang}/`}>{t.nav.home}</a>
+          <span class="sep">/</span>
+          <span class="current">{t.nav.contact}</span>
+        </nav>
+        <h1>{t.contact.h1_contact_us}</h1>
+        <p>{cfg.contact.page_subheadline}</p>
+      </div>
+    </div>
+  </div>
+
+  <Contact {cfg} {t} />
+</BasePage>
