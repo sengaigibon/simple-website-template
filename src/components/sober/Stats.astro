@@ -1,0 +1,15 @@
+---
+interface Props { cfg: any }
+const { cfg } = Astro.props
+---
+
+{cfg.stats?.length > 0 && (
+  <div class="stats">
+    {cfg.stats.map((s: any) => (
+      <div class="stat">
+        <div class="stat__num">{s.number}</div>
+        <div class="stat__label">{s.label}</div>
+      </div>
+    ))}
+  </div>
+)}

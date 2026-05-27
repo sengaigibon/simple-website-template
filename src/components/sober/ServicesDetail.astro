@@ -1,0 +1,47 @@
+---
+interface Props { cfg: any }
+const { cfg } = Astro.props
+const items = cfg.services?.items ?? []
+---
+
+<div id="services-detail-container">
+  {items.map((item: any, i: number) => (
+    <div class="service-row fade-up">
+      <div class="service-row__num">{String(i + 1).padStart(2, '0')}</div>
+      <div>
+        <h3>{item.title}</h3>
+        <p class="service-body">{item.body}</p>
+        {item.features?.length > 0 && (
+          <ul class="service-features">
+            {item.features.map((f: string) => <li>{f}</li>)}
+          </ul>
+        )}
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .service-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--border-light);
+    align-items: start;
+  }
+  .service-row:last-child { border-bottom: none; }
+  .service-row__num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--border-dark);
+    line-height: 1;
+    padding-top: 4px;
+  }
+  .service-row h3 { margin-bottom: 8px; }
+  .service-features { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 7px; }
+  .service-features li { font-size: .85rem; color: var(--text-muted); display: flex; gap: 10px; align-items: flex-start; }
+  .service-features li::before { content: '—'; color: var(--accent); flex-shrink: 0; font-weight: 700; }
+  @media(max-width: 768px) { .service-row { grid-template-columns: 1fr; gap: 8px; } .service-row__num { font-size: 1.5rem; } }
+</style>

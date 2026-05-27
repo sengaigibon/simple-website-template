@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "menu_aria": "Menu"
+  },
+  "footer": {
+    "col_company": "Company",
+    "col_services": "Services",
+    "col_connect": "Connect",
+    "link_about": "About Us",
+    "link_linkedin": "LinkedIn",
+    "link_twitter": "Twitter / X",
+    "rights": "All rights reserved."
+  },
+  "about": {
+    "values_eyebrow": "Our Values",
+    "team_eyebrow": "The Team",
+    "meet_team_btn": "Meet the Team",
+    "learn_more_btn": "Learn More"
+  },
+  "services": {
+    "view_all_btn": "View All",
+    "learn_more_link": "Learn more →",
+    "learn_more_cap_link": "Learn More →",
+    "about_team_btn": "About the Team",
+    "view_services_btn": "View Services"
+  },
+  "solutions": {
+    "eyebrow": "Industry Solutions",
+    "headline": "Proven solutions across diverse industrial sectors",
+    "view_details": "View Details →"
+  },
+  "testimonials": {
+    "eyebrow": "What Clients Say",
+    "headline": "Client Endorsements"
+  },
+  "contact": {
+    "h1_get_in_touch": "Get in Touch",
+    "h1_contact_us": "Contact Us",
+    "eyebrow_info": "Contact Info",
+    "eyebrow_get_in_touch": "Get in Touch",
+    "h2_lets_talk": "Let's Talk",
+    "h2_contact_information": "Contact Information",
+    "label_email": "Email",
+    "label_phone": "Phone",
+    "label_address": "Address",
+    "label_hours": "Hours",
+    "form_headline": "Send a Message",
+    "form_description": "Fill in the form and we'll be in touch.",
+    "form_description_alt": "Fill in the form and we'll respond promptly.",
+    "form_first_name": "First Name",
+    "form_last_name": "Last Name",
+    "form_email_label": "Email",
+    "form_email_address_label": "Email Address",
+    "form_company_label": "Company",
+    "form_interest_label": "Area of Interest",
+    "form_message_label": "Message",
+    "form_placeholder_first": "Jane",
+    "form_placeholder_last": "Smith",
+    "form_placeholder_email": "jane@company.com",
+    "form_placeholder_company": "Company name",
+    "form_placeholder_company_alt": "Your company name",
+    "form_placeholder_message": "Tell us about your project…",
+    "form_select_default": "— Please select —",
+    "form_submit": "Send Message →",
+    "form_submit_short": "Submit →"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "menu_aria": "Menú"
+  },
+  "footer": {
+    "col_company": "Empresa",
+    "col_services": "Servicios",
+    "col_connect": "Contactar",
+    "link_about": "Sobre Nosotros",
+    "link_linkedin": "LinkedIn",
+    "link_twitter": "Twitter / X",
+    "rights": "Todos los derechos reservados."
+  },
+  "about": {
+    "values_eyebrow": "Nuestros Valores",
+    "team_eyebrow": "El Equipo",
+    "meet_team_btn": "Conoce al Equipo",
+    "learn_more_btn": "Saber Más"
+  },
+  "services": {
+    "view_all_btn": "Ver Todo",
+    "learn_more_link": "Saber más →",
+    "learn_more_cap_link": "Saber Más →",
+    "about_team_btn": "Sobre el Equipo",
+    "view_services_btn": "Ver Servicios"
+  },
+  "solutions": {
+    "eyebrow": "Soluciones Industriales",
+    "headline": "Soluciones probadas en diversos sectores industriales",
+    "view_details": "Ver Detalles →"
+  },
+  "testimonials": {
+    "eyebrow": "Lo Que Dicen los Clientes",
+    "headline": "Testimonios de Clientes"
+  },
+  "contact": {
+    "h1_get_in_touch": "Contáctenos",
+    "h1_contact_us": "Contáctenos",
+    "eyebrow_info": "Información de Contacto",
+    "eyebrow_get_in_touch": "Contáctenos",
+    "h2_lets_talk": "Hablemos",
+    "h2_contact_information": "Información de Contacto",
+    "label_email": "Correo",
+    "label_phone": "Teléfono",
+    "label_address": "Dirección",
+    "label_hours": "Horarios",
+    "form_headline": "Enviar un Mensaje",
+    "form_description": "Complete el formulario y nos pondremos en contacto pronto.",
+    "form_description_alt": "Complete el formulario y le responderemos pronto.",
+    "form_first_name": "Nombre",
+    "form_last_name": "Apellido",
+    "form_email_label": "Correo",
+    "form_email_address_label": "Correo Electrónico",
+    "form_company_label": "Empresa",
+    "form_interest_label": "Área de Interés",
+    "form_message_label": "Mensaje",
+    "form_placeholder_first": "María",
+    "form_placeholder_last": "García",
+    "form_placeholder_email": "maria@empresa.com",
+    "form_placeholder_company": "Nombre de empresa",
+    "form_placeholder_company_alt": "Nombre de su empresa",
+    "form_placeholder_message": "Cuéntenos sobre su proyecto…",
+    "form_select_default": "— Seleccionar —",
+    "form_submit": "Enviar Mensaje →",
+    "form_submit_short": "Enviar →"
+  }
+}

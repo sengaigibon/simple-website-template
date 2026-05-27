@@ -1,58 +1,11 @@
 import { config, singleton, fields } from '@keystatic/core'
 
-// Shared schema — mirrors the full client.config.json structure.
-const clientSchema = {
-  theme: fields.select({
-    label: 'Theme (Layout)',
-    options: [
-      { label: 'Modern', value: 'modern' },
-      { label: 'Sober', value: 'sober' },
-      { label: 'Simplistic', value: 'simplistic' },
-    ],
-    defaultValue: 'modern',
-  }),
-
-  style: fields.select({
-    label: 'Style',
-    options: [
-      { label: 'Editorial (Modern)', value: 'style-1-editorial' },
-      { label: 'Terminal (Modern)', value: 'style-2-terminal' },
-      { label: 'Garden (Modern)', value: 'style-3-garden' },
-      { label: 'Studio (Modern)', value: 'style-4-studio' },
-      { label: 'Bold (Modern)', value: 'style-5-bold' },
-      { label: 'Industrial (Sober)', value: 'style-6-industrial' },
-      { label: 'Industrial Blue (Sober)', value: 'style-7-industrial-blue' },
-      { label: 'Corporate Red (Sober)', value: 'style-8-corporate-red' },
-      { label: 'Simplistic (Simplistic)', value: 'style-9-simplistic' },
-    ],
-    defaultValue: 'style-1-editorial',
-  }),
-
-  demo_mode: fields.checkbox({
-    label: 'Demo Mode',
-    description: 'Show the theme/style switcher. Turn off before going live.',
-    defaultValue: true,
-  }),
-
-  brand: fields.object(
-    {
-      name: fields.text({ label: 'Company Name' }),
-      logo_text: fields.text({ label: 'Logo Text (main part)' }),
-      logo_accent: fields.text({ label: 'Logo Accent (highlighted part)' }),
-      logo_image: fields.text({
-        label: 'Logo Image Path',
-        description: 'Relative to the HTML file, e.g. ../assets/logo.png or ../assets/logo.svg',
-      }),
-      tagline: fields.text({ label: 'Tagline' }),
-    },
-    { label: 'Brand' }
-  ),
-
+// Content schema shared by all locales
+const localeContentSchema = {
   meta: fields.object(
     {
       site_title: fields.text({ label: 'Site Title (browser tab)' }),
       description: fields.text({ label: 'Meta Description', multiline: true }),
-      language: fields.text({ label: 'Language Code', defaultValue: 'en' }),
       theme_label: fields.text({
         label: 'Theme Label',
         description: 'Human-readable, e.g. Modern · Editorial',
@@ -64,7 +17,7 @@ const clientSchema = {
   nav: fields.object(
     {
       cta_label: fields.text({ label: 'CTA Button Label' }),
-      cta_href: fields.text({ label: 'CTA Button Link', defaultValue: 'contact.html' }),
+      cta_href: fields.text({ label: 'CTA Button Link', defaultValue: 'contact' }),
     },
     { label: 'Navigation' }
   ),
@@ -196,6 +149,63 @@ const clientSchema = {
     { label: 'Contact' }
   ),
 
+  footer: fields.object(
+    {
+      tagline: fields.text({ label: 'Footer Tagline' }),
+      copyright: fields.text({ label: 'Copyright Text (company name)' }),
+    },
+    { label: 'Footer' }
+  ),
+}
+
+// Full client schema: structural fields + locale-nested content
+const clientSchema = {
+  theme: fields.select({
+    label: 'Theme (Layout)',
+    options: [
+      { label: 'Modern', value: 'modern' },
+      { label: 'Sober', value: 'sober' },
+      { label: 'Simplistic', value: 'simplistic' },
+    ],
+    defaultValue: 'modern',
+  }),
+
+  style: fields.select({
+    label: 'Style',
+    options: [
+      { label: 'Editorial (Modern)', value: 'style-1-editorial' },
+      { label: 'Terminal (Modern)', value: 'style-2-terminal' },
+      { label: 'Garden (Modern)', value: 'style-3-garden' },
+      { label: 'Studio (Modern)', value: 'style-4-studio' },
+      { label: 'Bold (Modern)', value: 'style-5-bold' },
+      { label: 'Industrial (Sober)', value: 'style-6-industrial' },
+      { label: 'Industrial Blue (Sober)', value: 'style-7-industrial-blue' },
+      { label: 'Corporate Red (Sober)', value: 'style-8-corporate-red' },
+      { label: 'Simplistic (Simplistic)', value: 'style-9-simplistic' },
+    ],
+    defaultValue: 'style-1-editorial',
+  }),
+
+  demo_mode: fields.checkbox({
+    label: 'Demo Mode',
+    description: 'Show the theme/style switcher. Turn off before going live.',
+    defaultValue: true,
+  }),
+
+  brand: fields.object(
+    {
+      name: fields.text({ label: 'Company Name' }),
+      logo_text: fields.text({ label: 'Logo Text (main part)' }),
+      logo_accent: fields.text({ label: 'Logo Accent (highlighted part)' }),
+      logo_image: fields.text({
+        label: 'Logo Image Path',
+        description: 'Relative to the client folder, e.g. ../assets/logo.png or ../assets/logo.svg',
+      }),
+      tagline: fields.text({ label: 'Tagline' }),
+    },
+    { label: 'Brand' }
+  ),
+
   social: fields.object(
     {
       linkedin: fields.text({ label: 'LinkedIn URL' }),
@@ -204,13 +214,9 @@ const clientSchema = {
     { label: 'Social Links' }
   ),
 
-  footer: fields.object(
-    {
-      tagline: fields.text({ label: 'Footer Tagline' }),
-      copyright: fields.text({ label: 'Copyright Text (company name)' }),
-    },
-    { label: 'Footer' }
-  ),
+  es: fields.object(localeContentSchema, { label: 'Spanish Content (es)' }),
+  en: fields.object(localeContentSchema, { label: 'English Content (en)' }),
+  zh: fields.object(localeContentSchema, { label: 'Chinese Content (zh)' }),
 }
 
 export default config({
@@ -230,14 +236,6 @@ export default config({
     'client-2': singleton({
       label: 'Verdant Studio (client-2)',
       path: 'clients/client-2/client.config',
-      format: { data: 'json' },
-      entryLayout: 'form',
-      schema: clientSchema,
-    }),
-
-    'client-3': singleton({
-      label: 'Axflow Industries (client-3)',
-      path: 'clients/client-3/client.config',
       format: { data: 'json' },
       entryLayout: 'form',
       schema: clientSchema,

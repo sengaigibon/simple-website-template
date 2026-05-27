@@ -1,0 +1,37 @@
+---
+interface Props {
+  cfg: any
+  t: any
+  lang: string
+  page: string
+}
+const { cfg, t, lang, page } = Astro.props
+const base = `/${lang}`
+---
+
+<nav class="nav">
+  <div class="container nav__inner">
+    <a class="nav__logo" href={`${base}/`}>
+      {cfg.brand.logo_image
+        ? <img src={cfg.brand.logo_image} alt={cfg.brand.name} class="nav__logo-img" />
+        : <><span>{cfg.brand.logo_text}</span><span>{cfg.brand.logo_accent}</span></>
+      }
+    </a>
+    <ul class="nav__links">
+      <li><a href={`${base}/`}        class:list={[{active: page==='index'}]}>{t.nav.home}</a></li>
+      <li><a href={`${base}/about`}   class:list={[{active: page==='about'}]}>{t.nav.about}</a></li>
+      <li><a href={`${base}/services`}class:list={[{active: page==='services'}]}>{t.nav.services}</a></li>
+      <li><a href={`${base}/contact`} class:list={[{active: page==='contact'}]}>{t.nav.contact}</a></li>
+    </ul>
+    <a class:list={['btn', 'nav__cta', cfg.theme === 'modern' ? 'btn-accent' : 'btn-primary']} href={`${base}/contact`}>{cfg.nav.cta_label}</a>
+    <button class="nav__burger" aria-label={t.nav.menu_aria}>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__mobile">
+  <a href={`${base}/`}>{t.nav.home}</a>
+  <a href={`${base}/about`}>{t.nav.about}</a>
+  <a href={`${base}/services`}>{t.nav.services}</a>
+  <a href={`${base}/contact`}>{t.nav.contact}</a>
+</div>

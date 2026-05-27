@@ -1,0 +1,24 @@
+---
+interface Props {
+  cfg: any
+  t: any
+  lang: string
+  secondaryBtn?: string
+  secondaryHref?: string
+}
+const { cfg, t, lang, secondaryBtn, secondaryHref } = Astro.props
+const c = cfg.cta
+---
+
+<div class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>{c.headline}</h2>
+    <p>{c.subheadline}</p>
+    <div class="actions">
+      <a class="btn btn-primary" href={`/${lang}/contact`}>{cfg.nav.cta_label}</a>
+      {secondaryBtn && secondaryHref && (
+        <a class="btn btn-outline" href={secondaryHref}>{secondaryBtn}</a>
+      )}
+    </div>
+  </div>
+</div>

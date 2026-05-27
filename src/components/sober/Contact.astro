@@ -1,0 +1,98 @@
+---
+interface Props { cfg: any; t: any }
+const { cfg, t } = Astro.props
+const c = cfg.contact
+---
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <span class="eyebrow">{t.contact.eyebrow_get_in_touch}</span>
+        <h2 style="margin-bottom:24px;">{t.contact.h2_contact_information}</h2>
+        <p>{c.intro}</p>
+        <div style="margin-top:32px;">
+          {c.email && (
+            <div class="contact-item">
+              <div class="contact-item__icon">✉️</div>
+              <div>
+                <span class="contact-item__label">{t.contact.label_email}</span>
+                <div class="contact-item__value">{c.email}</div>
+              </div>
+            </div>
+          )}
+          {c.phone && (
+            <div class="contact-item">
+              <div class="contact-item__icon">📞</div>
+              <div>
+                <span class="contact-item__label">{t.contact.label_phone}</span>
+                <div class="contact-item__value">{c.phone}</div>
+              </div>
+            </div>
+          )}
+          {c.address && (
+            <div class="contact-item">
+              <div class="contact-item__icon">📍</div>
+              <div>
+                <span class="contact-item__label">{t.contact.label_address}</span>
+                <div class="contact-item__value">{c.address}</div>
+              </div>
+            </div>
+          )}
+          {c.hours && (
+            <div class="contact-item">
+              <div class="contact-item__icon">🕐</div>
+              <div>
+                <span class="contact-item__label">{t.contact.label_hours}</span>
+                <div class="contact-item__value">{c.hours}</div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div class="form-card fade-up fade-up-1">
+        <h3 style="margin-bottom:6px;">{t.contact.form_headline}</h3>
+        <p style="margin-bottom:28px;font-size:.88rem;">{t.contact.form_description_alt}</p>
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first">{t.contact.form_first_name}</label>
+              <input type="text" id="first" name="first" placeholder={t.contact.form_placeholder_first} required />
+            </div>
+            <div class="form-group">
+              <label for="last">{t.contact.form_last_name}</label>
+              <input type="text" id="last" name="last" placeholder={t.contact.form_placeholder_last} required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">{t.contact.form_email_label}</label>
+            <input type="email" id="email" name="email" placeholder={t.contact.form_placeholder_email} required />
+          </div>
+          <div class="form-group">
+            <label for="company">{t.contact.form_company_label}</label>
+            <input type="text" id="company" name="company" placeholder={t.contact.form_placeholder_company} />
+          </div>
+          {c.form_service_options?.length > 0 && (
+            <div class="form-group">
+              <label for="service">{t.contact.form_interest_label}</label>
+              <select id="service" name="service">
+                <option value="">{t.contact.form_select_default}</option>
+                {c.form_service_options.map((opt: string) => (
+                  <option value={opt}>{opt}</option>
+                ))}
+              </select>
+            </div>
+          )}
+          <div class="form-group">
+            <label for="message">{t.contact.form_message_label}</label>
+            <textarea id="message" name="message" placeholder={t.contact.form_placeholder_message}></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            {t.contact.form_submit_short}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

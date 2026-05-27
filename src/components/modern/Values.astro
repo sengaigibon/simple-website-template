@@ -1,0 +1,25 @@
+---
+interface Props { cfg: any; t: any }
+const { cfg } = Astro.props
+const a = cfg.about
+const values = a.values ?? []
+---
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">{a.values_headline}</span>
+      <h2>{a.values_headline}</h2>
+      <div class="divider centered"></div>
+    </div>
+    <div class="grid-3">
+      {values.map((v: any) => (
+        <div class="card fade-up">
+          <div class="card__icon">{v.icon}</div>
+          <h3>{v.title}</h3>
+          <p>{v.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
