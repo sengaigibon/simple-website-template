@@ -51,6 +51,65 @@ which enables/disables the Showroom / Demo mode.
 
 Current Showroom URL: https://showroom-ean.pages.dev/ 
 
+---
+
+# Keystatic — Local Setup
+
+Keystatic is a Git-based content editor. It reads and writes the `client.config.json` files directly in this repo — no database, no CMS platform. You run a local admin UI to edit client content through a form instead of hand-editing JSON.
+
+The site itself is unchanged — `bash build.sh` still builds it. Keystatic only adds a lightweight Node.js/Astro layer to serve the admin UI.
+
+## First-time setup
+
+```bash
+npm install
+```
+
+This installs Astro and Keystatic. Only needed once after cloning.
+
+## Running the admin UI
+
+```bash
+npm run dev
+```
+
+Open http://localhost:4321/keystatic — you'll see a **Clients** list with all existing clients. Click any client to edit its fields through a form. Save writes directly to the `client.config.json` file on disk. Commit and push as normal to trigger a Cloudflare redeploy.
+
+## Adding a new client via Keystatic
+
+Each client is a **singleton** in `keystatic.config.ts` (not a dynamic collection). This keeps the config clean — no extra fields written to `client.config.json`.
+
+To add a new client:
+
+1. Create the folder manually: `clients/vierszka/` with a `client.config.json` copied from an existing client
+2. Open `keystatic.config.ts` and copy one of the existing singleton blocks:
+   ```ts
+   'vierszka': singleton({
+     label: 'Vierszka (vierszka)',
+     path: 'clients/vierszka/client.config',
+     format: { data: 'json' },
+     entryLayout: 'form',
+     schema: clientSchema,
+   }),
+   ```
+3. Restart `npm run dev` — the new client appears in the admin sidebar
+4. Open it in Keystatic and fill in all fields
+5. Add the logo manually: `clients/vierszka/assets/logo.png`
+6. Commit and push
+
+## Files added for Keystatic
+
+| File | Purpose |
+|------|---------|
+| `package.json` | Node dependencies (Astro + React + Keystatic) |
+| `astro.config.mjs` | Astro config with Keystatic integration |
+| `tsconfig.json` | TypeScript config (required by Keystatic) |
+| `keystatic.config.ts` | Schema: defines every editable field for client configs |
+
+The `keystatic.config.ts` is where you add new fields if the `client.config.json` schema ever changes.
+
+---
+
 # Workflow: Onboarding a New Client
 
 This is the end-to-end process after a client has seen the showroom and chosen a theme and style.
@@ -128,45 +187,3 @@ In the Cloudflare Pages project, go to **Custom domains** and attach the domain.
 3. All content is final and deployed
 4. The client knows how to edit their content via Keystatic
 
----
-
-# Keystatic — Content Editing
-
-Keystatic is a Git-based content editor. It reads and writes directly to files in this repository — no separate database. For this project, it edits the `client.config.json` file for each client.
-
-> **Note:** Keystatic is not yet configured in this project. The instructions below describe the intended workflow. A `keystatic.config.ts` file and a small Node.js setup will need to be added before the commands below work.
-
-There are two modes:
-
-| Mode | How to access | Best for |
-|------|--------------|----------|
-| **Local** | Run it on your machine | Your own editing sessions |
-| **Cloud** | Hosted UI connected to GitHub | Handing off to the client |
-
-## Local mode (for you)
-
-```bash
-# from the repo root
-npx keystatic
-```
-
-This starts a local admin UI at `http://localhost:8787/keystatic`. You can browse and edit any client's config fields through a form — no need to hand-edit JSON.
-
-## Cloud mode (for the client)
-
-Once Keystatic is connected to GitHub (via its cloud service at keystatic.cloud), the client gets a hosted URL where they can log in and edit their content through the same form UI. Each save creates a commit on `main`, which triggers a Cloudflare redeploy automatically.
-
-Setup steps (one-time per client):
-1. Go to [keystatic.cloud](https://keystatic.cloud) and connect your GitHub repo
-2. Configure which `client.config.json` fields are editable (done in `keystatic.config.ts`)
-3. Share the Keystatic URL with the client along with login credentials
-
-## What the client can edit
-
-Everything in their `client.config.json` is editable through the UI — no JSON knowledge needed. Fields are presented as labelled text inputs, text areas, and lists.
-
-## What Keystatic does NOT do
-
-- It does not build or deploy the site (that's Cloudflare's job on each push)
-- It does not manage files outside the repo (images must still be added via `assets/`)
-- It does not support branching workflows — edits go straight to `main`
