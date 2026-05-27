@@ -11,8 +11,8 @@ const base = `/${lang}`
 
 <nav class="nav">
   <div class="container nav__inner">
-    <a class="nav__logo" href={`${base}/`}>
-      {cfg.brand.logo_image && <img src={cfg.brand.logo_image} alt={cfg.brand.name} class="nav__logo-img" style="height:40px;width:auto;display:block;" />}
+    <a class="nav__logo" href={`${base}/`} style="display:flex;align-items:center;gap:8px;">
+      {cfg.brand.logo_image && <img src={cfg.brand.logo_image} alt={cfg.brand.name} class="nav__logo-img" style="height:40px;width:auto;" />}
       <span>{cfg.brand.logo_text}</span><span>{cfg.brand.logo_accent}</span>
     </a>
     <ul class="nav__links">
