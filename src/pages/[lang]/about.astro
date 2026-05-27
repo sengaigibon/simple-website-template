@@ -47,7 +47,7 @@ const a = cfg.about
   </div>
 
   {cfg.demo_mode ? <>
-    <div data-demo-theme="sober" class:list={[{ active: cfg.theme === 'sober' }]}>
+    <div data-demo-theme="sober" style={cfg.theme !== 'sober' ? 'display:none' : ''}>
       <section class="section section--alt">
         <div class="container"><SoberAboutMission {cfg} /></div>
       </section>
@@ -60,14 +60,14 @@ const a = cfg.about
       <Stats {cfg} />
       <SoberCTA {cfg} {t} {lang} />
     </div>
-    <div data-demo-theme="modern" class:list={[{ active: cfg.theme === 'modern' }]}>
+    <div data-demo-theme="modern" style={cfg.theme !== 'modern' ? 'display:none' : ''}>
       <ModernAboutMission {cfg} />
       <ModernValues {cfg} {t} />
       <ModernTeam {cfg} {t} />
       <Stats {cfg} />
       <ModernCTA {cfg} {t} {lang} />
     </div>
-    <div data-demo-theme="simplistic" class:list={[{ active: cfg.theme === 'simplistic' }]}>
+    <div data-demo-theme="simplistic" style={cfg.theme !== 'simplistic' ? 'display:none' : ''}>
       <SimplisticAboutMission {cfg} />
       <Stats {cfg} />
       <SimplisticValues {cfg} />

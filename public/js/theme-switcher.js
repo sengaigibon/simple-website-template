@@ -74,10 +74,10 @@
     try { localStorage.setItem('style_override', styleId); } catch(e) {}
   }
 
-  // ── Apply theme layout (toggle data-demo-theme blocks) ───────────────
+  // ── Apply theme layout (show/hide data-demo-theme blocks) ───────────
   function applyThemeLayout(themeId) {
     document.querySelectorAll('[data-demo-theme]').forEach(el => {
-      el.classList.toggle('active', el.dataset.demoTheme === themeId);
+      el.style.display = el.dataset.demoTheme === themeId ? '' : 'none';
     });
   }
 

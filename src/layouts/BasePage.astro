@@ -21,7 +21,6 @@ const pageTitle = title ?? cfg.meta.site_title
   <title>{pageTitle}</title>
   <meta name="description" content={cfg.meta.description} />
   <link id="theme-stylesheet" rel="stylesheet" href={`/styles/${cfg.style}.css`} />
-  {cfg.demo_mode && <style>{'[data-demo-theme]{display:none}[data-demo-theme].active{display:block}'}</style>}
 </head>
 <body>
   <Nav {cfg} {t} {lang} {page} />
