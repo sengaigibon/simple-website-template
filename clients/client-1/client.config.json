@@ -6,7 +6,7 @@
     "name": "ShaJa Adventures",
     "logo_text": "ShaJa",
     "logo_accent": "Adventures",
-    "logo_image": "../assets/logo.png",
+    "logo_image": "../assets/logo.svg",
     "tagline": "Explorando el mundo desde 1999"
   },
   "meta": {

@@ -28,11 +28,30 @@ See the configuration for each client in, e.g. for client-1
 ````
 simple-website-template/clients/client-1/client.config.json
 ````
-where there is a flag:
-````
-"demo_mode": true,
-````
-which enables/disables the Showroom / Demo mode.
+
+## 2a. Build modes
+
+The `demo_mode` flag in `client.config.json` controls what `build.sh` puts into `dist/`:
+
+| `demo_mode` | What is built |
+|---|---|
+| `true` | **Full build** — all layouts (modern, sober, simplistic) and all CSS styles are copied to subfolders. A root `index.html` redirects to the configured theme. The Theme Switcher UI is active. Used during client review. |
+| `false` | **Locked build** — only the configured `theme` layout and `style` CSS are copied. HTML pages are placed directly at `dist/` root (no subfolder, no redirect). No other themes or styles are shipped, so the URL cannot be manipulated to load a different theme. Used for live production. |
+
+**Production `dist/` structure (demo_mode: false):**
+```
+dist/
+  index.html        ← served directly, no redirect
+  about.html
+  services.html
+  contact.html
+  styles/<style>.css
+  js/
+  assets/
+  client.config.js
+```
+
+> Switching from demo to production: set `"demo_mode": false`, commit, push. Cloudflare will redeploy with locked theme/style and HTML at root.
 
 
 ## 3. Clodflare Set Up
@@ -188,9 +207,10 @@ In the Cloudflare Pages project, go to **Custom domains** and attach the domain.
 
 ## Step 7 — Go live
 
-1. Set `"demo_mode": false` in the client's `client.config.json`
-2. Commit and push → triggers final redeploy
-3. Confirm the theme switcher is gone and the live domain resolves correctly
+1. Set `"demo_mode": false` in the client's `client.config.json` (via Keystatic or directly)
+2. Commit and push to `master` → triggers final redeploy
+3. Cloudflare rebuilds in **locked mode**: only the configured theme layout and style CSS are included — no other themes or styles are shipped
+4. Confirm the theme switcher is gone and the live domain resolves correctly
 
 ## Done when:
 1. The website is live on the client's own domain
