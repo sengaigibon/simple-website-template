@@ -123,10 +123,11 @@
   // grid-3 (modern) → 3, grid-4 (simplistic) → 4, grid-2-cards (sober) → 4.
   const _svcContainer = document.getElementById('services-home-container');
   const _svcCount = _svcContainer && _svcContainer.classList.contains('grid-3') ? 3 : 4;
-  renderList('services-home-container', 'tpl-service-card', (cfg.services && cfg.services.items || []).slice(0, _svcCount), (el, item) => {
+  renderList('services-home-container', 'tpl-service-card', (cfg.services && cfg.services.items || []).slice(0, _svcCount), (el, item, i) => {
     el.querySelector('.card__icon').textContent = item.icon || '●';
     el.querySelector('h3').textContent = item.title;
     el.querySelector('p').textContent  = item.body;
+    el.classList.add('fade-up-' + (i + 1));
   });
 
   // Services — full detail list
