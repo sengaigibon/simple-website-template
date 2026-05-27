@@ -1,7 +1,7 @@
 {
-  "theme": "sober",
-  "style": "style-8-corporate-red",
-  "demo_mode": true,
+  "theme": "simplistic",
+  "style": "style-9-simplistic",
+  "demo_mode": false,
   "brand": {
     "name": "Vierszka Adventures",
     "logo_text": "Vierszka",
@@ -48,16 +48,16 @@
     "eyebrow": "Servicios",
     "headline": "Portafolio de Servicios",
     "subheadline": "Encuentra el tipo de aventura que quieres vivir!",
-    "page_subheadline": "..",
+    "page_subheadline": "Lo que mejor sabemos hacer...",
     "items": [
       {
         "icon": "🌲",
         "title": "Senderismo",
         "body": "Caminar por la Sierra de Guadarrama, conocer el corazón de la Pedriza, subir por los pinares del Valle de Navalmedio",
         "features": [
-          "API 610 / ISO 13709 compliant",
-          "Flow rates 5–50,000 m³/h",
-          "Carbon steel, stainless, duplex, Hastelloy"
+          "Rutas de 1 día de 5-20km",
+          "Para ir en transporte público o privado",
+          "Rutas con nula o poca dificultad técnica"
         ]
       },
       {
@@ -65,9 +65,9 @@
         "title": "Montanismo",
         "body": "Ascensiones estivales e invernales a las montañas de la Sierra de Guadarrama y alrededores",
         "features": [
-          "ANSI Classes 150–2500",
-          "SIL 2 / SIL 3 rated safety valves",
-          "HART, Fieldbus, Profibus compatible"
+          "Rutas de 1-2 días",
+          "Dificultad técnica poca / baja / media",
+          "Facilitamos material necesario"
         ]
       },
       {
@@ -75,9 +75,9 @@
         "title": "Vías Ferratas",
         "body": "Vámonos a trepar algunas paredes protegidos con equipo previamente instalado para mantenernos seguros mientras disfrutamos los paisajes.",
         "features": [
-          "Quarter-turn and multi-turn",
-          "Integrated valve controllers",
-          "Remote I/O and bus communication"
+          "Garantizamos hermosos paisajes",
+          "Y algo de adrenalina y esfuerzo",
+          "Facilitamos material necesario"
         ]
       },
       {
@@ -85,121 +85,109 @@
         "title": "Escalada en Roca",
         "body": "¿Vamos a dar unos buenos pegues a la Pedri? ¿A Patones? ¿San Martín de Valdeiglesias?",
         "features": [
-          "API 682 / ISO 21049 compliant",
-          "Dry gas seals for compressors",
-          "Custom seal support systems"
+          "De Top rope o Primero, tú eliges",
+          "Facilitamos material necesario",
+          "Escaladores experimentados"
         ]
       }
     ]
   },
   "process": {
-    "eyebrow": "How We Work",
-    "headline": "Our Approach",
+    "eyebrow": "Cómo trabajamos",
+    "headline": "Nuestro Enfoque",
     "steps": [
       {
-        "title": "Assessment",
-        "body": "We evaluate your process conditions and operational requirements before recommending any solution."
+        "title": "Informamos",
+        "body": "Te contamos de qué va la cosa y tú te decides por la aventura que quieras experimentar!"
       },
       {
-        "title": "Engineering",
-        "body": "Our applications engineers size, select and configure equipment to your exact specifications."
+        "title": "Planeamos",
+        "body": "Nos encargamos de que la logística, el transporte, el acceso, la ruta, el clima, el equipo de seguridad, los(as) guías, etc., se encuentren en condiciones óptimas previo a la aventura"
       },
       {
-        "title": "Manufacture",
-        "body": "All equipment is manufactured to order and tested against acceptance criteria."
+        "title": "Nos divertimos",
+        "body": "Y nos vamos al jaleo, a divertirnos confiando en nuestro plan, equipo y guías!"
       },
       {
-        "title": "Lifecycle",
-        "body": "Commissioning support, preventive maintenance and emergency repair — full lifecycle support."
+        "title": "Mejoramos",
+        "body": "Aprendemos de cada aventura, nos retroalimentamos y mejoramos para que tu próxima experiencia sea buenísima!"
       }
     ]
   },
   "about": {
-    "eyebrow": "About Vierszka",
-    "headline": "Built on Engineering Integrity",
-    "page_subheadline": "Four decades of precision manufacturing and field-proven reliability.",
-    "body": "Vierszka was founded in 1978 by process engineers who believed that better equipment engineering meant safer, more efficient plant operations.",
-    "mission_headline": "Our Mission",
-    "mission_body_1": "We exist to eliminate unplanned downtime in critical processes. Every product we engineer is aimed at keeping your plant running safely and efficiently.",
-    "mission_body_2": "With manufacturing in four countries and service centres in over sixty, we combine global capability with local accountability.",
-    "mission_emoji": "⚙️",
-    "values_headline": "What We Stand For",
-    "team_headline": "Leadership",
-    "team_subheadline": "Experienced operators and engineers who have worked in the industries we serve.",
+    "eyebrow": "Sobre Vierszka Adventures",
+    "headline": "Queremos hacer montañismo divertido y seguro",
+    "page_subheadline": "Décadas impresionando nuestros sentidos con las maravillas naturales",
+    "body": "Vierszka Adventures fue fundada en 2025 por un Ingeniero de Software - quien está en proceso de convertirse en guía de montaña - y un grupo de amigos(as) todos amantes de la montaña, quienes creen que sigue siendo posible conmover el alma humana a través de las maravillas que ofrece la madre naturaleza.",
+    "mission_headline": "Misión",
+    "mission_body_1": "Queremos aprender del mundo y de nosotros mismos mediante la exploración de la montaña, presentando retos de nivel adecuado a cada quién y garantizando la seguridad en todo momento.",
+    "mission_body_2": "Preparación, experiencia y confianza son los tres ejes que nos mueven en nuestras aventuras.",
+    "mission_emoji": "⛰️",
+    "values_headline": "Nuestros Principios",
+    "team_headline": "Experiencia",
+    "team_subheadline": "Técnicos deportivos de montaña, senderistas y escaladores con experiencia real.",
     "values": [
       {
         "icon": "🔩",
-        "title": "Engineering First",
-        "body": "Every decision starts with the engineering. We don't recommend products that aren't right for the application."
+        "title": "Conocimiento",
+        "body": "Cada decisión, cada aventura, comienza con adquirir conocimiento: lo planeamos, vemos qué hace falta, lo incluimos o lo aprendemos y sabemos que es posible. No vamos a experimentar contigo sobre la ruta."
       },
       {
         "icon": "📋",
-        "title": "Standards Compliance",
-        "body": "All products are designed and tested to applicable API, ISO and ASME standards."
+        "title": "Capacitación y Estándares",
+        "body": "Todo nuestro equipo humano se encuentra certificado como Técnico Deportivo de Montaña. Todo nuestro material de aventuras está homologado a estándares europeos o internacionales."
       },
       {
         "icon": "🤝",
-        "title": "Long-Term Partnership",
-        "body": "Our relationships with customers average over 12 years."
+        "title": "Confianza",
+        "body": "Quienes nos conocen han repetido aventuras con nosotros."
       }
     ],
     "team": [
       {
-        "name": "Richard Holt",
-        "role": "CEO",
-        "emoji": "👨‍💼"
+        "name": "Javier Caballero",
+        "role": "IT Expert",
+        "emoji": "👨‍💻"
       },
       {
-        "name": "Elena Moser",
-        "role": "Chief Engineer",
+        "name": "Sasha Yang",
+        "role": "Guía de montaña",
         "emoji": "👩‍🔧"
-      },
-      {
-        "name": "David Nakamura",
-        "role": "VP Operations",
-        "emoji": "👨‍🏭"
-      },
-      {
-        "name": "Fatima Al-Said",
-        "role": "Global Service Director",
-        "emoji": "👩‍💼"
       }
     ]
   },
   "testimonials": [
     {
-      "text": "Vierszka specified and delivered a complete pump train for our offshore platform in 14 weeks. The equipment has operated without incident for three years.",
-      "author": "J. Hargreaves",
-      "role": "Rotating Equipment Manager, North Sea Operations",
-      "emoji": "👷"
+      "text": "\"Siempre me había llamado la atención hacer una vía ferrata, pero me daba un poco de respeto la altura. ¡Menos mal que elegí a este equipo! Desde el minuto uno, la guía nos transmitió una confianza increíble, explicando cada detalle del material y de la ruta. La experiencia en las grapas y los puentes colgantes fue una pasada absoluta, con unas vistas que te quitan el aliento. Me sentí súper segura en todo momento y disfruté como una niña pequeña. Si buscas aventura con profesionales de verdad, no te lo pienses. ¡Repetiré seguro!\"",
+      "author": "Laura G.",
+      "role": "34 años",
+      "emoji": "🌎"
     },
     {
-      "text": "Their engineering team identified a seal failure mode our own team had missed. That kind of expertise is why we sole-source with Vierszka.",
-      "author": "M. Rodrigues",
-      "role": "Maintenance Director, Petroquimica do Brasil",
-      "emoji": "👨‍🔬"
+      "text": "\"¡Brutal! Fuimos un grupo de amigos a pasar el fin de semana y la ruta que nos prepararon entre montañas y bosques fue de lo mejor que he hecho nunca. No fue la típica caminata aburrida; los coordinadores le metieron un rollazo increíble, enseñándonos zonas escondidas, cruzando ríos y dándonos caña con un ritmo perfecto. Nos reímos muchísimo y desconectamos del todo de las pantallas y la ciudad. Si quieres perderte en la naturaleza y pasártelo jodidamente bien, este es tu sitio. ¡Un diez de fin de semana!\"",
+      "author": "Mateo S.",
+      "role": "22 años",
+      "emoji": "😜"
     }
   ],
   "cta": {
-    "eyebrow": "Talk to an Engineer",
-    "headline": "Have a Difficult Application?",
-    "subheadline": "Our applications engineers are available to discuss your process requirements without obligation."
+    "eyebrow": "Habla con uno de nosotros",
+    "headline": "¿Tienes alguna aventura específica en mente?",
+    "subheadline": "Nuestros(as) guías estan disponibles para ti sin compromiso alguno ;)"
   },
   "contact": {
-    "page_subheadline": "Speak directly with an applications engineer.",
-    "intro": "For new project enquiries, replacement parts or emergency service, contact your nearest Vierszka office or fill in the form.",
-    "email": "enquiries@vierszka.com",
+    "page_subheadline": "Habla directamente con nuestros(as) guías",
+    "intro": "Para cualquier información sobre aventuras existentes, nuevas aventuras o cualquier otra duda que tengas, contáctanos vía telefónica, correo electrónico o rellena el formulario",
+    "email": "preguntas@vierszka.com",
     "phone": "+34 644 554 028 ",
     "address": "Eugenio Salazar 45, 28002 Madrid",
     "hours": "Lunes–Viernes, 8am–5:30pm ",
     "form_service_options": [
-      "Industrial Pumps",
-      "Control Valves",
-      "Mechanical Seals",
-      "Actuators & Controls",
-      "Aftermarket / Spare Parts",
-      "Emergency Service",
-      "General Enquiry"
+      "Información General",
+      "Sugerencias",
+      "Quejas",
+      "Aventuras Nuevas",
+      "Aventuras Existentes"
     ]
   },
   "social": {
@@ -207,7 +195,7 @@
     "twitter": "https://twitter.com/vierszka"
   },
   "footer": {
-    "tagline": "Precision flow control for critical industrial applications.",
+    "tagline": "Guiamos exploradores y aventureros a vivir experiencias inolvidables",
     "copyright": "Vierszka Adventures SC de CV"
   }
 }
