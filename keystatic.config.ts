@@ -40,7 +40,7 @@ const clientSchema = {
       logo_accent: fields.text({ label: 'Logo Accent (highlighted part)' }),
       logo_image: fields.text({
         label: 'Logo Image Path',
-        description: 'Relative to the HTML file, e.g. ../assets/logo.png',
+        description: 'Relative to the HTML file, e.g. ../assets/logo.png or ../assets/logo.svg',
       }),
       tagline: fields.text({ label: 'Tagline' }),
     },
@@ -237,6 +237,14 @@ export default config({
     'client-3': singleton({
       label: 'Axflow Industries (client-3)',
       path: 'clients/client-3/client.config',
+      format: { data: 'json' },
+      entryLayout: 'form',
+      schema: clientSchema,
+    }),
+
+    'vierszka': singleton({
+      label: 'Vierszka Adventures (vierszka)',
+      path: 'clients/vierszka/client.config',
       format: { data: 'json' },
       entryLayout: 'form',
       schema: clientSchema,
