@@ -131,7 +131,8 @@
 
   // Services — full detail list
   renderList('services-detail-container', 'tpl-service-detail', cfg.services && cfg.services.items || [], (el, item, i) => {
-    el.querySelector('.service-num').textContent   = String(i + 1).padStart(2, '0');
+    const numEl = el.querySelector('.service-num') || el.querySelector('.service-row__num');
+    if (numEl) numEl.textContent = String(i + 1).padStart(2, '0');
     el.querySelector('h3').textContent             = item.title;
     el.querySelector('.service-body').textContent  = item.body;
     const ul = el.querySelector('.service-features');
