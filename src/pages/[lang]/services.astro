@@ -42,52 +42,99 @@ const s = cfg.services
     </div>
   </div>
 
-  {theme === 'sober' && <>
-    <section class="section">
-      <div class="container">
-        <div class="sidebar-section">
-          <div class="sidebar-section__label">
-            <span class="eyebrow">{s.eyebrow}</span>
-            <h2>{s.headline}</h2>
-            <p>{s.subheadline}</p>
+  {cfg.demo_mode ? <>
+    <div data-demo-theme="sober" class:list={[{ active: cfg.theme === 'sober' }]}>
+      <section class="section">
+        <div class="container">
+          <div class="sidebar-section">
+            <div class="sidebar-section__label">
+              <span class="eyebrow">{s.eyebrow}</span>
+              <h2>{s.headline}</h2>
+              <p>{s.subheadline}</p>
+            </div>
+            <div class="sidebar-section__content">
+              <SoberServicesDetail {cfg} />
+            </div>
           </div>
-          <div class="sidebar-section__content">
-            <SoberServicesDetail {cfg} />
-          </div>
+          <SoberProcess {cfg} />
         </div>
-        <SoberProcess {cfg} />
-      </div>
-    </section>
-    <SoberCTA {cfg} {t} {lang}
-      secondaryBtn={t.services.about_team_btn}
-      secondaryHref={`/${lang}/about`}
-    />
-  </>}
-
-  {theme === 'modern' && <>
-    <section class="section">
-      <div class="container">
-        <ModernServicesDetail {cfg} />
-      </div>
-    </section>
-    <ModernProcess {cfg} {t} />
-    <ModernCTA {cfg} {t} {lang}
-      secondaryBtn={t.services.about_team_btn}
-      secondaryHref={`/${lang}/about`}
-    />
-  </>}
-
-  {theme === 'simplistic' && <>
-    <SimplisticServicesHome {cfg} {t} {lang} />
-    <section class="section">
-      <div class="container">
-        <SimplisticServicesDetail {cfg} />
-      </div>
-    </section>
-    <SimplisticProcessAlt {cfg} />
-    <SimplisticCTA {cfg} {t} {lang}
-      secondaryBtn={t.services.about_team_btn}
-      secondaryHref={`/${lang}/about`}
-    />
+      </section>
+      <SoberCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.about_team_btn}
+        secondaryHref={`/${lang}/about`}
+      />
+    </div>
+    <div data-demo-theme="modern" class:list={[{ active: cfg.theme === 'modern' }]}>
+      <section class="section">
+        <div class="container">
+          <ModernServicesDetail {cfg} />
+        </div>
+      </section>
+      <ModernProcess {cfg} {t} />
+      <ModernCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.about_team_btn}
+        secondaryHref={`/${lang}/about`}
+      />
+    </div>
+    <div data-demo-theme="simplistic" class:list={[{ active: cfg.theme === 'simplistic' }]}>
+      <SimplisticServicesHome {cfg} {t} {lang} />
+      <section class="section">
+        <div class="container">
+          <SimplisticServicesDetail {cfg} />
+        </div>
+      </section>
+      <SimplisticProcessAlt {cfg} />
+      <SimplisticCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.about_team_btn}
+        secondaryHref={`/${lang}/about`}
+      />
+    </div>
+  </> : <>
+    {theme === 'sober' && <>
+      <section class="section">
+        <div class="container">
+          <div class="sidebar-section">
+            <div class="sidebar-section__label">
+              <span class="eyebrow">{s.eyebrow}</span>
+              <h2>{s.headline}</h2>
+              <p>{s.subheadline}</p>
+            </div>
+            <div class="sidebar-section__content">
+              <SoberServicesDetail {cfg} />
+            </div>
+          </div>
+          <SoberProcess {cfg} />
+        </div>
+      </section>
+      <SoberCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.about_team_btn}
+        secondaryHref={`/${lang}/about`}
+      />
+    </>}
+    {theme === 'modern' && <>
+      <section class="section">
+        <div class="container">
+          <ModernServicesDetail {cfg} />
+        </div>
+      </section>
+      <ModernProcess {cfg} {t} />
+      <ModernCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.about_team_btn}
+        secondaryHref={`/${lang}/about`}
+      />
+    </>}
+    {theme === 'simplistic' && <>
+      <SimplisticServicesHome {cfg} {t} {lang} />
+      <section class="section">
+        <div class="container">
+          <SimplisticServicesDetail {cfg} />
+        </div>
+      </section>
+      <SimplisticProcessAlt {cfg} />
+      <SimplisticCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.about_team_btn}
+        secondaryHref={`/${lang}/about`}
+      />
+    </>}
   </>}
 </BasePage>

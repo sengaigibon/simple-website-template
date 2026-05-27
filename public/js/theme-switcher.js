@@ -74,6 +74,13 @@
     try { localStorage.setItem('style_override', styleId); } catch(e) {}
   }
 
+  // ── Apply theme layout (toggle data-demo-theme blocks) ───────────────
+  function applyThemeLayout(themeId) {
+    document.querySelectorAll('[data-demo-theme]').forEach(el => {
+      el.classList.toggle('active', el.dataset.demoTheme === themeId);
+    });
+  }
+
   // ── Apply style (CSS swap only) ───────────────────────────
   function applyStyle(styleId) {
     const link = document.getElementById('theme-stylesheet');
@@ -90,6 +97,7 @@
     if (!THEMES[newThemeId]) return;
     saveTheme(newThemeId);
     const bestStyle = getStyleId(newThemeId);
+    applyThemeLayout(newThemeId);
     // Rebuild the panel so style list and active states reflect the new theme
     const panel = document.getElementById('ts-panel');
     if (panel) panel.outerHTML = buildPanel(newThemeId);
@@ -294,7 +302,8 @@
   }
   wireThemeButtons();
 
-  // ── Apply the active style on load ───────────────────────
+  // ── Apply active theme layout and style on load ──────────
+  applyThemeLayout(activeThemeId);
   applyStyle(activeStyleId);
 
 })();

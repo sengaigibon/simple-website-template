@@ -35,40 +35,75 @@ const theme = cfg.theme
 ---
 
 <BasePage {cfg} {t} {lang} page="index">
-  {theme === 'sober' && <>
-    <SoberHero {cfg} {lang} />
-    <Stats {cfg} />
-    <SoberServicesHome {cfg} {t} {lang} />
-    <SoberTestimonials {cfg} />
-    <SoberAboutTeaser {cfg} {t} {lang} />
-    <SoberCTA {cfg} {t} {lang}
-      secondaryBtn={t.services.view_services_btn}
-      secondaryHref={`/${lang}/services`}
-    />
-  </>}
-
-  {theme === 'modern' && <>
-    <ModernHero {cfg} {t} {lang} />
-    <Stats {cfg} />
-    <ModernServicesHome {cfg} {t} {lang} />
-    <ModernAboutTeaser {cfg} {t} {lang} />
-    <ModernCTA {cfg} {t} {lang}
-      secondaryBtn={t.services.view_services_btn}
-      secondaryHref={`/${lang}/services`}
-    />
-  </>}
-
-  {theme === 'simplistic' && <>
-    <SimplisticHero {cfg} {t} {lang} />
-    <Stats {cfg} />
-    <SimplisticServicesHome {cfg} {t} {lang} />
-    <SimplisticAboutSplit {cfg} {t} {lang} />
-    <SimplisticSolutions {cfg} {t} />
-    <SimplisticProcess {cfg} />
-    <SimplisticTestimonials {cfg} {t} />
-    <SimplisticCTA {cfg} {t} {lang}
-      secondaryBtn={t.services.view_services_btn}
-      secondaryHref={`/${lang}/services`}
-    />
+  {cfg.demo_mode ? <>
+    <div data-demo-theme="sober" class:list={[{ active: cfg.theme === 'sober' }]}>
+      <SoberHero {cfg} {lang} />
+      <Stats {cfg} />
+      <SoberServicesHome {cfg} {t} {lang} />
+      <SoberTestimonials {cfg} />
+      <SoberAboutTeaser {cfg} {t} {lang} />
+      <SoberCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.view_services_btn}
+        secondaryHref={`/${lang}/services`}
+      />
+    </div>
+    <div data-demo-theme="modern" class:list={[{ active: cfg.theme === 'modern' }]}>
+      <ModernHero {cfg} {t} {lang} />
+      <Stats {cfg} />
+      <ModernServicesHome {cfg} {t} {lang} />
+      <ModernAboutTeaser {cfg} {t} {lang} />
+      <ModernCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.view_services_btn}
+        secondaryHref={`/${lang}/services`}
+      />
+    </div>
+    <div data-demo-theme="simplistic" class:list={[{ active: cfg.theme === 'simplistic' }]}>
+      <SimplisticHero {cfg} {t} {lang} />
+      <Stats {cfg} />
+      <SimplisticServicesHome {cfg} {t} {lang} />
+      <SimplisticAboutSplit {cfg} {t} {lang} />
+      <SimplisticSolutions {cfg} {t} />
+      <SimplisticProcess {cfg} />
+      <SimplisticTestimonials {cfg} {t} />
+      <SimplisticCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.view_services_btn}
+        secondaryHref={`/${lang}/services`}
+      />
+    </div>
+  </> : <>
+    {theme === 'sober' && <>
+      <SoberHero {cfg} {lang} />
+      <Stats {cfg} />
+      <SoberServicesHome {cfg} {t} {lang} />
+      <SoberTestimonials {cfg} />
+      <SoberAboutTeaser {cfg} {t} {lang} />
+      <SoberCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.view_services_btn}
+        secondaryHref={`/${lang}/services`}
+      />
+    </>}
+    {theme === 'modern' && <>
+      <ModernHero {cfg} {t} {lang} />
+      <Stats {cfg} />
+      <ModernServicesHome {cfg} {t} {lang} />
+      <ModernAboutTeaser {cfg} {t} {lang} />
+      <ModernCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.view_services_btn}
+        secondaryHref={`/${lang}/services`}
+      />
+    </>}
+    {theme === 'simplistic' && <>
+      <SimplisticHero {cfg} {t} {lang} />
+      <Stats {cfg} />
+      <SimplisticServicesHome {cfg} {t} {lang} />
+      <SimplisticAboutSplit {cfg} {t} {lang} />
+      <SimplisticSolutions {cfg} {t} />
+      <SimplisticProcess {cfg} />
+      <SimplisticTestimonials {cfg} {t} />
+      <SimplisticCTA {cfg} {t} {lang}
+        secondaryBtn={t.services.view_services_btn}
+        secondaryHref={`/${lang}/services`}
+      />
+    </>}
   </>}
 </BasePage>
