@@ -12,10 +12,8 @@ const base = `/${lang}`
 <nav class="nav">
   <div class="container nav__inner">
     <a class="nav__logo" href={`${base}/`}>
-      {cfg.brand.logo_image
-        ? <img src={cfg.brand.logo_image} alt={cfg.brand.name} class="nav__logo-img" style="height:40px;width:auto;display:block;" />
-        : <><span>{cfg.brand.logo_text}</span><span>{cfg.brand.logo_accent}</span></>
-      }
+      {cfg.brand.logo_image && <img src={cfg.brand.logo_image} alt={cfg.brand.name} class="nav__logo-img" style="height:40px;width:auto;display:block;" />}
+      <span>{cfg.brand.logo_text}</span><span>{cfg.brand.logo_accent}</span>
     </a>
     <ul class="nav__links">
       <li><a href={`${base}/`}        class:list={[{active: page==='index'}]}>{t.nav.home}</a></li>
